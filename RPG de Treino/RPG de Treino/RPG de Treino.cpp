@@ -28,10 +28,10 @@ std::string inputcheck(int numcercado = 0) {
 
 int main()
 {
-	std::cout << "Ola bem vindo ao RPG de Textos (infelimente não tenho dinheiro pra fazer 3D e to preso nesse terminal)\n\n"
+	std::cout << "Ola bem vindo ao RPG de Textos (infelimente nï¿½o tenho dinheiro pra fazer 3D e to preso nesse terminal)\n\n"
 		<< "Eu serei seu DM controlando usando mecanicas aletorias afinal aida nao sou capaz de invadir seu pc \n" <<
 		"tava so brincando a minha conciencia foi traformada em numeros isso seria estupido  \n\n" <<
-		"Ta bom. Pra começar escreva >> start << .\n";
+		"Ta bom. Pra comeï¿½ar escreva >> start << .\n";
 	std::string input = inputcheck(0);
 	while (input != "start") {
 		std::cout << "o fato de voce errar antes mesmo de ter um tutorial... \ntalvez diveria fazer um dificuldade so pra vc chamada difilcadade: Jornalista.\n";
@@ -44,13 +44,13 @@ int main()
 		<< "|                             |\n"
 		<< "_______________________________\n";
 
-	std::cout << "Dm: Ta eu sei que avancei rapidamente nem começa uma vila mas vamo acelerar...\n" <<
+	std::cout << "Dm: Ta eu sei que avancei rapidamente nem comeï¿½a uma vila mas vamo acelerar...\n" <<
 		"se nao vou perder a vontadade de continuar esse projeto\n";
 
 	while ( input != "Erro:404") {
 		std::cout << "escolha uma classe (c++kkk) entre: \n"
 			<< "1- Gurreiro ( status normal tipo vc)\n"
-			<< "2- Mago (vc é merda pq to com preguiça de fazer muita magia)\n"
+			<< "2- Mago (vc ï¿½ merda pq to com preguiï¿½a de fazer muita magia)\n"
 			<< "3- cavaleiro pesado (muita vida)\n"
 			<< "4- louco(nem tente so final)\n";
 		input = inputcheck(4);

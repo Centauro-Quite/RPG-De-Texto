@@ -1,5 +1,18 @@
 #include "inventario.h"
+#include <iostream>
+#include <array>
 
-inventario::inventario()
+inventario::inventario(Itens Arma, Itens Armadura, Itens acessorio)
+{
+    
+}
+
+
+
+
+
+
+
+void inventario::ChecarMochila()
 {
 }

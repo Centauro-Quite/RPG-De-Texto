@@ -1,13 +1,23 @@
 #pragma once
+#include "Itens.h"
+#include <vector>
 class inventario
 {
 private:
-	int Espaço_Mochila[10] = { -1 };
-	int EspaçoMax = { 3 };
-
-
+	int EspacoMax = { 3 };
+	std::vector <Itens> Mochila = { Itens::Nada, Itens::Nada, Itens::Nada};
+	int flechas = 10;
+	Itens Arma;
+	Itens Armadura;
+	Itens acessorio = Itens::Nada;
 public:
-	inventario();
+	inventario(Itens Arma ,Itens Armadura, Itens acessorio );
+	void Usar(Itens);
+	void Equipar();
+	void ChecarMochila();
+
+protected:
+	Itens Adionar_Itens();
 
 };
 
