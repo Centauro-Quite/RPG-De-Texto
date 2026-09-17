@@ -2,10 +2,9 @@
 class Base
 {
 private:
-	int HP, MP, ATK, DF, INT, LUK, LV, XP, MAXHP, MAXMP = { 0 };
-	int LVstatusBonus = 5;
+	int HPS, MPS, ATKS, DFS, INTS, LUKS, LV, XP, MAXHP, MAXMP, CurHP, CurMP = { 0 };
 public:
-	Base(int HP, int MP, int ATK, int DF, int INT, int LUK, int LV);
+	Base(int HPS, int MPS, int ATKS, int DFS, int INTS, int LUKS, int LV);
 	virtual ~Base();
 	virtual void ListaDeAtaques() = 0;
 	virtual int ReceberDano(int dano) = 0;

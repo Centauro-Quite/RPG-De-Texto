@@ -1,0 +1,12 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\frlr1\\onedrive\\documents\\github\\rpg-de-texto\\rpg de treino\\rpg de treino\\base.cpp",
+        "ProvidedModule": "",
+        "Includes": [
+            "c:\\users\\frlr1\\onedrive\\documents\\github\\rpg-de-texto\\rpg de treino\\rpg de treino\\base.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
