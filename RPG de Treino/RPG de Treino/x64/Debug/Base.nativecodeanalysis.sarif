@@ -1,0 +1,74 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "results": [
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "Variable 'Base::CurHP' is uninitialized. Always initialize a member variable (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/centauroq/Documents/Eu Proprio fiz/RPG de Treino/RPG de Treino/Base.cpp"
+                },
+                "region": {
+                  "startLine": 3,
+                  "startColumn": 7
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Base::{ctor}",
+                  "decoratedName": "??0Base@@QEAA@HHHHHHH@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "Base::CurHP"
+          }
+        }
+      ],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis",
+          "version": "14.38.33145.0",
+          "informationUri": "https://aka.ms/cpp/ca"
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///C:/Users/centauroq/Documents/Eu Proprio fiz/RPG de Treino/RPG de Treino/Base.cpp"
+          },
+          "roles": [
+            "analysisTarget",
+            "resultFile"
+          ],
+          "hashes": {
+            "sha-256": "04f2f1c84a4e6e62324bc066906f4c9eec3674baf6eb6de9bbe549a580b46e97"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/centauroq/documents/eu proprio fiz/rpg de treino/rpg de treino/base.h"
+          },
+          "hashes": {
+            "sha-256": "a8921598951a26a98fcb25c676fd66d2077f67ce2dda15c9af8a63d6f628d40c"
+          }
+        }
+      ]
+    }
+  ]
+}

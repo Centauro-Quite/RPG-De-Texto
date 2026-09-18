@@ -3,8 +3,8 @@
 #include <fstream>
 #include <cstdlib>
 #include <cctype>
-
 #include "Gurreiro.h"
+
 
 std::string inputcheck() {
 	std::string input;
@@ -28,7 +28,7 @@ int main()
 		std::cout << "o fato de voce errar antes mesmo de ter um tutorial... \ntalvez diveria fazer um dificuldade so pra vc chamada difilcadade: Jornalista.\n";
 		input = inputcheck();
 	}
-	std::cout 
+	std::cout
 		<< "_______________________________\n"
 		<< "|                             |\n"
 		<< "|     Bem vindo a Dungeon     |\n"
@@ -37,7 +37,7 @@ int main()
 
 	std::cout << "Dm: Ta eu sei que avancei rapidamente nem come�a uma vila mas vamo acelerar...\n" <<
 		"se nao vou perder a vontadade de continuar esse projeto\n";
-		std::cout << "escolha uma classe (c++kkk) entre: \n"
+	std::cout << "escolha uma classe (c++kkk) entre: \n"
 		<< "1- Gurreiro ( status normal tipo vc)\n"
 		<< "2- Mago (vc � merda pq to com pregui�a de fazer muita magia)\n"
 		<< "3- cavaleiro pesado (muita vida)\n"
@@ -45,20 +45,16 @@ int main()
 	input = inputcheck();
 	int x = std::atoi(input.c_str());
 
-	while (x < 0 || x > 4 ) {
+	while (x < 0 || x > 4) {
 		std::cout << "error tente novamente";
 		input = inputcheck();
 		int x = std::atoi(input.c_str());
-		
-		
 	}
-	if ( x == 1) {
-		Gurreiro Player(10,10,10,5,10,1,1);
+	if (x == 1) {
+		Gurreiro Player(10, 10, 10, 5, 10, 1, 1);
 		Player.checarMochiila();
-		
 	}
-
-
-
+	
 }
+
 

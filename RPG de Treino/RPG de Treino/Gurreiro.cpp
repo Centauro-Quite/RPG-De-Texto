@@ -1,13 +1,33 @@
 #include "Gurreiro.h"
 #include "inventario.h"
+#include <string>
+#include <iostream>
 
-Gurreiro::Gurreiro(int HP, int MP, int ATK, int DF, int INT, int LUK, int LV) : Base(HP, MP, ATK, DF, INT, LUK, LV),
-Mochila(Itens::Espada_Inicial, Itens::Armadura_Inicial, Itens::Anel_Iniciante)
+
+Gurreiro::Gurreiro(int HPS, int MPS, int ATKS, int DFS, int INTS, int LUKS, int LV) :
+	Base(HPS, MPS, ATKS, DFS, INTS, LUKS, LV),
+	Mochila(Itens::Espada_Inicial, Itens::Armadura_Inicial, Itens::Anel_Iniciante)
 {
+	
+}
+void Gurreiro::ChecarMochila()
+{
+	Mochila.ChecarMochila();
 }
 
-void Gurreiro::ListaDeAtaques() {
-	// Implementar lista de ataques do guerreiro
+
+
+
+void Gurreiro::ListaDeAtaques(bool Combate) {
+	if (Combate == true) {
+		std::cout << "escolha um dos golpes";
+	}
+
+	for (const auto& [id, ataque] : ListadeAtaqueMap ) {
+		std::cout << id << ": " << ataque.Nome << "\n";
+		std:: 
+
+	}
 }
 
 void Gurreiro::checarMochiila() {
@@ -21,4 +41,7 @@ int Gurreiro::ReceberDano(int dano)
 	return dano;
 }
 
-
+int Base::SubirLV()
+{
+	return 0;
+}

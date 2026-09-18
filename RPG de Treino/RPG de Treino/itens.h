@@ -13,7 +13,7 @@ enum class Itens
 	// Itens comums
 	Pocao = 1,
 	Maca,
-	Armadura_LA,
+	Armadura_La,
 	Espada_Cobre,
 	Arco_Madeira,
 	// Itens Raro

@@ -1,15 +1,21 @@
 #include "Base.h"
 
-Base::Base(int HP, int MP, int ATK, int DF, int INT, int LUK, int LV) : HPS(HP), MPS(MP), ATKS(ATK), DFS(DF), INTS(INT), LUKS(LUK), LV(LV), XP(0){
-
-	MAXHP = 5 * HP;
-	MAXMP = 5 * MP;
+Base::Base(int HPS, int MPS, int ATKS, int DFS, int INTS, int LUKS, int LV) : HPS(HPS), MPS(MPS), ATKS(ATKS), DFS(DFS), INTS(INTS), LUKS(LUKS), LV(LV), XP(0), CurHP(0), CurMP(0), CURATK (0), CurDF(0){
+	MAXHP = 5 * HPS;
+	MAXMP = 5 * MPS;
+	CURATK = 5 * ATKS;
+	CurDF = 5 * DFS;
+	CurHP = MAXHP;
+	CurMP = MAXMP;
+	ListadeAtaqueMap [0] = Ataques{ "Ataque Basico", 3, 0 };
+	
 }
 Base::~Base()
 {
 }
 
 
-void Base::ListaDeAtaques()  {
+void Base::ListaDeAtaques(bool combate) {
 
- }
+}
+

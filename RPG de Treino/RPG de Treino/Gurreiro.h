@@ -3,16 +3,15 @@
 #include "inventario.h"
 
 
-class Gurreiro : public Base 
+
+class Gurreiro : public Base
 {
 private:
-	inventario Mochila{ Itens::Espada_Inicial, Itens::Armadura_Inicial, Itens::Anel_Iniciante };
+	inventario Mochila;
 public:
-	Gurreiro(int HP, int MP, int ATK, int DF, int INT, int LUK, int LV);
-	void checarMochiila();
-	void ListaDeAtaques() override;
+	Gurreiro(int HPS, int MPS, int ATKS, int DFS, int INTS, int LUKS, int LV);
+	void ChecarMochila();
+	void ListaDeAtaques(bool combate) override;
 	int ReceberDano(int dano) override;
-
+	void checarMochiila();
 };
-
-
