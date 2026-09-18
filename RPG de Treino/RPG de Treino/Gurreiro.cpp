@@ -25,7 +25,6 @@ void Gurreiro::ListaDeAtaques(bool Combate) {
 
 	for (const auto& [id, ataque] : ListadeAtaqueMap ) {
 		std::cout << id << ": " << ataque.Nome << "\n";
-		std:: 
 
 	}
 }

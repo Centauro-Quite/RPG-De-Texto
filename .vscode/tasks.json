@@ -2,17 +2,21 @@
     "tasks": [
         {
             "type": "cppbuild",
-            "label": "C/C++: g++.exe build active file",
+            "label": "Compilar RPG de Treino",
             "command": "c:\\Users\\User\\mingw64\\bin\\g++.exe",
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
-                "${file}",
+                "-std=c++17",
+                "${workspaceFolder}\\RPG de Treino\\RPG de Treino\\RPG de Treino.cpp",
+                "${workspaceFolder}\\RPG de Treino\\RPG de Treino\\Base.cpp",
+                "${workspaceFolder}\\RPG de Treino\\RPG de Treino\\Gurreiro.cpp",
+                "${workspaceFolder}\\RPG de Treino\\RPG de Treino\\inventario.cpp",
                 "-o",
-                "${fileDirname}\\${fileBasenameNoExtension}.exe"
+                "${workspaceFolder}\\RPG de Treino\\RPG de Treino\\RPG de Treino-vscode.exe"
             ],
             "options": {
-                "cwd": "c:\\Users\\User\\mingw64\\bin"
+                "cwd": "${workspaceFolder}"
             },
             "problemMatcher": [
                 "$gcc"
