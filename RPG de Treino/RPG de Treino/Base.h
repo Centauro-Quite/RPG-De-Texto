@@ -23,7 +23,7 @@ public:
 
     virtual void ListaDeAtaques(bool combate) = 0;
     virtual int ReceberDano(int dano) = 0;
-    virtual int SubirLV();
+    void SubirLV();
 
 };
 
