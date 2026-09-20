@@ -21,12 +21,13 @@ void Base::ListaDeAtaques(bool combate) {
 }
 
 
-void Base::SubirLV(int xp){
+void Base::ChecarLV(int xp){
 //XP =+ xp;
-//if (XP >= MAXxp){
+//if (XP >= MaxXP){
 //LV++
 //XP =0;
 //XPMax = LV * 2;
+//SubirLV();
 //}
 
 
