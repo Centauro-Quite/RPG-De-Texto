@@ -13,7 +13,7 @@ protected:
     };
     std::map<int, Ataques> ListadeAtaqueMap;
 private:
-    int HPS, MPS, ATKS, DFS, INTS, LUKS, LV, XP, MAXHP, MAXMP, CurHP, CurMP, CURATK, CurDF = { 0 };
+    int HPS, MPS, ATKS, DFS, INTS, LUKS, LV, XP, MAXHP, MAXMP, CurHP, CurMP, CURATK, CurDF, MaxXP = { 0 };
 
   
 public:
