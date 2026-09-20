@@ -20,5 +20,6 @@ void Base::ListaDeAtaques(bool combate) {
 }
 
 void Base::SubirLV(int xp){
-
+ XP = xp;
+ 
 }
