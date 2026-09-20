@@ -30,6 +30,8 @@ void Base::ChecarLV(int xp){
 //SubirLV();
 //}
 
+//void SubirLV(){
+
 
 
 
