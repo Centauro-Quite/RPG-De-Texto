@@ -1,5 +1,5 @@
 #pragma once
-
+#include <string>
 enum class Itens
 {
 	// itens iniante
@@ -25,13 +25,146 @@ enum class Itens
 
 
 };
-enum class raridade {
+enum class Raridade {
 	iniciante, comum, raro, lendario,
 };
 struct Coisas {
-	Itens coisas;
-	raridade itemraridade;
+	Itens item;
+	Raridade raridade;
+	std::string Name;
 	int Atk;
-	int custo;
+	bool Usavel;
 
 };
+static Coisas Flecha{
+	Itens::Flecha,
+	Raridade::iniciante,
+	"Flecha",
+	0,
+	true,
+};
+
+static Coisas Anel_Iniciante{
+	Itens::Anel_Iniciante,
+	Raridade::iniciante,
+	"Anel Iniciante",
+	10,
+	false,
+};
+
+static Coisas Arco_Iniciante{
+	Itens::Arco_Iniciante,
+	Raridade::iniciante,
+	"Arco Iniciante",
+	5,
+	false,
+};
+
+static Coisas Armadura_Inicial{
+	Itens::Armadura_Inicial,
+	Raridade::iniciante,
+	"Armadura Inicial",
+	5,
+	false,
+};
+
+static Coisas Espada_Inicial{
+	Itens::Espada_Inicial,
+	Raridade::iniciante,
+	"Espada Inicial",
+	5,
+	false,
+};
+
+static Coisas NadaItem{
+	Itens::Nada,
+	Raridade::iniciante,
+	"Nada",
+	0,
+	false,
+};
+
+// Itens comuns
+static Coisas Pocao{
+	Itens::Pocao,
+	Raridade::comum,
+	"Pocao",
+
+	15,
+	true,
+};
+
+static Coisas Maca{
+	Itens::Maca,
+	Raridade::comum,
+	"Maca",
+	3,
+	true,
+};
+
+static Coisas Armadura_La_Item{
+	Itens::Armadura_La,
+	Raridade::comum,
+	"Armadura de La",
+	20,
+	false,
+};
+
+static Coisas Espada_Cobre_Item{
+	Itens::Espada_Cobre,
+	Raridade::comum,
+	"Espada de Cobre",
+	25,
+	false,
+};
+
+static Coisas Arco_Madeira_Item{
+	Itens::Arco_Madeira,
+	Raridade::comum,
+	"Arco de Madeira",
+	15,
+	false,
+};
+
+// Itens raros
+static Coisas Espada_Duas_Maos_Item{
+	Itens::Espada_Duas_Maos,
+	Raridade::raro,
+	"Espada de Duas Maos",
+	
+	100,
+	false,
+};
+
+static Coisas Espada_Ferro_Item{
+	Itens::Espada_Ferro,
+	Raridade::raro,
+	"Espada de Ferro",
+	60,
+	false,
+};
+
+static Coisas Armadura_Ferro_Item{
+	Itens::Armadura_Ferro,
+	Raridade::raro,
+	"Armadura de Ferro",
+	80,
+	false,
+};
+
+static Coisas Maca_Coragem_Item{
+	Itens::Maca_Coragem,
+	Raridade::raro,
+	"Maca da Coragem",
+	65,
+	false,
+};
+
+static Coisas Pocao_Pureza_Item{
+	Itens::Pocao_Pureza,
+	Raridade::raro,
+	"Pocao da Pureza",
+	120,
+	true,
+};
+

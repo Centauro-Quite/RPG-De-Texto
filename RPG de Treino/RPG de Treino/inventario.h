@@ -6,20 +6,25 @@ class inventario
 {
 private:
 	int EspacoMax = { 4 };
-	std::vector <Itens> Mochila = { Itens::Nada, Itens::Nada, Itens::Nada, Itens::Nada};
+	int quantidade = 0;
+	Coisas Arma;
+	Coisas Armadura;
+	Coisas Acessorio;
+
+
+
+	std::vector < Coisas > Mochila = { Arma , Armadura, Acessorio };
 	int flechas = 10;
-	Itens Arma;
-	Itens Armadura;
-	Itens Acessorio;
-	
+
+	 
 public:
-	inventario(Itens Arma ,Itens Armadura, Itens Acessorio );
+	inventario(Coisas Arma, Coisas Armadura, Coisas Acessorio);
 
 	void Usar(Itens);
 	void Equipar();
 	
 	void ChecarMochila();
-	std::string ConverterEnuminString(Itens);
+	
 
 protected:
 	Itens Adionar_Itens();

@@ -1,7 +1,7 @@
 #pragma once
 #include <map>
 #include <string>
-
+#include "inventario.h"
 class Base
 {
 protected:
@@ -12,9 +12,12 @@ protected:
         int dano = 0;
         int mana = 0;
     };
+    struct Status {
+        int HPS, MPS, ATKS, DFS, INTS, LUKS, LV, XP, MaxHP, MaxMP, CurHP, CurMP, CurATK, CurDF, MaxXP;
+    };
     std::map <int, Ataques> ListadeAtaqueMap;
 private:
-    int HPS, MPS, ATKS, DFS, INTS, LUKS, LV, XP, MaxHP, MaxMP, CurHP, CurMP, CurATK, CurDF, MaxXP = { 0 };
+    Status Base = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
     void Morte();
 public:
 

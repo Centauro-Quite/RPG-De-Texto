@@ -1,0 +1,185 @@
+﻿#pragma once
+#include <string>
+enum class Itens
+{
+	// itens iniante
+
+	Flecha = -5,
+	Anel_Iniciante = -4,
+	Arco_Iniciante = -3,
+	Armadura_Inicial = -2,
+	Espada_Inicial = -1,
+	Nada = 0,
+	// Itens comums
+	Pocao = 1,
+	Maca,
+	Armadura_La,
+	Espada_Cobre,
+	Arco_Madeira,
+	// Itens Raro
+	Espada_Duas_Maos,
+	Espada_Ferro,
+	Armadura_Ferro,
+	Maca_Coragem,
+	Pocao_Pureza,
+
+
+};
+enum class Raridade {
+	iniciante, comum, raro, lendario,
+};
+struct Coisas {
+	Itens item;
+	Raridade raridade;
+	std::string Name;
+	int Atk;
+	int custo;
+	bool Usavel;
+
+};
+Coisas Flecha{
+	Itens::Flecha,
+	Raridade::iniciante,
+	"Flecha",
+	0,
+	0,
+	true,
+};
+
+Coisas Anel_Iniciante{
+	Itens::Anel_Iniciante,
+	Raridade::iniciante,
+	"Anel Iniciante",
+	0,
+	10,
+	false,
+};
+
+Coisas Arco_Iniciante{
+	Itens::Arco_Iniciante,
+	Raridade::iniciante,
+	"Arco Iniciante",
+	2,
+	5,
+	false,
+};
+
+Coisas Armadura_Inicial{
+	Itens::Armadura_Inicial,
+	Raridade::iniciante,
+	"Armadura Inicial",
+	0,
+	5,
+	false,
+};
+
+Coisas Espada_Inicial{
+	Itens::Espada_Inicial,
+	Raridade::iniciante,
+	"Espada Inicial",
+	3,
+	5,
+	false,
+};
+
+Coisas NadaItem{
+	Itens::Nada,
+	Raridade::iniciante,
+	"Nada",
+	0,
+	0,
+	false,
+};
+
+// Itens comuns
+Coisas Pocao{
+	Itens::Pocao,
+	Raridade::comum,
+	"Po\xc3\xa7\xc3\xa3o",
+	0,
+	15,
+	true,
+};
+
+Coisas Maca{
+	Itens::Maca,
+	Raridade::comum,
+	"Ma\xc3\xa7\xc3\xa3",
+	0,
+	3,
+	true,
+};
+
+Coisas Armadura_La_Item{
+	Itens::Armadura_La,
+	Raridade::comum,
+	"Armadura de L\xc3\xa3",
+	0,
+	20,
+	false,
+};
+
+Coisas Espada_Cobre_Item{
+	Itens::Espada_Cobre,
+	Raridade::comum,
+	"Espada de Cobre",
+	6,
+	25,
+	false,
+};
+
+Coisas Arco_Madeira_Item{
+	Itens::Arco_Madeira,
+	Raridade::comum,
+	"Arco de Madeira",
+	4,
+	15,
+	false,
+};
+
+// Itens raros
+Coisas Espada_Duas_Maos_Item{
+	Itens::Espada_Duas_Maos,
+	Raridade::raro,
+	"Espada de Duas Maos",
+	12,
+	100,
+	false,
+};
+
+Coisas Espada_Ferro_Item{
+	Itens::Espada_Ferro,
+	Raridade::raro,
+	"Espada de Ferro",
+	9,
+	60,
+	false,
+};
+
+Coisas Armadura_Ferro_Item{
+	Itens::Armadura_Ferro,
+	Raridade::raro,
+	"Armadura de Ferro",
+	0,
+	80,
+	false,
+};
+
+Coisas Maca_Coragem_Item{
+	Itens::Maca_Coragem,
+	Raridade::raro,
+	"Ma\xc3\xa7a  da Coragem",
+	8,
+	65,
+	false,
+};
+
+Coisas Pocao_Pureza_Item{
+	Itens::Pocao_Pureza,
+	Raridade::raro,
+	"Po\xc3\xa7\xc3\xa3o da Pureza",
+	0,
+	120,
+	true,
+};
+

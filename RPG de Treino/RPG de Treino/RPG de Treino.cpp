@@ -21,7 +21,8 @@ std::string inputcheck() {
 int main()
 {
 	Gurreiro Player(1,1,1,0,1,1,1);
-	Player.checarLV(10) ;
+	Player.ChecarMochila();
+
 	
 
 
@@ -61,7 +62,8 @@ int main()
 	}
 	if (x == 1) {
 		Gurreiro Player(10, 10, 10, 5, 10, 1, 1);
-		Player.ChecarMochila();
+		
+
 	}
 	
 

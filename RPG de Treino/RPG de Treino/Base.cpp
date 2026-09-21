@@ -52,6 +52,7 @@ int Base::ListaDeAtaques(const bool Combate) {
 			std::cout << "essas sao opcoes de ataque";
 		}
 	}
+	return 0;
 }
 
 void Base::ReceberDano(int dano) {

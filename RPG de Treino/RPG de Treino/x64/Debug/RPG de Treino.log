@@ -1,3 +1,2 @@
-﻿  Base.cpp
-C:\Users\centauroq\Documents\Eu Proprio fiz\RPG de Treino\RPG de Treino\Base.cpp(55): warning C4715: 'Base::ListaDeAtaques': not all control paths return a value
-  RPG de Treino.vcxproj -> C:\Users\centauroq\Documents\Eu Proprio fiz\RPG de Treino\x64\Debug\RPG de Treino.exe
+﻿  RPG de Treino.cpp
+  RPG de Treino.vcxproj -> C:\Users\frlr1\OneDrive\Documents\GitHub\RPG-De-Texto\RPG de Treino\x64\Debug\RPG de Treino.exe
