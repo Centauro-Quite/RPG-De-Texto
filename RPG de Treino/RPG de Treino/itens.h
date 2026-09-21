@@ -6,7 +6,7 @@ enum class Itens
 
 	Flecha = -5,
 	Anel_Iniciante = -4,
-	Arco = -3,
+	Arco_Iniciante = -3,
 	Armadura_Inicial = -2,
 	Espada_Inicial = -1,
 	Nada = 0,
@@ -23,5 +23,15 @@ enum class Itens
 	Maca_Coragem,
 	Pocao_Pureza,
 
+
+};
+enum class raridade {
+	iniciante, comum, raro, lendario,
+};
+struct Coisas {
+	Itens coisas;
+	raridade itemraridade;
+	int Atk;
+	int custo;
 
 };

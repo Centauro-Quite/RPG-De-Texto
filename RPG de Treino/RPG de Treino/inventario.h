@@ -5,7 +5,7 @@
 class inventario
 {
 private:
-	int EspacoMax = { 3 };
+	int EspacoMax = { 4 };
 	std::vector <Itens> Mochila = { Itens::Nada, Itens::Nada, Itens::Nada, Itens::Nada};
 	int flechas = 10;
 	Itens Arma;
@@ -14,6 +14,7 @@ private:
 	
 public:
 	inventario(Itens Arma ,Itens Armadura, Itens Acessorio );
+
 	void Usar(Itens);
 	void Equipar();
 	

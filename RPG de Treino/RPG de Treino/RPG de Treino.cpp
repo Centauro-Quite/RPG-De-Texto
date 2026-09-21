@@ -5,6 +5,7 @@
 #include <cctype>
 #include "Gurreiro.h"
 
+#define Log(x) (std::cout << x << '\n')
 
 std::string inputcheck() {
 	std::string input;
@@ -19,6 +20,14 @@ std::string inputcheck() {
 
 int main()
 {
+	Gurreiro Player(1,1,1,0,1,1,1);
+	Player.checarLV(10) ;
+	
+
+
+	std::cin.get();
+	return 0;
+
 	std::cout << "Ola bem vindo ao RPG de Textos (infelimente n�o tenho dinheiro pra fazer 3D e to preso nesse terminal)\n\n"
 		<< "Eu serei seu DM controlando usando mecanicas aletorias afinal aida nao sou capaz de invadir seu pc \n" <<
 		"tava so brincando a minha conciencia foi traformada em numeros isso seria estupido  \n\n" <<
@@ -52,9 +61,12 @@ int main()
 	}
 	if (x == 1) {
 		Gurreiro Player(10, 10, 10, 5, 10, 1, 1);
-		Player.checarMochiila();
+		Player.ChecarMochila();
 	}
 	
+
+
+
 }
 
 

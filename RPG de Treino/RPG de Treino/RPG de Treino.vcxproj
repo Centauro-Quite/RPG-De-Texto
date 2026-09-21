@@ -126,12 +126,14 @@
   <ItemGroup>
     <ClCompile Include="Base.cpp" />
     <ClCompile Include="Gurreiro.cpp" />
+    <ClCompile Include="InimigosBase.cpp" />
     <ClCompile Include="inventario.cpp" />
     <ClCompile Include="RPG de Treino.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Base.h" />
     <ClInclude Include="Gurreiro.h" />
+    <ClInclude Include="InimigosBase.h" />
     <ClInclude Include="inventario.h" />
     <ClInclude Include="itens.h" />
   </ItemGroup>
