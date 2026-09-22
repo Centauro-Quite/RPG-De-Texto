@@ -1,6 +1,7 @@
 #include "InimigosBase.h"
 
-InimigosBase::InimigosBase(int HP, int ATK, int DF, int LUK, int LV) : HP(HP), ATK(ATK), DF(DF), LUK(LUK), LV(LV), MaxHP(HP), CurHP(MaxHP)
+InimigosBase::InimigosBase(int HP, int ATK, int DF, int LUK, int LV) : HP(HP), ATK(ATK), DF(DF), LUK(LUK), LV(LV), MaxHP(HP), CurHP(HP
+)
 {
 
 }
@@ -11,9 +12,11 @@ InimigosBase::~InimigosBase()
 }
 void InimigosBase::ReceberDano( const int Dano)
 {
-	HP = Dano - DF;
+	CurHP -= Dano - DF;
+	if (CurHP < 0)
+		CurHP = 0;
 }
 int InimigosBase::CausarDano() const {
 
-	return 0;
+	return ATK;
 }

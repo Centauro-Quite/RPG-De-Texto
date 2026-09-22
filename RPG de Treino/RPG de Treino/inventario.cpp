@@ -28,6 +28,5 @@ void inventario::ChecarMochila()
     }
 }
 void inventario::Usar() {
-
+    
 }
-
