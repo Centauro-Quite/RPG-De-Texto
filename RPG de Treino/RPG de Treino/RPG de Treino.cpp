@@ -61,12 +61,11 @@ int main()
 		input = inputcheck();
 		int x = std::atoi(input.c_str());
 	}
+	static int HP,MP,ATK,DF,INT,LUK,LV;
 	if (x == 1) {
-		Gurreiro Player(10, 10, 10, 5, 10, 1, 1);
-		
-
+		Gurreiro Player(HP = 10, MP = 10, ATK = 10, DF = 5, INT = 10, LUK = 1, LV = 1);
 	}
-	
+	input = inputcheck();
 
 
 

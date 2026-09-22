@@ -9,7 +9,7 @@ INTS(INTS),LUKS(LUKS),LV(LV), XP(0), CurHP(0), CurMP(0), CurATK(0), CurDF(0), Ma
 	CurDF = 5 * DFS;
 	CurHP = MaxHP;
 	CurMP = MaxMP;
-	MaxXP = LV * 2;
+	MaxXP = LV < 1 ? 10 : LV * 2;
 	ListadeAtaqueMap[1] = Ataques{ "Ataque Basico", 3, 0 };
 	name = "erro base foi escolhida";
 
@@ -27,7 +27,7 @@ void const Base::StatusTela() const {
 		MaxHP << '\n' << "MP:" << CurMP << "/" << MaxMP << '\n' << "Dps:" << CurATK
 		<< '\n' << "XP:" << XP << "/" << MaxXP << '\n'<< "DFatual:" << CurDF 
 		<< "\n\n" ;
-	std::cout << "HP:" << HPS << "  MP:" << MPS << "   DF:" << DFS << "\nINT:" <<
+	std::cout << "HP:" << HPS << "  MP:" << MPS << "   DF:" << DFS << "  INT:" <<
 		INTS << "   LUK:" << LUKS << "\n\n";
 }
 
