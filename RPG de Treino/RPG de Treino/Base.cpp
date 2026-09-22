@@ -1,7 +1,8 @@
 #include "Base.h"
 #include <iostream>
 
-Base::Base( int HPS, int MPS, int ATKS, int DFS, int INTS, int LUKS, int LV) :HPS(HPS),MPS(MPS),ATKS(ATKS),DFS(DFS),INTS(INTS),LUKS(LUKS),LV(LV), XP(0), CurHP(0), CurMP(0), CurATK(0), CurDF(0), MaxXP(10) {
+Base::Base( int HPS, int MPS, int ATKS, int DFS, int INTS, int LUKS, int LV) :HPS(HPS),MPS(MPS),ATKS(ATKS),DFS(DFS),
+INTS(INTS),LUKS(LUKS),LV(LV), XP(0), CurHP(0), CurMP(0), CurATK(0), CurDF(0), MaxXP(10), name("erro base foi escolhida") {
 	MaxHP = 5 * HPS;
 	MaxMP = 5 * MPS;
 	CurATK = 5 * ATKS;
@@ -21,7 +22,7 @@ Base::Base( int HPS, int MPS, int ATKS, int DFS, int INTS, int LUKS, int LV) :HP
 Base::~Base()
 {
 }
-void Base::StatusTela() {
+void const Base::StatusTela() const {
 	std::cout << "Status de " << name << ":\n" << "HP:" << CurHP << "/" <<
 		MaxHP << '\n' << "MP:" << CurMP << "/" << MaxMP << '\n' << "Dps:" << CurATK
 		<< '\n' << "XP:" << XP << "/" << MaxXP << '\n'<< "DFatual:" << CurDF 

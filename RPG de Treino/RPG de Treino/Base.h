@@ -21,7 +21,7 @@ public:
 
     Base(int HPS, int MPS, int ATKS, int DFS, int INTS, int LUKS, int LV);
     virtual ~Base();
-    void StatusTela();
+    void const StatusTela() const;
     int GetATK()const;
     int causardano (const int ataque)const;
     virtual int ListaDeAtaques(const bool combate);
