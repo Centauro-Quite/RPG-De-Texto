@@ -5,7 +5,7 @@
 class inventario
 {
 private:
-	int EspacoMax = { 4 };
+	int EspacoMax = {4};
 	int quantidade = 0;
 	Coisas Arma;
 	Coisas Armadura;
@@ -20,7 +20,7 @@ private:
 public:
 	inventario(Coisas Arma, Coisas Armadura, Coisas Acessorio);
 
-	void Usar(Itens);
+	void Usar();
 	void Equipar();
 	
 	void ChecarMochila();

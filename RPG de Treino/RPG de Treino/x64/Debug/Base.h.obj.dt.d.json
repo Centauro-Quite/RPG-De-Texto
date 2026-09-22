@@ -95,7 +95,10 @@
             "c:\\program files\\microsoft visual studio\\18\\community\\vc\\tools\\msvc\\14.37.32822\\include\\iosfwd",
             "c:\\program files\\microsoft visual studio\\18\\community\\vc\\tools\\msvc\\14.37.32822\\include\\__msvc_sanitizer_annotate_container.hpp",
             "c:\\program files\\microsoft visual studio\\18\\community\\vc\\tools\\msvc\\14.37.32822\\include\\cctype",
-            "c:\\program files (x86)\\windows kits\\10\\include\\10.0.26100.0\\ucrt\\ctype.h"
+            "c:\\program files (x86)\\windows kits\\10\\include\\10.0.26100.0\\ucrt\\ctype.h",
+            "c:\\users\\frlr1\\onedrive\\documents\\github\\rpg-de-texto\\rpg de treino\\rpg de treino\\inventario.h",
+            "c:\\users\\frlr1\\onedrive\\documents\\github\\rpg-de-texto\\rpg de treino\\rpg de treino\\itens.h",
+            "c:\\program files\\microsoft visual studio\\18\\community\\vc\\tools\\msvc\\14.37.32822\\include\\vector"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

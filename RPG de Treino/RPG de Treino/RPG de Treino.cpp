@@ -20,8 +20,9 @@ std::string inputcheck() {
 
 int main()
 {
-	Gurreiro Player(1,1,1,0,1,1,1);
+	Gurreiro Player(1,1,1,1,1,1,1);
 	Player.ChecarMochila();
+	Player.StatusTela();
 
 	
 

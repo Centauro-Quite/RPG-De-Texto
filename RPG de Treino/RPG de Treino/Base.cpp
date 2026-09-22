@@ -1,21 +1,35 @@
 #include "Base.h"
 #include <iostream>
 
-Base::Base(int HPS, int MPS, int ATKS, int DFS, int INTS, int LUKS, int LV) : HPS(HPS), MPS(MPS), ATKS(ATKS), DFS(DFS), INTS(INTS),
-LUKS(LUKS), LV(LV), XP(0), CurHP(0), CurMP(0), CurATK(0), CurDF(0), MaxXP(10)  {
-		MaxHP = 5 * HPS;
-		MaxMP = 5 * MPS;
-		CurATK = 5 * ATKS;
-		CurDF = 5 * DFS;
-		CurHP = MaxHP;
-		CurMP = MaxMP;
-		MaxXP = LV * 2;
-		ListadeAtaqueMap[1] = Ataques{ "Ataque Basico", 3, 0 };
+Base::Base( int HPS, int MPS, int ATKS, int DFS, int INTS, int LUKS, int LV) :HPS(HPS),MPS(MPS),ATKS(ATKS),DFS(DFS),INTS(INTS),LUKS(LUKS),LV(LV), XP(0), CurHP(0), CurMP(0), CurATK(0), CurDF(0), MaxXP(10) {
+	MaxHP = 5 * HPS;
+	MaxMP = 5 * MPS;
+	CurATK = 5 * ATKS;
+	CurDF = 5 * DFS;
+	CurHP = MaxHP;
+	CurMP = MaxMP;
+	MaxXP = LV * 2;
+	ListadeAtaqueMap[1] = Ataques{ "Ataque Basico", 3, 0 };
+	name = "erro base foi escolhida";
 
-	}
+	//struct Stutus
+	//{
+	//	int	HPS, MPS, ATKS, DFS, INTS, LUKS, LV, XP, MaxHP, MaxMP, CurHP, CurMP, CurATK, CurDF, MaxXP;
+	//};
+
+}
 Base::~Base()
 {
 }
+void Base::StatusTela() {
+	std::cout << "Status de " << name << ":\n" << "HP:" << CurHP << "/" <<
+		MaxHP << '\n' << "MP:" << CurMP << "/" << MaxMP << '\n' << "Dps:" << CurATK
+		<< '\n' << "XP:" << XP << "/" << MaxXP << '\n'<< "DFatual:" << CurDF 
+		<< "\n\n" ;
+	std::cout << "HP:" << HPS << "  MP:" << MPS << "   DF:" << DFS << "\nINT:" <<
+		INTS << "   LUK:" << LUKS << "\n\n";
+}
+
 int Base::GetATK () const {
 	return CurATK;
 }
@@ -84,7 +98,5 @@ void Base::SubirLV() {
 	//printar Status
 	
 }
-void Base::Status() {
 
-}
   
