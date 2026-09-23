@@ -5,7 +5,8 @@
 #include <cctype>
 #include "Gurreiro.h"
 #include "Combate.h"
-#include "Goblin.h"
+#include "InimigosBase.h"
+
 
 #define Log(x) (std::cout << x << '\n')
 #define testar std::cin.get(); return 0;
@@ -24,8 +25,9 @@ std::string inputcheck() {
 int main()
 {
 	Gurreiro Player(1,1,1,1,1,1,1);
-	goblin inimigo(1,1,1,1,1);
-	Combate (Player, inimigo);
+	InimigosBase inimigo("Goblig",1,1,1,1,1);
+	Combate a (Player, inimigo);
+	a.entrar();
 
 	testar
 
@@ -87,7 +89,8 @@ int main()
 
 		}
 	
-		std::cout << "tchau zé ninguem ola heroi " << z << " vamos logo conquistar essa dugeon;" << "fazendo voece lutar contra um goblin\n";
+		std::cout << "tchau zé ninguem ola heroi " << z << " vamos logo conquistar essa dugeon;"
+			<< "fazendo voce lutar contra um goblin\n";
 		
 	} 
 }

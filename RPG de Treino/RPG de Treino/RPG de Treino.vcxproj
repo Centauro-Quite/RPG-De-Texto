@@ -125,13 +125,16 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Base.cpp" />
+    <ClCompile Include="Combate.cpp" />
     <ClCompile Include="Gurreiro.cpp" />
     <ClCompile Include="InimigosBase.cpp" />
     <ClCompile Include="inventario.cpp" />
     <ClCompile Include="RPG de Treino.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Aletorio.h" />
     <ClInclude Include="Base.h" />
+    <ClInclude Include="Combate.h" />
     <ClInclude Include="Gurreiro.h" />
     <ClInclude Include="InimigosBase.h" />
     <ClInclude Include="inventario.h" />

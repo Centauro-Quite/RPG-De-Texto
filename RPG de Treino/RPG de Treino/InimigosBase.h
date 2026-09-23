@@ -1,21 +1,33 @@
 #pragma once
 #include <string>
+struct StatusInimigos
+{
+	int ATK; int MaxHP;
+	int DF; int LV;
+	std::string Nome;
+	std::string Descricao;
+};
 class InimigosBase
 {
 protected:
 
 private:
+	static int Quantidade;
+	std::string Nome;
 	int HP, ATK, DF, LV, LUK, MaxHP, CurHP;
+	std::string Descricao;
 public:
-	InimigosBase(int HP, int ATK, int DF, int LUK, int LV );
+	InimigosBase();
+	InimigosBase(std::string Nome, int HP, int ATK, int DF, int LUK, int LV );
 	~InimigosBase();
+	std::string GetName();
 	void ReceberDano(const int Dano);
 	int CausarDano() const;
-	int GetHP();
-	int GetAtk();
-	std::string Descricao();
+	int GetHP()const;
+	void setDescricao(std::string x);
+	std::string getDescricao();
 
-
-
+	StatusInimigos Status();
+	
 };
 

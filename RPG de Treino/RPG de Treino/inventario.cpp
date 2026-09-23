@@ -12,6 +12,12 @@ inventario::inventario(Coisas Arma, Coisas Armadura, Coisas Acessorio) : Arma(Ar
     
 }
 
+void inventario::encherInv()
+{
+    
+}
+
+
 
 
 void inventario::ChecarMochila()

@@ -1,0 +1,33 @@
+﻿#include "Combate.h"
+#include "Aleatorio.h"
+
+void turnoJogador() {
+    std::cout << "1- Atacar\n" << "2- Usar equipamento\n" << "3- Checar Mochila\n" << "4- Checar Inimigo\n" <<
+        "5- Checar Status\n" <<" Enquanto estiver em combate voce nao e capaz de sair do jogo mas se escrever 'sair' fara uma tentativa de fuga\n";
+
+}
+
+
+void Combate::turnoInimigo()
+{
+    return;
+}
+
+Combate::Combate(Base& Player, InimigosBase& Inimigo) : Player(Player), Inimigo(Inimigo),statusI(Inimigo.Status()),
+statusP(Player.Status()){
+
+}
+
+void Combate::entrar() {
+    std::cout << "Entrou em combate com:" << '\n' << statusI.Nome << '\n' << "Vamos decidir quem vai começar" << statusP.Nome
+    << " ou " << (statusI.Nome + ".") << "\n";
+    Aleatorio rado;
+    if (rado.Entre(0, 1) == 0) {
+        std::cout << "voce perdeu 50% igual perdi minha Nangong Yu :(\n" << "Turno do inimigo:\n";
+        turnoInimigo();
+    }
+    else {
+        std::cout << "ganhoou o 50% parabens comece primeiro";
+        turnoJogador();
+    }
+}

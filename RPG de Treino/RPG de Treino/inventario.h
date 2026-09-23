@@ -10,16 +10,12 @@ private:
 	Coisas Arma;
 	Coisas Armadura;
 	Coisas Acessorio;
-
-
-
 	std::vector < Coisas > Mochila = { Arma , Armadura, Acessorio };
 	int flechas = 10;
 
-	 
 public:
 	inventario(Coisas Arma, Coisas Armadura, Coisas Acessorio);
-
+	void encherInv();
 	void Usar();
 	void Equipar();
 	

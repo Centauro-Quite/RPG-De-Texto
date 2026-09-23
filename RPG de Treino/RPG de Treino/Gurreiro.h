@@ -7,10 +7,10 @@
 class Gurreiro : public Base
 {
 private:
-	inventario Mochila;
-	std::string name;
+	
+	std::string Nome;
 public:
 	Gurreiro(int HPS, int MPS, int ATKS, int DFS, int INTS, int LUKS, int LV);
-	void ChecarMochila();
+	
 	
 };

@@ -2,9 +2,16 @@
 #include <map>
 #include <string>
 #include "inventario.h"
+struct StatusPlayer
+{
+    int ATK; int MaxHP;
+    int DF; int LV;
+    std::string Nome;
+};
 class Base
 {
 protected:
+    void setMochila();
     struct Ataques
     {
         std::string Nome = "erro";
@@ -14,9 +21,10 @@ protected:
     };
     std::map <int, Ataques> ListadeAtaqueMap;
 private:
+    inventario Mochila;
     int HPS, MPS, ATKS, DFS, INTS, LUKS, LV, XP, MaxHP =10 , MaxMP, CurHP, CurMP, CurATK, CurDF, MaxXP;
     void Morte();
-    std::string name;
+    std::string Nome;
 public:
 
     Base(int HPS, int MPS, int ATKS, int DFS, int INTS, int LUKS, int LV);
@@ -28,6 +36,9 @@ public:
     void ReceberDano(int dano);
     void checarLV(const int xp);
     void SubirLV();
+    StatusPlayer Status();
+    void trocarnome(std::string x);
+    void checarMochila();
     
-};
+};  
 
