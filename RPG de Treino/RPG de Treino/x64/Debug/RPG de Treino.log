@@ -1,1 +1,10 @@
-﻿  RPG de Treino.vcxproj -> C:\Users\User\Documents\GitHub\RPG-De-Texto\RPG de Treino\x64\Debug\RPG de Treino.exe
+﻿  Combate.cpp
+  InimigosBase.cpp
+C:\Users\User\Documents\GitHub\RPG-De-Texto\RPG de Treino\RPG de Treino\Combate.cpp(82,12): error C2660: 'Base::checarLV': função não recebe 0 argumentos
+      C:\Users\User\Documents\GitHub\RPG-De-Texto\RPG de Treino\RPG de Treino\base.h(38,10):
+      consulte a declaração de 'Base::checarLV'
+      C:\Users\User\Documents\GitHub\RPG-De-Texto\RPG de Treino\RPG de Treino\Combate.cpp(82,12):
+      ao tentar corresponder a lista de argumentos '()'
+  
+  RPG de Treino.cpp
+  Gerando Código...

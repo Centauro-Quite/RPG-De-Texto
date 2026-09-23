@@ -79,6 +79,6 @@ void Combate::entrar() {
 void Combate::sair()
 {
 
-    Player.checarLV();
+    //Player.checarLV();
 
 }
