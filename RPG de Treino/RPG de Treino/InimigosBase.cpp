@@ -5,7 +5,9 @@ InimigosBase::InimigosBase(): Nome(""), HP(0), ATK(0), DF(0), LUK(0), LV(0), Max
 	//criar inigimo aletorio
 }
 InimigosBase::InimigosBase(std::string Nome, int HP, int ATK, int DF, int LUK, int LV) : Nome(Nome), HP(HP), ATK(ATK), DF(DF), LUK(LUK),
-LV(LV), MaxHP(HP), CurHP(HP), Descricao("")
+LV(LV), MaxHP(HP), CurHP(HP), Descricao(""
+
+)
 {
 
 }

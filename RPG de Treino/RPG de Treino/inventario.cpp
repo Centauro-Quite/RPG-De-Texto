@@ -12,9 +12,11 @@ inventario::inventario(Coisas Arma, Coisas Armadura, Coisas Acessorio) : Arma(Ar
     
 }
 
-void inventario::encherInv()
+void inventario::encherInv(Coisas item, Coisas item2, Coisas item3)
 {
-    
+	Mochila[0] = item;
+	Mochila[1] = item2;
+	Mochila[2] = item3;
 }
 
 
@@ -24,8 +26,8 @@ void inventario::ChecarMochila()
 {
     std::cout << "___Mochila___\nTamanho da mochila = " << EspacoMax << "\n";
 
-    for (int i = 0; i < (EspacoMax--) ; i++) {
-        if (Mochila[i].item ==  Itens::Nada) {
+    for (int i = 0; i < EspacoMax; i++){
+        if (Mochila[i].item == NadaItem.item) {
             std::cout << (i + 1) << ": Vazio\n ";
         }
         else {

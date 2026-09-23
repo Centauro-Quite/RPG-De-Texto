@@ -28,6 +28,11 @@ void const Base::StatusTela() const {
 		INTS << "   LUK:" << LUKS << "\n\n";
 }
 
+int Base::GetHP() const
+{
+	return CurHP;
+}
+
 int Base::GetATK () const {
 	return CurATK;
 }
@@ -74,9 +79,9 @@ void Base::ReceberDano(int dano) {
 	}
 }
 
-void Base::setMochila()
+void Base::setMochila(Coisas item, Coisas item2, Coisas item3)
 {
-	
+	Mochila.encherInv(item, item2, item3);
 }
 
 void Base::Morte() {

@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\RPG de Treino",
+    "\\RPG de Treino\\RPG de Treino"
   ],
-  "SelectedNode": "\\RPG de Treino.sln",
+  "SelectedNode": "\\RPG de Treino\\RPG de Treino\\Base.cpp",
   "PreviewInSolutionExplorer": false
 }

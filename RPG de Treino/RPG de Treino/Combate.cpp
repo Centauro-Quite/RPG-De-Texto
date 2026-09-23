@@ -1,5 +1,6 @@
 #include "Combate.h"
 #include "Aleatorio.h"
+#include <algorithm>
 
 static bool is_number(const std::string& s)
 {
@@ -19,28 +20,47 @@ statusP(Player.Status()){
 void Combate::turnoJogador() {
     std::cout << "1- Atacar\n" << "2- Usar equipamento\n" << "3- Checar Mochila\n" << "4- Checar Inimigo\n" <<
         "5- Checar Status\n" << " Enquanto estiver em combate voce nao e capaz de sair do jogo mas se escrever 'sair' fara uma tentativa de fuga\n";
-    std::string input; std::cin >> input;
-    if (is_number(input)) {
-        switch (std::stoi(input))
-        {
-        case(1): {
-            Player.ListaDeAtaques(true);
-            break;
-        }
-        case(2): {
-            //ainda nao ta pronto
-        }
-        case(3): {
-            Player.checarMochila();
-        }
-        case(4): {
-            
-        }
-        default:
-            break;
+    bool out = true;
+    while (out) {
+        std::string input; std::cin >> input;
+        int x;
+        if (is_number(input)) {
+            switch (std::stoi(input)) {
+            case(1): {
+                x = Player.ListaDeAtaques(true);
+                Inimigo.ReceberDano(x);
+                if (Inimigo.GetHP() > 0) {
+                    sair();
+                    return;
+                }
+                turnoInimigo();
+                out = true;
+
+                break;
+            }
+            case(2): {
+                //ainda nao ta pRONTP
+            }
+            case(3): {
+                Player.checarMochila();
+                break;
+            }
+            case(4): {
+                std::cout << "O inimigo se chama:" << statusI.Nome << "\nHP:" << Inimigo.GetHP() << "/" <<
+                    statusI.MaxHP << "\nATK:" << statusI.ATK << "\n DF:" << statusI.DF << "\nLV:" << statusI.LV << "\ndecricao:" << statusI.Descricao;
+                break;
+            }
+            case(5): {
+				Player.StatusTela();
+				break;
+            }
+            default:
+                break;
+            }
         }
     }
 }
+
 
 void Combate::entrar() {
     std::cout << "Entrou em combate com:" << '\n' << statusI.Nome << '\n' << "Vamos decidir quem vai comecar " << statusP.Nome
@@ -54,4 +74,11 @@ void Combate::entrar() {
         std::cout << "Voce ganhoou o 50% parabens comece primeiro\n";
         turnoJogador();
     }
+}
+
+void Combate::sair()
+{
+
+    Player.checarLV();
+
 }

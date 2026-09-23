@@ -6,6 +6,7 @@ struct StatusInimigos
 	int DF; int LV;
 	std::string Nome;
 	std::string Descricao;
+	int xp;
 };
 class InimigosBase
 {

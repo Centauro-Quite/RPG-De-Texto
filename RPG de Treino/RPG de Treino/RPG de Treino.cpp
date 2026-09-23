@@ -30,7 +30,7 @@ int main()
 	a.entrar();
 
 	testar
-
+	
 
 	std::cout << "Ola bem vindo ao RPG de Textos (infelimente n�o tenho dinheiro pra fazer 3D e to preso nesse terminal)\n\n"
 		<< "Eu serei seu DM controlando usando mecanicas aletorias afinal aida nao sou capaz de invadir seu pc \n" <<

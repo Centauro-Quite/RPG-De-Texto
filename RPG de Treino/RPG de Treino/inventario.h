@@ -15,7 +15,7 @@ private:
 
 public:
 	inventario(Coisas Arma, Coisas Armadura, Coisas Acessorio);
-	void encherInv();
+	void encherInv(Coisas item, Coisas item2, Coisas item3);
 	void Usar();
 	void Equipar();
 	
