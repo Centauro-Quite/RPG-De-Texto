@@ -18,6 +18,7 @@ private:
 	std::string Nome;
 	int HP, ATK, DF, LV, LUK, MaxHP, CurHP;
 	std::string Descricao;
+	void criarinimigo(const std::vector<Luta>&);
 public:
 	InimigosBase(Areas area);
 	InimigosBase(std::string Nome, int HP, int ATK, int DF, int LUK, int LV );

@@ -1,5 +1,5 @@
 #pragma once
-#include "Itens.h"
+#include "itens.h"
 #include <vector>
 #include <string>
 class inventario
@@ -19,11 +19,12 @@ public:
 	void Usar();
 	void Equipar();
 	
-	void ChecarMochila();
 	
+	void ChecarMochila();
+	bool temespada();
 
 protected:
 	Itens Adionar_Itens();
-
+	
 };
 

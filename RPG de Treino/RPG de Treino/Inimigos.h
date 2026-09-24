@@ -2,7 +2,7 @@
 #include <string>
 #include <vector>
 enum class Areas {
-	vila, dungeon, guerra, floresta, cemiterio
+	vila, floresta, dungeon, cemiterio, guerra
 
 };
 enum class inimigosid {

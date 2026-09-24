@@ -1,9 +1,10 @@
 #include "inventario.h"
 #include <iostream>
+#include <algorithm>
 
 inventario::inventario(Coisas Arma, Coisas Armadura, Coisas Acessorio) : Arma(Arma), Armadura(Armadura), Acessorio(Acessorio)
 {
-
+    Mochila.reserve(10);
     Mochila.push_back(Arma);
     Mochila.push_back(Armadura);
     Mochila.push_back(Acessorio);
@@ -18,8 +19,18 @@ void inventario::encherInv(Coisas item, Coisas item2, Coisas item3)
 	Mochila[2] = item3;
 }
 
-
-
+bool inventario::temespada() {
+    auto lista = { Itens::Espada_Cobre, Itens::Espada_Inicial, Itens::Espada_Duas_Maos };
+    if (std::find(lista.begin(), lista.end(), Mochila[0].item) != lista.end()) {
+        return true;
+    }
+    return false;
+}
+void inventario::Usar() {
+    ChecarMochila();
+    std::cout << "Gostaria de usar qual poncao?";
+    auto lista = 
+}
 
 void inventario::ChecarMochila()
 {
@@ -39,6 +50,4 @@ void inventario::ChecarMochila()
         }
     }
 }
-void inventario::Usar() {
-    
-}
+

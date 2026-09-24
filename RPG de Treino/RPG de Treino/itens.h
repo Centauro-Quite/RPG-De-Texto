@@ -3,14 +3,15 @@
 enum class Itens
 {
 	// itens iniante
-	Flecha = -5,
-	Anel_Iniciante = -4,
-	Arco_Iniciante = -3,
-	Armadura_Inicial = -2,
-	Espada_Inicial = -1,
+	
 	Nada = 0,
+	Flecha ,
+	Anel_Iniciante,
+	Arco_Iniciante,
+	Armadura_Inicial,
+	Espada_Inicial,
 	// Itens comums
-	Pocao = 1,
+	Pocao ,
 	Maca,
 	Armadura_La,
 	Espada_Cobre,

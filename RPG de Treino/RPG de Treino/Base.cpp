@@ -36,8 +36,10 @@ int Base::causardano (const int ataque) const {
 int Base::ListaDeAtaques(const bool Combate) {
 	if (Combate == true) {
 		std::cout << "escolha um dos golpes:\n";
+		if (Mochila.temespada()) {
+			ListadeAtaqueMap[1] = Ataques{ "Usar a espada", 10, 0 };
+		}
 	}
-
 	for (const auto& [id, ataque] : ListadeAtaqueMap) {
 		std::cout << id << ": " << ataque.Nome << ": DPS:" << (ATKS + ataque.dano);
 		if (ataque.mana > 0) {
@@ -76,6 +78,7 @@ void Base::setMochila(Coisas item, Coisas item2, Coisas item3)
 {
 	Mochila.encherInv(item, item2, item3);
 }
+
 
 void Base::Morte() {
 	std::cout << "infelimente a historia do seu heroi chega ao fim";

@@ -92,7 +92,7 @@ int main()
 	
 		std::cout << "tchau zé ninguem ola heroi " << z << " vamos logo conquistar essa floresta;"
 			<< "fazendo voce lutar contra um coelho(kkkkkk fracote)\n";
-
+		InimigosBase inimigo("Coelho", 1, 1, 1, 1, 10);
 		
 	} 
 }
