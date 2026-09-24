@@ -1,20 +1,13 @@
 #include "Base.h"
 #include <iostream>
 
-Base::Base( int HPS, int MPS, int ATKS, int DFS, int INTS, int LUKS, int LV) :HPS(HPS),MPS(MPS),ATKS(ATKS),DFS(DFS),
-INTS(INTS),LUKS(LUKS),LV(LV), XP(0), CurHP(0), CurMP(0), CurATK(0), CurDF(0), MaxXP(10), Nome("erro base foi escolhida"), Mochila(NadaItem,NadaItem,NadaItem) {
-	MaxHP = 5 * HPS;
-	MaxMP = 5 * MPS;
-	CurATK = 5 * ATKS;
-	CurDF = 5 * DFS;
+Base::Base( int HPS, int MPS, int ATKS, int DFS, int INTS, int LUKS, int LV) : HPS(HPS),MPS(MPS),ATKS(ATKS),DFS(DFS),
+INTS(INTS),LUKS(LUKS),LV(LV), XP(0), CurHP(0), CurMP(0), CurATK(0), CurDF(0), MaxXP(10), Nome("erro base foi escolhida"),
+Mochila(NadaItem,NadaItem,NadaItem) {
+	atualizarstatus();
+	ListadeAtaqueMap[1] = Ataques{ "Ataque Basico", 3, 0 };
 	CurHP = MaxHP;
 	CurMP = MaxMP;
-	MaxXP = LV < 1 ? 10 : LV * 2;
-	ListadeAtaqueMap[1] = Ataques{ "Ataque Basico", 3, 0 };
-	Nome = "erro base foi escolhida";
-
-	
-
 }
 Base::~Base()
 {
@@ -92,7 +85,7 @@ void Base::Morte() {
 }
 
 void Base::checarLV(const int xp) {
-	XP = +xp;
+	XP += xp;
 	if (XP >= MaxXP) {
 		XP = 0;
 		MaxXP = LV * 2;
@@ -101,11 +94,45 @@ void Base::checarLV(const int xp) {
 }
 void Base::SubirLV() {
 	LV++;
-	std::cout << "Nivel: " << (LV - 1) << " -> " << "Nivel: " << LV << " Parabens vc subiu de nivel\n";
-	std::string input; std::cin >> input;
-	//printar Status
-	
+	std::cout << "subir de Nivel: " << (LV - 1) << " -> " << " para Nivel: " << LV << " Parabens vc subiu de nivel\n";
+	StatusTela();
+	std::cout << "Por causa voce upou um nivel cosegiu dois pontos pra gastar no seus status escolha entre eles:\n";
+	std::map<std::string, int*> atributos = {
+	{ "hp",  &HPS },
+	{ "mp",  &MPS },
+	{ "atk", &ATKS },
+	{ "df",  &DFS },
+	{ "int", &INTS },
+	{ "luk", &LUKS }
+	};
+
+	std::cout << "Escolha um status: hp, mp, atk, df, int ou luk\n";
+	int o = 0;
+	while (o < 2) {
+		std::string escolha;
+		std::cin >> escolha;
+
+		auto atributo = atributos.find(escolha);
+
+		if (atributo == atributos.end()) {
+			std::cout << "Esse status nao existe.\n";
+			continue;
+		}
+
+		++(*atributo->second);
+		atualizarstatus();
+		o++;
+		std::cout << "ponto colocado em " << (atributo->first) << '\n';
+	}
 }
+void Base::atualizarstatus() {
+	MaxHP = 5 * HPS;
+	MaxMP = 5 * MPS;
+	CurATK = 5 * ATKS;
+	CurDF = 5 * DFS;
+
+}
+
 StatusPlayer Base::Status()
 {
 	return StatusPlayer{ this->ATKS,this->MaxHP,this->DFS,this->LV,this->Nome};

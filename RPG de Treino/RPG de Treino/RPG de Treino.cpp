@@ -25,7 +25,7 @@ std::string inputcheck() {
 int main()
 {
 	Gurreiro Player(1,1,1,1,1,1,1);
-	InimigosBase inimigo("Goblig",1,1,1,1,1);
+	InimigosBase inimigo("Goblig",1,1,1,1,10);
 	Combate a (Player, inimigo);
 	a.entrar();
 
@@ -75,6 +75,7 @@ int main()
 		case (2): {
 			// Mago
 			z = "Mago";
+			
 			break;
 		}
 		case(3):{
@@ -89,8 +90,9 @@ int main()
 
 		}
 	
-		std::cout << "tchau zé ninguem ola heroi " << z << " vamos logo conquistar essa dugeon;"
-			<< "fazendo voce lutar contra um goblin\n";
+		std::cout << "tchau zé ninguem ola heroi " << z << " vamos logo conquistar essa floresta;"
+			<< "fazendo voce lutar contra um coelho(kkkkkk fracote)\n";
+
 		
 	} 
 }

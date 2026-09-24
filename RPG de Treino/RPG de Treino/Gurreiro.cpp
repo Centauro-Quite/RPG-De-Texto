@@ -1,8 +1,5 @@
-
-#include <string>
-#include <iostream>
 #include "Gurreiro.h"
-#include "itens.h"
+
 
 
 Gurreiro::Gurreiro(int HPS, int MPS, int ATKS, int DFS, int INTS, int LUKS, int LV) :

@@ -33,9 +33,6 @@
     <ClCompile Include="Combate.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Aletorio.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="inventario.h">
@@ -57,6 +54,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Aletorio.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Inimigos.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

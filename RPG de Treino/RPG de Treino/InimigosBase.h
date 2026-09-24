@@ -1,5 +1,6 @@
 #pragma once
 #include <string>
+#include "Inimigos.h"
 struct StatusInimigos
 {
 	int ATK; int MaxHP;
@@ -18,7 +19,7 @@ private:
 	int HP, ATK, DF, LV, LUK, MaxHP, CurHP;
 	std::string Descricao;
 public:
-	InimigosBase();
+	InimigosBase(Areas area);
 	InimigosBase(std::string Nome, int HP, int ATK, int DF, int LUK, int LV );
 	~InimigosBase();
 	std::string GetName();
@@ -27,6 +28,7 @@ public:
 	int GetHP()const;
 	void setDescricao(std::string x);
 	std::string getDescricao();
+	int XPFarme();
 
 	StatusInimigos Status();
 	

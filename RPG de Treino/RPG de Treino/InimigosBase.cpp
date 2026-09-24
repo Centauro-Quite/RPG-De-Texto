@@ -1,13 +1,12 @@
 #include "InimigosBase.h"
 
-InimigosBase::InimigosBase(): Nome(""), HP(0), ATK(0), DF(0), LUK(0), LV(0), MaxHP(0), CurHP(0), Descricao("")
+
+InimigosBase::InimigosBase(Areas area): Nome(""), HP(0), ATK(0), DF(0), LUK(0), LV(0), MaxHP(0), CurHP(0), Descricao("")
 {
-	//criar inigimo aletorio
+	
 }
 InimigosBase::InimigosBase(std::string Nome, int HP, int ATK, int DF, int LUK, int LV) : Nome(Nome), HP(HP), ATK(ATK), DF(DF), LUK(LUK),
-LV(LV), MaxHP(HP), CurHP(HP), Descricao(""
-
-)
+LV(LV), MaxHP(HP), CurHP(HP), Descricao("")
 {
 
 }
@@ -42,6 +41,11 @@ void InimigosBase::setDescricao(std::string x)
 std::string InimigosBase::getDescricao()
 {
 	return Descricao;
+}
+
+int InimigosBase::XPFarme()
+{
+	return LV * 10 / 3;
 }
 
 StatusInimigos InimigosBase::Status()

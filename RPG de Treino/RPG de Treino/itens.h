@@ -3,7 +3,6 @@
 enum class Itens
 {
 	// itens iniante
-
 	Flecha = -5,
 	Anel_Iniciante = -4,
 	Arco_Iniciante = -3,
@@ -22,149 +21,182 @@ enum class Itens
 	Armadura_Ferro,
 	Maca_Coragem,
 	Pocao_Pureza,
-
-
 };
 enum class Raridade {
 	iniciante, comum, raro, lendario,
 };
+enum class usos {
+	arma,armadura,acessorio,usavel,nada
+
+};
 struct Coisas {
+	std::string Name;
 	Itens item;
 	Raridade raridade;
-	std::string Name;
+	usos Qualuso;
 	int Atk;
-	bool Usavel;
-
+	int DF;
+	int Curar;
 };
+
 static Coisas Flecha{
+	"Flecha",
 	Itens::Flecha,
 	Raridade::iniciante,
-	"Flecha",
+	usos::usavel,
 	0,
-	true,
+	0,
+	0,
 };
-
 static Coisas Anel_Iniciante{
+	"Anel Iniciante",
 	Itens::Anel_Iniciante,
 	Raridade::iniciante,
-	"Anel Iniciante",
-	10,
-	false,
+	usos::acessorio,
+	1,
+	1,
+	0,
 };
 
 static Coisas Arco_Iniciante{
+	"Arco Iniciante",
 	Itens::Arco_Iniciante,
 	Raridade::iniciante,
-	"Arco Iniciante",
-	5,
-	false,
+	usos::arma,
+	2,
+	0,
+	0,
 };
 
 static Coisas Armadura_Inicial{
+	"Armadura Inicial",
 	Itens::Armadura_Inicial,
 	Raridade::iniciante,
-	"Armadura Inicial",
-	5,
-	false,
+	usos::armadura,
+	0,
+	2,
+	0,
 };
 
 static Coisas Espada_Inicial{
+	"Espada Inicial",
 	Itens::Espada_Inicial,
 	Raridade::iniciante,
-	"Espada Inicial",
-	5,
-	false,
+	usos::arma,
+	1,
+	1,
+	0,
 };
 
 static Coisas NadaItem{
+	"Vazio",
 	Itens::Nada,
 	Raridade::iniciante,
-	"Nada",
+	usos::nada,
 	0,
-	false,
+	0,
+	-99999,
 };
 
 // Itens comuns
 static Coisas Pocao{
+	"Pocao",
 	Itens::Pocao,
 	Raridade::comum,
-	"Pocao",
-
-	15,
-	true,
+	usos::usavel,
+	0,
+	0,
+	5,
 };
 
 static Coisas Maca{
+	"Maca",
 	Itens::Maca,
 	Raridade::comum,
-	"Maca",
+	usos::arma,
+	2,
 	3,
-	true,
+	0,
 };
 
 static Coisas Armadura_La_Item{
+	"Armadura de La",
 	Itens::Armadura_La,
 	Raridade::comum,
-	"Armadura de La",
-	20,
-	false,
+	usos::armadura,
+	0,
+	3,
+	0,
 };
 
 static Coisas Espada_Cobre_Item{
+	"Espada de Cobre",
 	Itens::Espada_Cobre,
 	Raridade::comum,
-	"Espada de Cobre",
-	25,
-	false,
+	usos::arma,
+	5,
+	3,
+	0,
 };
 
 static Coisas Arco_Madeira_Item{
+	"Arco de Madeira",
 	Itens::Arco_Madeira,
 	Raridade::comum,
-	"Arco de Madeira",
-	15,
-	false,
+	usos::arma,
+	8,
+	0,
+	0,
 };
 
 // Itens raros
 static Coisas Espada_Duas_Maos_Item{
+	"Espada de Duas Maos",
 	Itens::Espada_Duas_Maos,
 	Raridade::raro,
-	"Espada de Duas Maos",
-	
-	100,
-	false,
+	usos::arma,
+	28,
+	0,
+	0,
 };
 
 static Coisas Espada_Ferro_Item{
+	"Espada de Ferro",
 	Itens::Espada_Ferro,
 	Raridade::raro,
-	"Espada de Ferro",
-	60,
-	false,
+	usos::arma,
+	20,
+	10,
+	0,
 };
 
 static Coisas Armadura_Ferro_Item{
+	"Armadura de Ferro",
 	Itens::Armadura_Ferro,
 	Raridade::raro,
-	"Armadura de Ferro",
-	80,
-	false,
+	usos::armadura,
+	5,
+	25,
+	0,
 };
 
 static Coisas Maca_Coragem_Item{
+	"Maca da Coragem",
 	Itens::Maca_Coragem,
 	Raridade::raro,
-	"Maca da Coragem",
-	65,
-	false,
+	usos::arma,
+	20,
+	20,
+	0,
 };
 
 static Coisas Pocao_Pureza_Item{
+	"Pocao da Pureza",
 	Itens::Pocao_Pureza,
 	Raridade::raro,
-	"Pocao da Pureza",
-	120,
-	true,
+	usos::usavel,
+	0,
+	0,
+	30,
 };
 

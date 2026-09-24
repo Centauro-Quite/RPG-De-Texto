@@ -1,6 +1,7 @@
 #include "Combate.h"
 #include "Aleatorio.h"
 #include <algorithm>
+#include <iostream>
 
 static bool is_number(const std::string& s)
 {
@@ -10,7 +11,8 @@ static bool is_number(const std::string& s)
 
 void Combate::turnoInimigo()
 {
-    return;
+    
+    turnoJogador();
 }
 
 Combate::Combate(Base& Player, InimigosBase& Inimigo) : Player(Player), Inimigo(Inimigo),statusI(Inimigo.Status()),
@@ -34,12 +36,11 @@ void Combate::turnoJogador() {
                     return;
                 }
                 turnoInimigo();
-                out = true;
-
+                out = false;
                 break;
             }
             case(2): {
-                //ainda nao ta pRONTP
+                //ainda nao ta pronto
             }
             case(3): {
                 Player.checarMochila();
@@ -55,8 +56,13 @@ void Combate::turnoJogador() {
 				break;
             }
             default:
+                std::cout << "tente novamente";
                 break;
             }
+        }
+        if (input == "sair") {
+            //fugir
+            return;
         }
     }
 }
@@ -78,7 +84,7 @@ void Combate::entrar() {
 
 void Combate::sair()
 {
-
-    //Player.checarLV();
-
+    int XP = Inimigo.XPFarme();
+    std::cout << "Parabens voce ganhou do inimigo  conseguiu " << XP << " de XP \n";
+    Player.checarLV(XP);
 }

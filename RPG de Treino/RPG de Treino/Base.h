@@ -25,6 +25,7 @@ private:
     int HPS, MPS, ATKS, DFS, INTS, LUKS, LV, XP, MaxHP =10 , MaxMP, CurHP, CurMP, CurATK, CurDF, MaxXP;
     void Morte();
     std::string Nome;
+    void atualizarstatus();
 public:
 
     Base(int HPS, int MPS, int ATKS, int DFS, int INTS, int LUKS, int LV);

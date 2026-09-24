@@ -1,7 +1,7 @@
 #pragma once
 #include "base.h"
 #include "InimigosBase.h"
-#include <iostream>
+
 class Combate{
 private:
     Base& Player;

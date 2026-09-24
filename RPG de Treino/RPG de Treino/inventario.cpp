@@ -1,6 +1,5 @@
 #include "inventario.h"
 #include <iostream>
-#include <array>
 
 inventario::inventario(Coisas Arma, Coisas Armadura, Coisas Acessorio) : Arma(Arma), Armadura(Armadura), Acessorio(Acessorio)
 {
@@ -31,7 +30,12 @@ void inventario::ChecarMochila()
             std::cout << (i + 1) << ": Vazio\n ";
         }
         else {
-            std::cout << (i + 1) << ": " << Mochila[i].Name << " DP: " << Mochila[i].Atk << "\n";
+            std::cout << (i + 1) << ": " << Mochila[i].Name << " DP: " << Mochila[i].Atk;  
+            if (i < 3) {
+                std::cout << "   >>Equipado<<\n";
+                continue;
+            }
+            std::cout << '\n';
         }
     }
 }
