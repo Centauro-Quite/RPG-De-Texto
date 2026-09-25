@@ -1,2 +1,29 @@
-﻿  Base.cpp
-  RPG de Treino.vcxproj -> C:\Users\frlr1\OneDrive\Documents\GitHub\RPG-De-Texto\RPG de Treino\x64\Debug\RPG de Treino.exe
+﻿  InimigosBase.cpp
+C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.37.32822\include\xmemory(918,20): error C2338: static_assert failed: 'The C++ Standard forbids containers of const elements because allocator<const T> is ill-formed.'
+C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.37.32822\include\xmemory(645,1): message : consulte a referência à instanciação 'std::allocator<const Luta>' do modelo da classe que está sendo compilada
+C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.37.32822\include\xmemory(742,27): message : consulte a referência à instanciação 'std::_Default_allocator_traits<_Alloc>' do modelo da classe que está sendo compilada
+          with
+          [
+              _Alloc=std::allocator<const Luta>
+          ]
+C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.37.32822\include\vector(444,50): message : consulte a referência à instanciação 'std::allocator_traits<_Alloc>' do modelo da classe que está sendo compilada
+          with
+          [
+              _Alloc=std::allocator<const Luta>
+          ]
+C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.37.32822\include\vector(444,26): message : consulte a referência à instanciação 'std::_Rebind_alloc_t<_Alloc,_Ty>' do modelo da alias que está sendo compilada
+          with
+          [
+              _Alloc=std::allocator<const Luta>,
+              _Ty=const Luta
+          ]
+C:\Users\frlr1\OneDrive\Documents\GitHub\RPG-De-Texto\RPG de Treino\RPG de Treino\InimigosBase.cpp(13,27): message : consulte a referência à instanciação 'std::vector<const Luta,std::allocator<const Luta>>' do modelo da classe que está sendo compilada
+C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.37.32822\include\xmemory(953,66): error C2535: '_Ty *std::allocator<_Ty>::address(_Ty &) noexcept const': função membro já definida ou declarada
+          with
+          [
+              _Ty=const Luta
+          ]
+C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.37.32822\include\xmemory(949,60): message : consulte a declaração de 'std::allocator<const Luta>::address'
+C:\Users\frlr1\OneDrive\Documents\GitHub\RPG-De-Texto\RPG de Treino\RPG de Treino\InimigosBase.cpp(30,44): warning C4267: 'argumento': conversão de 'size_t' para 'int', possível perda de dados
+  inventario.cpp
+  Gerando Código...

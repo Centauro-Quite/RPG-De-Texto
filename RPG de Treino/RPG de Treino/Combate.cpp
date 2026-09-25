@@ -30,10 +30,12 @@ void Combate::turnoJogador() {
             switch (std::stoi(input)) {
             case(1): {
                 x = Player.ListaDeAtaques(true);
+                if (x == 0) {
+                    return turnoJogador();
+                }
                 Inimigo.ReceberDano(x);
-                if (Inimigo.GetHP() > 0) {
-                    sair();
-                    return;
+                if (Inimigo.GetHP() < 0) {
+                    return sair();
                 }
                 turnoInimigo();
                 out = false;

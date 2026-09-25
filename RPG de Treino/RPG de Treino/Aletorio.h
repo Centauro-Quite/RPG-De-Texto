@@ -15,7 +15,6 @@ public:
         std::uniform_int_distribution<int> distribuicao(minimo, maximo);
         return distribuicao(Gerador());
     }
-
 private:
     static std::mt19937& Gerador()
     {

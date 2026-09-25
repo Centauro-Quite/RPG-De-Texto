@@ -1,33 +1,34 @@
 #include "InimigosBase.h"
-#include "Aletorio.h"
+#include <algorithm>
+#include "Aleatorio.h"
 
 InimigosBase::InimigosBase(Areas area): Nome(""), HP(0), ATK(0), DF(0), LUK(0), LV(0), MaxHP(0), CurHP(0), Descricao("")
 {
-	/*Dungeon: Goblin, Esqueleto e Slime
-	Floresta : Goblin, Slime, Lobo e Coelho
-	Vila : Bandido e Guerreiro
-	Guerra : Bandido e Guerreiro
-	Cemitério : apenas Zumbi
-	*/
-	std::vector <Luta> podemexistir;
-	podemexistir.reserve(3);
+	std::vector <Luta> todosInimigos = { goblin_luta,bandidos_luta,esqueletos_luta, zumbis_luta, guerreiro_luta, slime_luta,
+		lobo_luta, coelho_luta };
 
-	if (area == Areas::vila) {
-		podemexistir.emplace_back(bandidos_luta);
+	std::vector<const Luta*> podemNascer;
+	podemNascer.reserve(todosInimigos.size());
+
+	for (const Luta& inimigo : todosInimigos) {
+		auto encontrado = std::find(
+			inimigo.area.begin(),
+			inimigo.area.end(),
+
+			area);
+		if (encontrado != inimigo.area.end()) {
+			podemNascer.push_back(&inimigo);
+		}
 	}
-	else if (area == Areas::floresta) {
-		podemexistir.insert(podemexistir.end(), { goblin_luta, slime_luta, lobo_luta, coelho_luta });
-	}
-	else if (area == Areas::dungeon) {
-		podemexistir.insert(podemexistir.end(), { goblin_luta, esqueletos_luta, slime_luta });
-	}
-	else if (area == Areas::cemiterio) {
-		podemexistir.emplace_back(zumbis_luta);
-	}
-	else {
-		podemexistir.insert(podemexistir.end(), { bandidos_luta, guerreiro_luta });
-	}
-	criarinimigo(podemexistir);
+	Aleatorio rando;
+	int x = rando.Entre(0, (podemNascer.size()- 1));
+	HP = podemNascer[x]->hp;
+	ATK = podemNascer[x]->atk ;
+	DF = podemNascer[x]-> df;
+	LV = podemNascer[x]->lv;
+	Nome = podemNascer[x]->nome;
+	MaxHP = HP;
+	CurHP = HP;
 }
 InimigosBase::InimigosBase(std::string Nome, int HP, int ATK, int DF, int LUK, int LV) : Nome(Nome), HP(HP), ATK(ATK), DF(DF), LUK(LUK),
 LV(LV), MaxHP(HP), CurHP(HP), Descricao("")
