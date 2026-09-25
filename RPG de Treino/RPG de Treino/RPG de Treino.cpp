@@ -25,7 +25,7 @@ std::string inputcheck() {
 int main()
 {
 	Gurreiro Player(1,1,1,1,1,1,1);
-	InimigosBase inimigo("Goblig",1,1,1,1,10);
+	InimigosBase inimigo(Areas::floresta);
 	Combate a (Player, inimigo);
 	a.entrar();
 

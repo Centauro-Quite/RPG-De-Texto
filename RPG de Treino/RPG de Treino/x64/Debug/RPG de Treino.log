@@ -1,5 +1,3 @@
-﻿  Combate.cpp
-  InimigosBase.cpp
-  RPG de Treino.cpp
-  Generating Code...
+﻿  InimigosBase.cpp
+C:\Users\centauroq\Documents\Eu Proprio fiz\RPG de Treino\RPG de Treino\InimigosBase.cpp(24,44): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
   RPG de Treino.vcxproj -> C:\Users\centauroq\Documents\Eu Proprio fiz\RPG de Treino\x64\Debug\RPG de Treino.exe
