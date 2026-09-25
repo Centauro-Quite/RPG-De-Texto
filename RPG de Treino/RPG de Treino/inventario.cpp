@@ -29,7 +29,6 @@ bool inventario::temespada() {
 void inventario::Usar() {
     ChecarMochila();
     std::cout << "Gostaria de usar qual poncao?";
-    auto lista = 
 }
 
 void inventario::ChecarMochila()
