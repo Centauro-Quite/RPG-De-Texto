@@ -1,6 +1,12 @@
 #include "InimigosBase.h"
 
 
+std::vector<Luta> InimigosBase::listainimigo(Areas area)
+{
+
+	return std::vector<Luta>();
+}
+
 InimigosBase::InimigosBase(Areas area): Nome(""), HP(0), ATK(0), DF(0), LUK(0), LV(0), MaxHP(0), CurHP(0), Descricao("")
 {
 	

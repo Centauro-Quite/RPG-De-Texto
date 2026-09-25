@@ -10,6 +10,7 @@ private:
     StatusPlayer statusP;
     void turnoJogador();
     void turnoInimigo(); 
+ 
 public: 
     Combate(Base &Player, InimigosBase& Inimigo);
     void entrar(); 

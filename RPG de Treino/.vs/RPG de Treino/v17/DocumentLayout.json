@@ -3,16 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\centauroq\\Documents\\Eu Proprio fiz\\RPG de Treino\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{680E8C4E-48DA-46F5-AC56-A6BF3EE556DD}|RPG de Treino\\RPG de Treino.vcxproj|C:\\Users\\centauroq\\Documents\\Eu Proprio fiz\\RPG de Treino\\RPG de Treino\\Combate.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{680E8C4E-48DA-46F5-AC56-A6BF3EE556DD}|RPG de Treino\\RPG de Treino.vcxproj|solutionrelative:RPG de Treino\\Combate.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{680E8C4E-48DA-46F5-AC56-A6BF3EE556DD}|RPG de Treino\\RPG de Treino.vcxproj|C:\\Users\\centauroq\\Documents\\Eu Proprio fiz\\RPG de Treino\\RPG de Treino\\InimigosBase.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{680E8C4E-48DA-46F5-AC56-A6BF3EE556DD}|RPG de Treino\\RPG de Treino.vcxproj|solutionrelative:RPG de Treino\\InimigosBase.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{680E8C4E-48DA-46F5-AC56-A6BF3EE556DD}|RPG de Treino\\RPG de Treino.vcxproj|C:\\Users\\centauroq\\Documents\\Eu Proprio fiz\\RPG de Treino\\RPG de Treino\\InimigosBase.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{680E8C4E-48DA-46F5-AC56-A6BF3EE556DD}|RPG de Treino\\RPG de Treino.vcxproj|solutionrelative:RPG de Treino\\InimigosBase.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{680E8C4E-48DA-46F5-AC56-A6BF3EE556DD}|RPG de Treino\\RPG de Treino.vcxproj|C:\\Users\\centauroq\\Documents\\Eu Proprio fiz\\RPG de Treino\\RPG de Treino\\inventario.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{680E8C4E-48DA-46F5-AC56-A6BF3EE556DD}|RPG de Treino\\RPG de Treino.vcxproj|solutionrelative:RPG de Treino\\inventario.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{680E8C4E-48DA-46F5-AC56-A6BF3EE556DD}|RPG de Treino\\RPG de Treino.vcxproj|C:\\Users\\centauroq\\Documents\\Eu Proprio fiz\\RPG de Treino\\RPG de Treino\\Base.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{680E8C4E-48DA-46F5-AC56-A6BF3EE556DD}|RPG de Treino\\RPG de Treino.vcxproj|solutionrelative:RPG de Treino\\Base.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{680E8C4E-48DA-46F5-AC56-A6BF3EE556DD}|RPG de Treino\\RPG de Treino.vcxproj|C:\\Users\\centauroq\\Documents\\Eu Proprio fiz\\RPG de Treino\\RPG de Treino\\InimigosBase.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{680E8C4E-48DA-46F5-AC56-A6BF3EE556DD}|RPG de Treino\\RPG de Treino.vcxproj|solutionrelative:RPG de Treino\\InimigosBase.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{680E8C4E-48DA-46F5-AC56-A6BF3EE556DD}|RPG de Treino\\RPG de Treino.vcxproj|C:\\Users\\centauroq\\Documents\\Eu Proprio fiz\\RPG de Treino\\RPG de Treino\\Combate.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -25,14 +33,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{680E8C4E-48DA-46F5-AC56-A6BF3EE556DD}|RPG de Treino\\RPG de Treino.vcxproj|C:\\Users\\centauroq\\Documents\\Eu Proprio fiz\\RPG de Treino\\RPG de Treino\\Inimigos.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{680E8C4E-48DA-46F5-AC56-A6BF3EE556DD}|RPG de Treino\\RPG de Treino.vcxproj|solutionrelative:RPG de Treino\\Inimigos.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{680E8C4E-48DA-46F5-AC56-A6BF3EE556DD}|RPG de Treino\\RPG de Treino.vcxproj|C:\\Users\\centauroq\\Documents\\Eu Proprio fiz\\RPG de Treino\\RPG de Treino\\InimigosBase.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{680E8C4E-48DA-46F5-AC56-A6BF3EE556DD}|RPG de Treino\\RPG de Treino.vcxproj|solutionrelative:RPG de Treino\\InimigosBase.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{680E8C4E-48DA-46F5-AC56-A6BF3EE556DD}|RPG de Treino\\RPG de Treino.vcxproj|C:\\Users\\centauroq\\Documents\\Eu Proprio fiz\\RPG de Treino\\RPG de Treino\\Combate.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{680E8C4E-48DA-46F5-AC56-A6BF3EE556DD}|RPG de Treino\\RPG de Treino.vcxproj|solutionrelative:RPG de Treino\\Combate.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{680E8C4E-48DA-46F5-AC56-A6BF3EE556DD}|RPG de Treino\\RPG de Treino.vcxproj|C:\\Users\\centauroq\\Documents\\Eu Proprio fiz\\RPG de Treino\\RPG de Treino\\Base.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -58,7 +58,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 1611,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -86,12 +86,12 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "InimigosBase.cpp",
               "DocumentMoniker": "C:\\Users\\centauroq\\Documents\\Eu Proprio fiz\\RPG de Treino\\RPG de Treino\\InimigosBase.cpp",
               "RelativeDocumentMoniker": "RPG de Treino\\InimigosBase.cpp",
-              "ToolTip": "C:\\Users\\centauroq\\Documents\\Eu Proprio fiz\\RPG de Treino\\RPG de Treino\\InimigosBase.cpp*",
-              "RelativeToolTip": "RPG de Treino\\InimigosBase.cpp*",
+              "ToolTip": "C:\\Users\\centauroq\\Documents\\Eu Proprio fiz\\RPG de Treino\\RPG de Treino\\InimigosBase.cpp",
+              "RelativeToolTip": "RPG de Treino\\InimigosBase.cpp",
               "ViewState": "AgIAADAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-09-21T15:02:19.543Z",
@@ -99,7 +99,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Combate.cpp",
               "DocumentMoniker": "C:\\Users\\centauroq\\Documents\\Eu Proprio fiz\\RPG de Treino\\RPG de Treino\\Combate.cpp",
               "RelativeDocumentMoniker": "RPG de Treino\\Combate.cpp",
@@ -107,12 +107,11 @@
               "RelativeToolTip": "RPG de Treino\\Combate.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-09-23T05:27:25.816Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-23T05:27:25.816Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "inventario.cpp",
               "DocumentMoniker": "C:\\Users\\centauroq\\Documents\\Eu Proprio fiz\\RPG de Treino\\RPG de Treino\\inventario.cpp",
               "RelativeDocumentMoniker": "RPG de Treino\\inventario.cpp",
@@ -125,7 +124,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Base.cpp",
               "DocumentMoniker": "C:\\Users\\centauroq\\Documents\\Eu Proprio fiz\\RPG de Treino\\RPG de Treino\\Base.cpp",
               "RelativeDocumentMoniker": "RPG de Treino\\Base.cpp",
@@ -133,12 +132,11 @@
               "RelativeToolTip": "RPG de Treino\\Base.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAEoAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-09-21T04:02:20.89Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-21T04:02:20.89Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "Gurreiro.cpp",
               "DocumentMoniker": "C:\\Users\\centauroq\\Documents\\Eu Proprio fiz\\RPG de Treino\\RPG de Treino\\Gurreiro.cpp",
               "RelativeDocumentMoniker": "RPG de Treino\\Gurreiro.cpp",
@@ -146,14 +144,13 @@
               "RelativeToolTip": "RPG de Treino\\Gurreiro.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-09-21T14:54:29.964Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-21T14:54:29.964Z"
             }
           ]
         },
         {
           "DockedWidth": 659,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
@@ -166,12 +163,11 @@
               "ViewState": "AgIAADAAAAAAAAAAAAAAABsAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2026-09-21T04:07:04.799Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "Inimigos.h",
               "DocumentMoniker": "C:\\Users\\centauroq\\Documents\\Eu Proprio fiz\\RPG de Treino\\RPG de Treino\\Inimigos.h",
               "RelativeDocumentMoniker": "RPG de Treino\\Inimigos.h",
@@ -193,17 +189,16 @@
               "RelativeToolTip": "RPG de Treino\\Base.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-09-21T04:02:08.392Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-21T04:02:08.392Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 0,
               "Title": "Combate.h",
               "DocumentMoniker": "C:\\Users\\centauroq\\Documents\\Eu Proprio fiz\\RPG de Treino\\RPG de Treino\\Combate.h",
               "RelativeDocumentMoniker": "RPG de Treino\\Combate.h",
-              "ToolTip": "C:\\Users\\centauroq\\Documents\\Eu Proprio fiz\\RPG de Treino\\RPG de Treino\\Combate.h*",
-              "RelativeToolTip": "RPG de Treino\\Combate.h*",
+              "ToolTip": "C:\\Users\\centauroq\\Documents\\Eu Proprio fiz\\RPG de Treino\\RPG de Treino\\Combate.h",
+              "RelativeToolTip": "RPG de Treino\\Combate.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2026-09-23T05:28:33.892Z",
@@ -235,7 +230,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
               "Title": "InimigosBase.h",
               "DocumentMoniker": "C:\\Users\\centauroq\\Documents\\Eu Proprio fiz\\RPG de Treino\\RPG de Treino\\InimigosBase.h",
               "RelativeDocumentMoniker": "RPG de Treino\\InimigosBase.h",
@@ -243,8 +238,7 @@
               "RelativeToolTip": "RPG de Treino\\InimigosBase.h*",
               "ViewState": "AgIAAAIAAAAAAAAAAAAgwBQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-09-21T15:02:32.248Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-21T15:02:32.248Z"
             }
           ]
         },
