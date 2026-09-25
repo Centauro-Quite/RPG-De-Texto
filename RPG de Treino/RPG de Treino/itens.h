@@ -38,6 +38,7 @@ struct Coisas {
 	int Atk;
 	int DF;
 	int Curar;
+	int MP;
 };
 
 static Coisas Flecha{
@@ -45,6 +46,7 @@ static Coisas Flecha{
 	Itens::Flecha,
 	Raridade::iniciante,
 	usos::usavel,
+	0,
 	0,
 	0,
 	0,
@@ -57,6 +59,7 @@ static Coisas Anel_Iniciante{
 	1,
 	1,
 	0,
+	0,
 };
 
 static Coisas Arco_Iniciante{
@@ -65,6 +68,7 @@ static Coisas Arco_Iniciante{
 	Raridade::iniciante,
 	usos::arma,
 	2,
+	0,
 	0,
 	0,
 };
@@ -77,6 +81,7 @@ static Coisas Armadura_Inicial{
 	0,
 	2,
 	0,
+	0,
 };
 
 static Coisas Espada_Inicial{
@@ -86,6 +91,7 @@ static Coisas Espada_Inicial{
 	usos::arma,
 	1,
 	1,
+	0,
 	0,
 };
 
@@ -97,6 +103,7 @@ static Coisas NadaItem{
 	0,
 	0,
 	-99999,
+	0,
 };
 
 // Itens comuns
@@ -108,6 +115,7 @@ static Coisas Pocao{
 	0,
 	0,
 	5,
+	0,
 };
 
 static Coisas Maca{
@@ -117,6 +125,7 @@ static Coisas Maca{
 	usos::arma,
 	2,
 	3,
+	0,
 	0,
 };
 
@@ -128,6 +137,7 @@ static Coisas Armadura_La_Item{
 	0,
 	3,
 	0,
+	0,
 };
 
 static Coisas Espada_Cobre_Item{
@@ -138,6 +148,7 @@ static Coisas Espada_Cobre_Item{
 	5,
 	3,
 	0,
+	0,
 };
 
 static Coisas Arco_Madeira_Item{
@@ -146,6 +157,7 @@ static Coisas Arco_Madeira_Item{
 	Raridade::comum,
 	usos::arma,
 	8,
+	0,
 	0,
 	0,
 };
@@ -159,6 +171,7 @@ static Coisas Espada_Duas_Maos_Item{
 	28,
 	0,
 	0,
+	0,
 };
 
 static Coisas Espada_Ferro_Item{
@@ -168,6 +181,7 @@ static Coisas Espada_Ferro_Item{
 	usos::arma,
 	20,
 	10,
+	0,
 	0,
 };
 
@@ -179,6 +193,7 @@ static Coisas Armadura_Ferro_Item{
 	5,
 	25,
 	0,
+	0,
 };
 
 static Coisas Maca_Coragem_Item{
@@ -188,6 +203,7 @@ static Coisas Maca_Coragem_Item{
 	usos::arma,
 	20,
 	20,
+	0,
 	0,
 };
 
@@ -199,5 +215,6 @@ static Coisas Pocao_Pureza_Item{
 	0,
 	0,
 	30,
+	0,
 };
 

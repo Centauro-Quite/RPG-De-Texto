@@ -1,29 +1,145 @@
-﻿  InimigosBase.cpp
-C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.37.32822\include\xmemory(918,20): error C2338: static_assert failed: 'The C++ Standard forbids containers of const elements because allocator<const T> is ill-formed.'
-C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.37.32822\include\xmemory(645,1): message : consulte a referência à instanciação 'std::allocator<const Luta>' do modelo da classe que está sendo compilada
-C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.37.32822\include\xmemory(742,27): message : consulte a referência à instanciação 'std::_Default_allocator_traits<_Alloc>' do modelo da classe que está sendo compilada
-          with
-          [
-              _Alloc=std::allocator<const Luta>
-          ]
-C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.37.32822\include\vector(444,50): message : consulte a referência à instanciação 'std::allocator_traits<_Alloc>' do modelo da classe que está sendo compilada
-          with
-          [
-              _Alloc=std::allocator<const Luta>
-          ]
-C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.37.32822\include\vector(444,26): message : consulte a referência à instanciação 'std::_Rebind_alloc_t<_Alloc,_Ty>' do modelo da alias que está sendo compilada
-          with
-          [
-              _Alloc=std::allocator<const Luta>,
-              _Ty=const Luta
-          ]
-C:\Users\frlr1\OneDrive\Documents\GitHub\RPG-De-Texto\RPG de Treino\RPG de Treino\InimigosBase.cpp(13,27): message : consulte a referência à instanciação 'std::vector<const Luta,std::allocator<const Luta>>' do modelo da classe que está sendo compilada
-C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.37.32822\include\xmemory(953,66): error C2535: '_Ty *std::allocator<_Ty>::address(_Ty &) noexcept const': função membro já definida ou declarada
-          with
-          [
-              _Ty=const Luta
-          ]
-C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.37.32822\include\xmemory(949,60): message : consulte a declaração de 'std::allocator<const Luta>::address'
-C:\Users\frlr1\OneDrive\Documents\GitHub\RPG-De-Texto\RPG de Treino\RPG de Treino\InimigosBase.cpp(30,44): warning C4267: 'argumento': conversão de 'size_t' para 'int', possível perda de dados
+﻿  Base.cpp
+  Combate.cpp
+  Gurreiro.cpp
   inventario.cpp
+  RPG de Treino.cpp
+  Saves.cpp
+C:\Users\frlr1\OneDrive\Documents\GitHub\RPG-De-Texto\RPG de Treino\RPG de Treino\Saves.h(10,19): error C2039: ' string': não é um membro de 'std'
+C:\Users\frlr1\OneDrive\Documents\GitHub\RPG-De-Texto\RPG de Treino\RPG de Treino\predefined C++ types (compiler internal)(347,11): message : consulte a declaração de 'std'
+C:\Users\frlr1\OneDrive\Documents\GitHub\RPG-De-Texto\RPG de Treino\RPG de Treino\Saves.h(10,19): error C2061: erro de sintaxe: identificador 'string'
+C:\Users\frlr1\OneDrive\Documents\GitHub\RPG-De-Texto\RPG de Treino\RPG de Treino\Saves.cpp(5,39): error C2146: erro de sintaxe: ')' ausente antes do identificador 'Name_file'
+C:\Users\frlr1\OneDrive\Documents\GitHub\RPG-De-Texto\RPG de Treino\RPG de Treino\Saves.cpp(5,39): error C3646: 'Name_file': especificador de substituição desconhecido
+C:\Users\frlr1\OneDrive\Documents\GitHub\RPG-De-Texto\RPG de Treino\RPG de Treino\Saves.cpp(5,48): error C2059: erro de sintaxe: ')'
+C:\Users\frlr1\OneDrive\Documents\GitHub\RPG-De-Texto\RPG de Treino\RPG de Treino\Saves.cpp(5,13): error C2511: 'void Saves::Salvar(std::string)': função membro sobrecarregada não encontrada em 'Saves'
+C:\Users\frlr1\OneDrive\Documents\GitHub\RPG-De-Texto\RPG de Treino\RPG de Treino\Saves.h(2,7): message : consulte a declaração de 'Saves'
+C:\Users\frlr1\OneDrive\Documents\GitHub\RPG-De-Texto\RPG de Treino\RPG de Treino\Saves.cpp(7,23): error C2563: incompatibilidade na lista de parâmetros formais
+C:\Users\frlr1\OneDrive\Documents\GitHub\RPG-De-Texto\RPG de Treino\RPG de Treino\Saves.cpp(7,33): error C2146: erro de sintaxe: ')' ausente antes do identificador 'NA'
+C:\Users\frlr1\OneDrive\Documents\GitHub\RPG-De-Texto\RPG de Treino\RPG de Treino\Saves.cpp(7,35): error C2059: erro de sintaxe: ')'
+C:\Users\frlr1\OneDrive\Documents\GitHub\RPG-De-Texto\RPG de Treino\RPG de Treino\Saves.cpp(7,33): error C2065: 'NA': identificador não declarado
+C:\Users\frlr1\OneDrive\Documents\GitHub\RPG-De-Texto\RPG de Treino\RPG de Treino\Saves.cpp(8,7): error C2143: erro de sintaxe: ';' ausente antes de 'std::fstream'
+C:\Users\frlr1\OneDrive\Documents\GitHub\RPG-De-Texto\RPG de Treino\RPG de Treino\Saves.cpp(8,21): error C2065: 'Name_file': identificador não declarado
+C:\Users\frlr1\OneDrive\Documents\GitHub\RPG-De-Texto\RPG de Treino\RPG de Treino\Saves.cpp(8,19): error C2665: 'std::basic_fstream<char,std::char_traits<char>>::basic_fstream': nenhuma função sobrecarregada pode converter todos os tipos de argumento
+C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.37.32822\include\fstream(445,5): message : poderia ser 'std::basic_fstream<char,std::char_traits<char>>::basic_fstream(FILE *)'
+C:\Users\frlr1\OneDrive\Documents\GitHub\RPG-De-Texto\RPG de Treino\RPG de Treino\Saves.cpp(8,19): message : 'std::basic_fstream<char,std::char_traits<char>>::basic_fstream(FILE *)': não é possível converter um argumento 1 de 'const int' em 'FILE *'
+C:\Users\frlr1\OneDrive\Documents\GitHub\RPG-De-Texto\RPG de Treino\RPG de Treino\Saves.cpp(8,56): message : Conversão de tipo integral para tipo de ponteiro requer reinterpret_cast, conversão C-style ou conversão function-style entre parênteses
+C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.37.32822\include\fstream(425,5): message : ou       'std::basic_fstream<char,std::char_traits<char>>::basic_fstream(const std::wstring &,std::ios_base::openmode,int)'
+C:\Users\frlr1\OneDrive\Documents\GitHub\RPG-De-Texto\RPG de Treino\RPG de Treino\Saves.cpp(8,19): message : 'std::basic_fstream<char,std::char_traits<char>>::basic_fstream(const std::wstring &,std::ios_base::openmode,int)': não é possível converter um argumento 1 de 'const int' em 'const std::wstring &'
+C:\Users\frlr1\OneDrive\Documents\GitHub\RPG-De-Texto\RPG de Treino\RPG de Treino\Saves.cpp(8,56): message : Razão: não é possível converter de 'const int' para 'const std::wstring'
+C:\Users\frlr1\OneDrive\Documents\GitHub\RPG-De-Texto\RPG de Treino\RPG de Treino\Saves.cpp(8,56): message : 'std::basic_string<wchar_t,std::char_traits<wchar_t>,std::allocator<wchar_t>>::basic_string': nenhuma função sobrecarregada pode converter todos os tipos de argumento
+C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.37.32822\include\xstring(2539,5): message : poderia ser 'std::basic_string<wchar_t,std::char_traits<wchar_t>,std::allocator<wchar_t>>::basic_string(const _Elem *const )'
+          with
+          [
+              _Elem=wchar_t
+          ]
+C:\Users\frlr1\OneDrive\Documents\GitHub\RPG-De-Texto\RPG de Treino\RPG de Treino\Saves.cpp(8,56): message : 'std::basic_string<wchar_t,std::char_traits<wchar_t>,std::allocator<wchar_t>>::basic_string(const _Elem *const )': não é possível converter um argumento 1 de 'const int' em 'const _Elem *const '
+          with
+          [
+              _Elem=wchar_t
+          ]
+C:\Users\frlr1\OneDrive\Documents\GitHub\RPG-De-Texto\RPG de Treino\RPG de Treino\Saves.cpp(8,56): message : Conversão de tipo integral para tipo de ponteiro requer reinterpret_cast, conversão C-style ou conversão function-style entre parênteses
+C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.37.32822\include\xstring(3072,5): message : ou       'std::basic_string<wchar_t,std::char_traits<wchar_t>,std::allocator<wchar_t>>::basic_string(std::initializer_list<_Elem>,const _Alloc &)'
+          with
+          [
+              _Elem=wchar_t,
+              _Alloc=std::allocator<wchar_t>
+          ]
+C:\Users\frlr1\OneDrive\Documents\GitHub\RPG-De-Texto\RPG de Treino\RPG de Treino\Saves.cpp(8,56): message : 'std::basic_string<wchar_t,std::char_traits<wchar_t>,std::allocator<wchar_t>>::basic_string(std::initializer_list<_Elem>,const _Alloc &)': não é possível converter um argumento 1 de 'const int' em 'std::initializer_list<_Elem>'
+          with
+          [
+              _Elem=wchar_t,
+              _Alloc=std::allocator<wchar_t>
+          ]
+          and
+          [
+              _Elem=wchar_t
+          ]
+C:\Users\frlr1\OneDrive\Documents\GitHub\RPG-De-Texto\RPG de Treino\RPG de Treino\Saves.cpp(8,56): message : Conversão requer um segundo operador de conversão definida pelo usuário ou construtor
+C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.37.32822\include\xstring(2891,5): message : ou       'std::basic_string<wchar_t,std::char_traits<wchar_t>,std::allocator<wchar_t>>::basic_string(const _Ty &,const unsigned __int64,const unsigned __int64,const _Alloc &)'
+          with
+          [
+              _Alloc=std::allocator<wchar_t>
+          ]
+C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.37.32822\include\xstring(2569,5): message : ou       'std::basic_string<wchar_t,std::char_traits<wchar_t>,std::allocator<wchar_t>>::basic_string(_Iter,_Iter,const _Alloc &)'
+          with
+          [
+              _Alloc=std::allocator<wchar_t>
+          ]
+C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.37.32822\include\xstring(2563,5): message : ou       'std::basic_string<wchar_t,std::char_traits<wchar_t>,std::allocator<wchar_t>>::basic_string(const unsigned __int64,const _Elem,const _Alloc &)'
+          with
+          [
+              _Elem=wchar_t,
+              _Alloc=std::allocator<wchar_t>
+          ]
+C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.37.32822\include\xstring(2550,5): message : ou       'std::basic_string<wchar_t,std::char_traits<wchar_t>,std::allocator<wchar_t>>::basic_string(const _Elem *const ,const _Alloc &)'
+          with
+          [
+              _Elem=wchar_t,
+              _Alloc=std::allocator<wchar_t>
+          ]
+C:\Users\frlr1\OneDrive\Documents\GitHub\RPG-De-Texto\RPG de Treino\RPG de Treino\Saves.cpp(8,56): message : ao tentar corresponder a lista de argumentos '(const int)'
+C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.37.32822\include\fstream(416,5): message : ou       'std::basic_fstream<char,std::char_traits<char>>::basic_fstream(const wchar_t *,std::ios_base::openmode,int)'
+C:\Users\frlr1\OneDrive\Documents\GitHub\RPG-De-Texto\RPG de Treino\RPG de Treino\Saves.cpp(8,19): message : 'std::basic_fstream<char,std::char_traits<char>>::basic_fstream(const wchar_t *,std::ios_base::openmode,int)': não é possível converter um argumento 1 de 'const int' em 'const wchar_t *'
+C:\Users\frlr1\OneDrive\Documents\GitHub\RPG-De-Texto\RPG de Treino\RPG de Treino\Saves.cpp(8,56): message : Conversão de tipo integral para tipo de ponteiro requer reinterpret_cast, conversão C-style ou conversão function-style entre parênteses
+C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.37.32822\include\fstream(412,5): message : ou       'std::basic_fstream<char,std::char_traits<char>>::basic_fstream(const std::string &,std::ios_base::openmode,int)'
+C:\Users\frlr1\OneDrive\Documents\GitHub\RPG-De-Texto\RPG de Treino\RPG de Treino\Saves.cpp(8,19): message : 'std::basic_fstream<char,std::char_traits<char>>::basic_fstream(const std::string &,std::ios_base::openmode,int)': não é possível converter um argumento 1 de 'const int' em 'const std::string &'
+C:\Users\frlr1\OneDrive\Documents\GitHub\RPG-De-Texto\RPG de Treino\RPG de Treino\Saves.cpp(8,56): message : Razão: não é possível converter de 'const int' para 'const std::string'
+C:\Users\frlr1\OneDrive\Documents\GitHub\RPG-De-Texto\RPG de Treino\RPG de Treino\Saves.cpp(8,56): message : 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string': nenhuma função sobrecarregada pode converter todos os tipos de argumento
+C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.37.32822\include\xstring(2539,5): message : poderia ser 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string(const _Elem *const )'
+          with
+          [
+              _Elem=char
+          ]
+C:\Users\frlr1\OneDrive\Documents\GitHub\RPG-De-Texto\RPG de Treino\RPG de Treino\Saves.cpp(8,56): message : 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string(const _Elem *const )': não é possível converter um argumento 1 de 'const int' em 'const _Elem *const '
+          with
+          [
+              _Elem=char
+          ]
+C:\Users\frlr1\OneDrive\Documents\GitHub\RPG-De-Texto\RPG de Treino\RPG de Treino\Saves.cpp(8,56): message : Conversão de tipo integral para tipo de ponteiro requer reinterpret_cast, conversão C-style ou conversão function-style entre parênteses
+C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.37.32822\include\xstring(3072,5): message : ou       'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string(std::initializer_list<_Elem>,const _Alloc &)'
+          with
+          [
+              _Elem=char,
+              _Alloc=std::allocator<char>
+          ]
+C:\Users\frlr1\OneDrive\Documents\GitHub\RPG-De-Texto\RPG de Treino\RPG de Treino\Saves.cpp(8,56): message : 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string(std::initializer_list<_Elem>,const _Alloc &)': não é possível converter um argumento 1 de 'const int' em 'std::initializer_list<_Elem>'
+          with
+          [
+              _Elem=char,
+              _Alloc=std::allocator<char>
+          ]
+          and
+          [
+              _Elem=char
+          ]
+C:\Users\frlr1\OneDrive\Documents\GitHub\RPG-De-Texto\RPG de Treino\RPG de Treino\Saves.cpp(8,56): message : Conversão requer um segundo operador de conversão definida pelo usuário ou construtor
+C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.37.32822\include\xstring(2891,5): message : ou       'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string(const _Ty &,const unsigned __int64,const unsigned __int64,const _Alloc &)'
+          with
+          [
+              _Alloc=std::allocator<char>
+          ]
+C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.37.32822\include\xstring(2569,5): message : ou       'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string(_Iter,_Iter,const _Alloc &)'
+          with
+          [
+              _Alloc=std::allocator<char>
+          ]
+C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.37.32822\include\xstring(2563,5): message : ou       'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string(const unsigned __int64,const _Elem,const _Alloc &)'
+          with
+          [
+              _Elem=char,
+              _Alloc=std::allocator<char>
+          ]
+C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.37.32822\include\xstring(2550,5): message : ou       'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string(const _Elem *const ,const _Alloc &)'
+          with
+          [
+              _Elem=char,
+              _Alloc=std::allocator<char>
+          ]
+C:\Users\frlr1\OneDrive\Documents\GitHub\RPG-De-Texto\RPG de Treino\RPG de Treino\Saves.cpp(8,56): message : ao tentar corresponder a lista de argumentos '(const int)'
+C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.37.32822\include\fstream(404,5): message : ou       'std::basic_fstream<char,std::char_traits<char>>::basic_fstream(const char *,std::ios_base::openmode,int)'
+C:\Users\frlr1\OneDrive\Documents\GitHub\RPG-De-Texto\RPG de Treino\RPG de Treino\Saves.cpp(8,19): message : 'std::basic_fstream<char,std::char_traits<char>>::basic_fstream(const char *,std::ios_base::openmode,int)': não é possível converter um argumento 1 de 'const int' em 'const char *'
+C:\Users\frlr1\OneDrive\Documents\GitHub\RPG-De-Texto\RPG de Treino\RPG de Treino\Saves.cpp(8,56): message : Conversão de tipo integral para tipo de ponteiro requer reinterpret_cast, conversão C-style ou conversão function-style entre parênteses
+C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.37.32822\include\fstream(430,5): message : ou       'std::basic_fstream<char,std::char_traits<char>>::basic_fstream(const _Ty &,std::ios_base::openmode,int)'
+C:\Users\frlr1\OneDrive\Documents\GitHub\RPG-De-Texto\RPG de Treino\RPG de Treino\Saves.cpp(8,19): message : 'std::basic_fstream<char,std::char_traits<char>>::basic_fstream(const _Ty &,std::ios_base::openmode,int)': não foi possível deduzir o argumento de modelo para '__formal'
+C:\Users\frlr1\OneDrive\Documents\GitHub\RPG-De-Texto\RPG de Treino\RPG de Treino\Saves.cpp(8,19): message : ao tentar corresponder a lista de argumentos '(const int)'
+C:\Users\frlr1\OneDrive\Documents\GitHub\RPG-De-Texto\RPG de Treino\RPG de Treino\Saves.cpp(10,1): error C2059: erro de sintaxe: '}'
   Gerando Código...

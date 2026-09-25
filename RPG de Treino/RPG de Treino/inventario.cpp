@@ -1,6 +1,5 @@
 #include "inventario.h"
 #include <iostream>
-#include <algorithm>
 
 inventario::inventario(Coisas Arma, Coisas Armadura, Coisas Acessorio) : Arma(Arma), Armadura(Armadura), Acessorio(Acessorio)
 {
@@ -19,16 +18,20 @@ void inventario::encherInv(Coisas item, Coisas item2, Coisas item3)
 	Mochila[2] = item3;
 }
 
-bool inventario::temespada() {
-    auto lista = { Itens::Espada_Cobre, Itens::Espada_Inicial, Itens::Espada_Duas_Maos };
-    if (std::find(lista.begin(), lista.end(), Mochila[0].item) != lista.end()) {
+bool inventario::temarma() {
+    if (Arma.Qualuso == usos::arma) {
         return true;
-    }
+   }
     return false;
 }
 void inventario::Usar() {
     ChecarMochila();
     std::cout << "Gostaria de usar qual poncao?";
+}
+
+Coisas inventario::pegarobj(int i)
+{
+    return Mochila[i];
 }
 
 void inventario::ChecarMochila()

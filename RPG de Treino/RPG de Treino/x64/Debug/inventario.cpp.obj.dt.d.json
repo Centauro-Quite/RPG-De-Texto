@@ -125,8 +125,7 @@
             "c:\\program files\\microsoft visual studio\\18\\community\\vc\\tools\\msvc\\14.37.32822\\include\\xlocinfo",
             "c:\\program files\\microsoft visual studio\\18\\community\\vc\\tools\\msvc\\14.37.32822\\include\\__msvc_xlocinfo_types.hpp",
             "c:\\program files\\microsoft visual studio\\18\\community\\vc\\tools\\msvc\\14.37.32822\\include\\clocale",
-            "c:\\program files (x86)\\windows kits\\10\\include\\10.0.26100.0\\ucrt\\locale.h",
-            "c:\\program files\\microsoft visual studio\\18\\community\\vc\\tools\\msvc\\14.37.32822\\include\\algorithm"
+            "c:\\program files (x86)\\windows kits\\10\\include\\10.0.26100.0\\ucrt\\locale.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

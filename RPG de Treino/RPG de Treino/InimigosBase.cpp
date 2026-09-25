@@ -39,18 +39,7 @@ InimigosBase::~InimigosBase()
 {
 
 }
-void InimigosBase::criarinimigo(const std::vector<Luta>& a) {
-	Aleatorio aleatorio;
-	int i = aleatorio.Entre(0, a.size());
-	HP = a[i].hp;
-	ATK = a[i].atk;
-	DF = a[i].df;
-	LV = a[i].lv;
-	LUK = a[i].luk;
-	Nome = a[i].nome;
-	MaxHP = HP;
-	CurHP = HP;
-}
+
 std::string InimigosBase::GetName()
 {
 	return Nome;

@@ -130,6 +130,7 @@
     <ClCompile Include="InimigosBase.cpp" />
     <ClCompile Include="inventario.cpp" />
     <ClCompile Include="RPG de Treino.cpp" />
+    <ClCompile Include="Saves.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Aletorio.h" />
@@ -140,6 +141,8 @@
     <ClInclude Include="InimigosBase.h" />
     <ClInclude Include="inventario.h" />
     <ClInclude Include="itens.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="Saves.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />

@@ -34,11 +34,16 @@ int Base::causardano (const int ataque) const {
 }
 
 int Base::ListaDeAtaques(const bool Combate) {
+	if (Mochila.temarma()) {
+		Coisas arma = Mochila.pegarobj(0);
+		ListadeAtaqueMap[1] = Ataques { arma.Name, arma.Atk, arma.MP };
+	}
+	else {
+		ListadeAtaqueMap[1] = Ataques{ "Ataque Basico", 3, 0 };
+	}
 	if (Combate == true) {
 		std::cout << "escolha um dos golpes:\n";
-		if (Mochila.temespada()) {
-			ListadeAtaqueMap[1] = Ataques{ "Usar a espada", 10, 0 };
-		}
+		
 	}
 	for (const auto& [id, ataque] : ListadeAtaqueMap) {
 		std::cout << id << ": " << ataque.Nome << ": DPS:" << (ATKS + ataque.dano);

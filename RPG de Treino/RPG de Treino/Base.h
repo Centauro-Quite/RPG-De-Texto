@@ -19,6 +19,7 @@ protected:
         int dano = 0;
         int mana = 0;
     };
+    // [ID], Nome,Dano,MP
     std::map <int, Ataques> ListadeAtaqueMap;
 private:
     inventario Mochila;

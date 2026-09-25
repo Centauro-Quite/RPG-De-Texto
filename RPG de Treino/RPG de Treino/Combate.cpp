@@ -74,7 +74,8 @@ void Combate::entrar() {
     std::cout << "Entrou em combate com:" << '\n' << statusI.Nome << '\n' << "Vamos decidir quem vai comecar " << statusP.Nome
     << " ou " << (statusI.Nome + ".") << "\n";
     Aleatorio rado;
-    if (rado.Entre(0, 1) == 0) {
+    if (rado.Entre(
+        0, 1) == 0) {
         std::cout << "Voce perdeu 50% igual perdi minha Nangong Yu :(\n" << "Turno do inimigo:\n";
         turnoInimigo();
     }

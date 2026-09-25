@@ -18,10 +18,10 @@ public:
 	void encherInv(Coisas item, Coisas item2, Coisas item3);
 	void Usar();
 	void Equipar();
-	
+	Coisas pegarobj(int i);
 	
 	void ChecarMochila();
-	bool temespada();
+	bool temarma();
 
 protected:
 	Itens Adionar_Itens();
