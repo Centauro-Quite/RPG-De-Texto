@@ -85,6 +85,14 @@ void Base::setMochila(Coisas item, Coisas item2, Coisas item3)
 }
 
 
+std::string Base::GetListadeataquesave()
+{
+	for (const auto& [id, ataque] : ListadeAtaqueMap) {
+		return static_cast<std::string>(id + ataque.Nome);
+	}
+
+}
+
 void Base::Morte() {
 	std::cout << "infelimente a historia do seu heroi chega ao fim";
 	//limpar o arquivo de save

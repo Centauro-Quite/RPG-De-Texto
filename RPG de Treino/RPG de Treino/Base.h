@@ -22,6 +22,7 @@ protected:
     };
     // [ID], Nome,Dano,MP
     std::map <int, Ataques> ListadeAtaqueMap;
+    std::string GetListadeataquesave();
 private:
     inventario Mochila;
     int HPS, MPS, ATKS, DFS, INTS, LUKS, LV, XP, MaxHP =10 , MaxMP, CurHP, CurMP, CurATK, CurDF, MaxXP;

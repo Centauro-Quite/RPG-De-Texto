@@ -1,0 +1,21 @@
+﻿#include "Saves.h"
+#include <fstream>
+#include <filesystem>
+#include <string>
+bool Saves::checarSave(const std::string nome)
+{
+	if (std::filesystem::exists(( nome + "_save.dat"))) {
+		return true;
+	}
+	else {
+		return false;
+	}
+	return false;
+}
+ 
+void Saves::Salvar(const StatusPlayer basestruct)
+{
+	std::ifstream Save((basestruct.Nome + "_save.dat"), std::fstream::binary);
+	Save << (basestruct.HPS);
+}
+

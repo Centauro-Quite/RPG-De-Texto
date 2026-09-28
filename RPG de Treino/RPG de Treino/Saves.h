@@ -1,15 +1,13 @@
 #pragma once
 
-class Saves
+#include "Base.h"
+class Saves : public Base 
 {
-
+private:
+	bool checarSave(const std::string nome);
 public:
 	//verificar se um save ja existe
-	bool checarSave();
-	//salvar
-	void Salvar(const std::string& Name_file);
-
-	
+	void Salvar(const StatusPlayer basestruct);
 	// deletar quando morrer
 	void deletar();
 	// sobre escrever os saves
