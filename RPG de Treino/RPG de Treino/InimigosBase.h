@@ -28,7 +28,7 @@ public:
 	int GetHP()const;
 	void setDescricao(std::string x);
 	std::string getDescricao();
-	int XPFarme();
+	int XPFarme() const;
 
 	StatusInimigos Status();
 	

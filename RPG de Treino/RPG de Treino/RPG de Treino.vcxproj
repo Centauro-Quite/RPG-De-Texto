@@ -141,7 +141,6 @@
     <ClInclude Include="InimigosBase.h" />
     <ClInclude Include="inventario.h" />
     <ClInclude Include="itens.h" />
-    <ClInclude Include="resource.h" />
     <ClInclude Include="Saves.h" />
   </ItemGroup>
   <ItemGroup>

@@ -2,10 +2,11 @@
 #include <map>
 #include <string>
 #include "inventario.h"
+//HPS,MPS,ATK,DFS,INTS,LUKS,LV,XP,MaxHP,MaxMP,CurMP,CurATK,CurDF,MaxXP;string Nome;
 struct StatusPlayer
 {
-    int ATK; int MaxHP;
-    int DF; int LV;
+    int HPS, MPS, ATK, DFS, INTS,LUKS,LV,
+    XP,MaxHP, MaxMP,CurMP, CurATK,CurDF, MaxXP;
     std::string Nome;
 };
 class Base
@@ -39,7 +40,7 @@ public:
     void ReceberDano(int dano);
     void checarLV(const int xp);
     void SubirLV();
-    StatusPlayer Status();
+    StatusPlayer Status()const;
     void trocarnome(std::string x);
     void checarMochila();
     

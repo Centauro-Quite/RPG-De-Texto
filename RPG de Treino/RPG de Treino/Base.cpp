@@ -141,9 +141,9 @@ void Base::atualizarstatus() {
 
 }
 
-StatusPlayer Base::Status()
+StatusPlayer Base::Status() const
 {
-	return StatusPlayer{ this->ATKS,this->MaxHP,this->DFS,this->LV,this->Nome};
+	return StatusPlayer{ HPS,MPS,ATKS,DFS,INTS,LUKS,LV,XP,MaxHP,MaxMP,CurMP,CurATK,CurDF,MaxXP,Nome	};
 }
 
 void Base::trocarnome(std::string x)

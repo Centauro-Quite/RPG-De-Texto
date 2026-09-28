@@ -19,7 +19,7 @@ InimigosBase::InimigosBase(Areas area): Nome(""), HP(0), ATK(0), DF(0), LUK(0), 
 		if (encontrado != inimigo.area.end()) {
 			podemNascer.push_back(&inimigo);
 		}
-	}
+ 	}
 	Aleatorio rando;
 	int x = rando.Entre(0, (podemNascer.size()- 1));
 	HP = podemNascer[x]->hp;
@@ -69,7 +69,7 @@ std::string InimigosBase::getDescricao()
 	return Descricao;
 }
 
-int InimigosBase::XPFarme()
+int InimigosBase::XPFarme() const
 {
 	return LV * 10 / 3;
 }

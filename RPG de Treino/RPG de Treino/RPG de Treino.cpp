@@ -11,7 +11,7 @@
 #define Log(x) (std::cout << x << '\n')
 #define testar std::cin.get(); return 0;
 
-std::string inputcheck() {
+std::string static inputcheck() {
 	std::string input;
 	std::cin >> input;
 	if (input == "sair") {
