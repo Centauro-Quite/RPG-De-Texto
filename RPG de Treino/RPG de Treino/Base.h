@@ -16,7 +16,9 @@ struct Ataques
     int dano = 0;
     int mana = 0;
 };
-
+enum class classes {
+    Gurreiro
+};
 class Base
 {
 protected:
@@ -33,7 +35,7 @@ private:
     std::string Nome;
     void atualizarstatus();
 public:
-
+    Base();
     Base(int HPS, int MPS, int ATKS, int DFS, int INTS, int LUKS, int LV);
     ~Base();
     void const StatusTela() const;
@@ -47,8 +49,10 @@ public:
     StatusPlayer Status()const;
     void trocarnome(std::string x);
     void checarMochila();
-    
+    std::vector <Coisas> salvarMochilaB();
 
     void salvar();
+
+    void carregar();
    
 };  

@@ -129,12 +129,12 @@
     <ClCompile Include="Gurreiro.cpp" />
     <ClCompile Include="InimigosBase.cpp" />
     <ClCompile Include="inventario.cpp" />
+    <ClCompile Include="Mago.cpp" />
     <ClCompile Include="RPG de Treino.cpp" />
     <ClCompile Include="Saves.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Aleatorio.h" />
-    <ClInclude Include="Aletorio.h" />
     <ClInclude Include="Base.h" />
     <ClInclude Include="Combate.h" />
     <ClInclude Include="Gurreiro.h" />
@@ -142,6 +142,7 @@
     <ClInclude Include="InimigosBase.h" />
     <ClInclude Include="inventario.h" />
     <ClInclude Include="itens.h" />
+    <ClInclude Include="Mago.h" />
     <ClInclude Include="Saves.h" />
   </ItemGroup>
   <ItemGroup>

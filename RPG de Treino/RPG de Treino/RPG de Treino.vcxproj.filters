@@ -39,6 +39,9 @@
     <ClCompile Include="Saves.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Mago.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="inventario.h">
@@ -59,9 +62,6 @@
     <ClInclude Include="Combate.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Aletorio.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Inimigos.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -69,6 +69,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Aleatorio.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Mago.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

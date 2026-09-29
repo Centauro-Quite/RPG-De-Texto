@@ -1,6 +1,9 @@
 #include "Base.h"
 #include <iostream>
 #include "Saves.h"
+Base::Base() : Mochila(NadaItem, NadaItem, NadaItem) {
+    
+}
 
 Base::Base( int HPS, int MPS, int ATKS, int DFS, int INTS, int LUKS, int LV) : HPS(HPS),MPS(MPS),ATKS(ATKS),DFS(DFS),
 INTS(INTS),LUKS(LUKS),LV(LV), XP(0), CurHP(0), CurMP(0), CurATK(0), CurDF(0), MaxXP(10), Nome("erro base foi escolhida"),
@@ -85,13 +88,37 @@ void Base::setMochila(Coisas item, Coisas item2, Coisas item3)
 	Mochila.encherInv(item, item2, item3);
 }
 
-
+ 
 
 void Base::salvar() {
 	Saves salvar;
-	salvar.Salvar(Status(), ListadeAtaqueMap);
+	salvar.Salvar(Status(), ListadeAtaqueMap, Mochila.salvarMochila());
 }
+void Base::carregar() {
+	Saves carregar;
+	auto status = Status();
+	carregar.carregar(status, ListadeAtaqueMap);
+	// substituir todos os valores da Base pelos valores carregados em 'status'
+	HPS = status.HPS;
+	MPS = status.MPS;
+	ATKS = status.ATK;
+	DFS = status.DFS;
+	INTS = status.INTS;
+	LUKS = status.LUKS;
+	LV = status.LV;
+	XP = status.XP;
+	MaxHP = status.MaxHP;
+	MaxMP = status.MaxMP;
+	CurMP = status.CurMP;
+	CurATK = status.CurATK;
+	CurDF = status.CurDF;
+	MaxXP = status.MaxXP;
+	CurHP = status.CurHP;
+	Nome = status.Nome;
 
+	// limpar todos os valores dentro de 'status' após copiar para o objeto Base
+	status = StatusPlayer{};
+}
 
 
 void Base::Morte() {

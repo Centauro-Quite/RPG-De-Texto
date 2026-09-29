@@ -22,9 +22,9 @@ Saves::Saves()
 }
 
 const std::string path = "C:\\Users\\centauroq\\Documents\\Eu Proprio fiz\\RPG de Treino\\RPG de Treino\\Saves\\";
-void Saves::Salvar(const StatusPlayer basestruct, std::map <int,Ataques>& listaAtaques)
+void Saves::Salvar(const StatusPlayer& basestruct, const std::map<int, Ataques>& listaAtaques, const std::vector<Coisas>& vector)
 {
-	std::ofstream Save((path + basestruct.Nome + "_save.txt"), std::ios::out);
+	std::ofstream Save((path + "save.txt"), std::ios::out);
     Save << (basestruct.Nome) << '\n';
 	Save << (basestruct.HPS) << '\n';
     Save << (basestruct.MPS) << '\n';
@@ -40,7 +40,6 @@ void Saves::Salvar(const StatusPlayer basestruct, std::map <int,Ataques>& listaA
 	Save << (basestruct.CurATK) << "\n";
 	Save << (basestruct.CurDF) << "\n";
 	Save << (basestruct.MaxXP) << "\n";
-	Save << (basestruct.Nome) << "\n";
 	Save << (basestruct.CurHP) << "\n";
 	Save << listaAtaques.size() << '\n';
 
@@ -50,13 +49,63 @@ void Saves::Salvar(const StatusPlayer basestruct, std::map <int,Ataques>& listaA
 		Save << id << '\n';
 		Save << ataque.mana << '\n';
 	}
+    
+    
+}
+std::string Saves::checarexiste() {
+    std::ifstream Save(path + "save.txt");
+    if (Save.is_open()) {
+        std::string a;Save >> a;
+        return a;
+    }
+    return "";
 }
 
-void Saves::carregar(StatusPlayer& status, std::map <int, Ataques>& ataques )
+void Saves::carregar(StatusPlayer& status, std::map <int, Ataques>& ataques)
 {
-    std::ifstream Save((path + status.Nome + "_save.txt"), std::ios::in);
-    for ( )
+    std::ifstream Save(path + status.Nome + "_save.txt");
+
+    if (!Save) {
+        return;
+    }
+
+    // Nome está na primeira linha e pode conter espaços.
+    std::getline(Save, status.Nome);
+
+    Save >> status.HPS
+        >> status.MPS
+        >> status.ATK
+        >> status.DFS
+        >> status.INTS
+        >> status.LUKS
+        >> status.LV
+        >> status.XP
+        >> status.MaxHP
+        >> status.MaxMP
+        >> status.CurMP
+        >> status.CurATK
+        >> status.CurDF
+        >> status.MaxXP
+        >> status.CurHP;
+
+    std::size_t quantidadeAtaques;
+    Save >> quantidadeAtaques;
+
+    ataques.clear();
+
+    for (std::size_t i = 0; i < quantidadeAtaques; ++i) {
+        Ataques ataque;
+        int id;
+
+        Save >> std::quoted(ataque.Nome)
+            >> ataque.dano
+            >> id
+            >> ataque.mana;
+
+        ataques[id] = ataque;
+    }
+     
+
 }
-
-
+ 
 

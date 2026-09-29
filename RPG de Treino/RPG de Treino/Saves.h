@@ -1,6 +1,6 @@
 #pragma once
-
 #include "Base.h"
+
 class Saves
 {
 private:
@@ -8,18 +8,19 @@ private:
 public:
 	Saves();
 	//salvar
-	void Salvar(const StatusPlayer basestruct, std::map<int, Ataques>& listaAtaques);
+	void Salvar(const StatusPlayer& basestruct, const std::map<int, Ataques>& listaAtaques, const std::vector<Coisas>& vector);
 
+	std::string checarexiste();
 	
+	void carregar(StatusPlayer& status, std::map<int, Ataques>& ataques);
+
+
 	// deletar quando morrer
 	void deletar();
 	// sobre escrever os saves
 	void mudarSave();
 	//
-	
 
-	
 
-    void carregar(StatusPlayer& status, std::map<int, Ataques>& ataques);
 };
 

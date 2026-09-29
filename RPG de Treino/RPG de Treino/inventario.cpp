@@ -52,4 +52,7 @@ void inventario::ChecarMochila()
         }
     }
 }
+std::vector<Coisas> inventario::salvarMochila() {
+    return {Mochila};
 
+}

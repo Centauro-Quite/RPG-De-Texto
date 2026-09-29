@@ -7,6 +7,7 @@
 #include "Combate.h"
 #include "InimigosBase.h"
 #include "Saves.h"
+#include "Mago.h"
 #define Log(x) (std::cout << x << '\n')
 #define testar std::cin.get(); return 0;
 
@@ -22,18 +23,28 @@ std::string static inputcheck() {
 	
 	return input;
 }
-
+Saves salvar;
 int main()
 {
-	Gurreiro Player(1,1,1,1,1,1,1);
+	
 	/*
 	InimigosBase inimigo(Areas::floresta);
 	Combate a (Player, inimigo);
 	a.entrar();*/
-	Player.salvar();
-
-	testar
 	
+
+    
+   // checar se existe o save;
+
+    
+    std::string heroi = salvar.checarexiste();
+    std::unique_ptr <Base> Player;
+    if (heroi == "Gurreiro") {
+        Player = std::make_unique<Gurreiro>();
+    }
+    else if(heroi == "Mago") {
+        Player = std::make_unique<Mago>();
+    }
 
 	std::cout << "Ola bem vindo ao RPG de Textos (infelimente n�o tenho dinheiro pra fazer 3D e to preso nesse terminal)\n\n"
 		<< "Eu serei seu DM controlando usando mecanicas aletorias afinal aida nao sou capaz de invadir seu pc \n" <<
