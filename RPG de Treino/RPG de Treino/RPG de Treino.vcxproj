@@ -133,6 +133,7 @@
     <ClCompile Include="Saves.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Aleatorio.h" />
     <ClInclude Include="Aletorio.h" />
     <ClInclude Include="Base.h" />
     <ClInclude Include="Combate.h" />
@@ -145,6 +146,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Saves\Gurreio_save.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

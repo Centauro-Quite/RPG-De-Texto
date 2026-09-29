@@ -1,5 +1,6 @@
 #include "Base.h"
 #include <iostream>
+#include "Saves.h"
 
 Base::Base( int HPS, int MPS, int ATKS, int DFS, int INTS, int LUKS, int LV) : HPS(HPS),MPS(MPS),ATKS(ATKS),DFS(DFS),
 INTS(INTS),LUKS(LUKS),LV(LV), XP(0), CurHP(0), CurMP(0), CurATK(0), CurDF(0), MaxXP(10), Nome("erro base foi escolhida"),
@@ -85,13 +86,13 @@ void Base::setMochila(Coisas item, Coisas item2, Coisas item3)
 }
 
 
-std::string Base::GetListadeataquesave()
-{
-	for (const auto& [id, ataque] : ListadeAtaqueMap) {
-		return static_cast<std::string>(id + ataque.Nome);
-	}
 
+void Base::salvar() {
+	Saves salvar;
+	salvar.Salvar(Status(), ListadeAtaqueMap);
 }
+
+
 
 void Base::Morte() {
 	std::cout << "infelimente a historia do seu heroi chega ao fim";
@@ -151,7 +152,7 @@ void Base::atualizarstatus() {
 
 StatusPlayer Base::Status() const
 {
-	return StatusPlayer{ HPS,MPS,ATKS,DFS,INTS,LUKS,LV,XP,MaxHP,MaxMP,CurMP,CurATK,CurDF,MaxXP,Nome	};
+	return StatusPlayer{ HPS,MPS,ATKS,DFS,INTS,LUKS,LV,XP,MaxHP,MaxMP,CurMP,CurATK,CurDF,MaxXP,CurHP,Nome};
 }
 
 void Base::trocarnome(std::string x)

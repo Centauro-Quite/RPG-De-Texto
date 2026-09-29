@@ -13,6 +13,9 @@
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
     </Filter>
+    <Filter Include="Saves">
+      <UniqueIdentifier>{62c33770-0919-4ad7-be5a-7a069bdb0481}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="inventario.cpp">
@@ -65,8 +68,16 @@
     <ClInclude Include="Saves.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Aleatorio.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Saves\Gurreio_save.txt">
+      <Filter>Saves</Filter>
+    </Text>
   </ItemGroup>
 </Project>

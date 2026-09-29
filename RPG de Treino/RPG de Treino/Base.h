@@ -5,27 +5,30 @@
 //HPS,MPS,ATK,DFS,INTS,LUKS,LV,XP,MaxHP,MaxMP,CurMP,CurATK,CurDF,MaxXP;string Nome;
 struct StatusPlayer
 {
-    int HPS, MPS, ATK, DFS, INTS,LUKS,LV,
-    XP,MaxHP, MaxMP,CurMP, CurATK,CurDF, MaxXP;
+    int HPS, MPS, ATK, DFS, INTS, LUKS, LV,
+        XP, MaxHP, MaxMP, CurMP, CurATK, CurDF, MaxXP, CurHP;
     std::string Nome;
 };
+struct Ataques
+{
+    std::string Nome = "erro";
+
+    int dano = 0;
+    int mana = 0;
+};
+
 class Base
 {
 protected:
     void setMochila(Coisas item, Coisas item2, Coisas item3);
-    struct Ataques
-    {
-        std::string Nome = "erro";
 
-        int dano = 0;
-        int mana = 0;
-    };
     // [ID], Nome,Dano,MP
     std::map <int, Ataques> ListadeAtaqueMap;
-    std::string GetListadeataquesave();
+    
 private:
     inventario Mochila;
     int HPS, MPS, ATKS, DFS, INTS, LUKS, LV, XP, MaxHP =10 , MaxMP, CurHP, CurMP, CurATK, CurDF, MaxXP;
+    
     void Morte();
     std::string Nome;
     void atualizarstatus();
@@ -45,5 +48,7 @@ public:
     void trocarnome(std::string x);
     void checarMochila();
     
-};  
 
+    void salvar();
+   
+};  

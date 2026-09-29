@@ -6,10 +6,11 @@
 #include "Gurreiro.h"
 #include "Combate.h"
 #include "InimigosBase.h"
-
-
+#include "Saves.h"
 #define Log(x) (std::cout << x << '\n')
 #define testar std::cin.get(); return 0;
+
+
 
 std::string static inputcheck() {
 	std::string input;
@@ -25,9 +26,11 @@ std::string static inputcheck() {
 int main()
 {
 	Gurreiro Player(1,1,1,1,1,1,1);
+	/*
 	InimigosBase inimigo(Areas::floresta);
 	Combate a (Player, inimigo);
-	a.entrar();
+	a.entrar();*/
+	Player.salvar();
 
 	testar
 	
@@ -94,7 +97,6 @@ int main()
 			<< "fazendo voce lutar contra um coelho(kkkkkk fracote)\n";
 		InimigosBase inimigo("Coelho", 1, 1, 1, 1, 10);
 		
+	
 	} 
 }
-
-
