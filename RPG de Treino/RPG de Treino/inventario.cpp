@@ -11,6 +11,7 @@ inventario::inventario(Coisas Arma, Coisas Armadura, Coisas Acessorio) : Arma(Ar
     
 }
 
+
 void inventario::encherInv(Coisas item, Coisas item2, Coisas item3)
 {
 	Mochila[0] = item;
@@ -24,6 +25,17 @@ bool inventario::temarma() {
    }
     return false;
 }
+
+int inventario::get_tamanho() const
+{
+    return Espaco;
+}
+
+int inventario::get_flechas() const
+{
+    return flechas;
+}
+
 void inventario::Usar() {
     ChecarMochila();
     std::cout << "Gostaria de usar qual poncao?";
@@ -36,9 +48,9 @@ Coisas inventario::pegarobj(int i)
 
 void inventario::ChecarMochila()
 {
-    std::cout << "___Mochila___\nTamanho da mochila = " << EspacoMax << "\n";
+    std::cout << "___Mochila___\nTamanho da mochila = " << Espaco << "\n";
 
-    for (int i = 0; i < EspacoMax; i++){
+    for (int i = 0; i < Espaco; i++){
         if (Mochila[i].item == NadaItem.item) {
             std::cout << (i + 1) << ": Vazio\n ";
         }
@@ -52,7 +64,23 @@ void inventario::ChecarMochila()
         }
     }
 }
-std::vector<Coisas> inventario::salvarMochila() {
-    return {Mochila};
+const std::vector<Coisas>& inventario::carregarMochila() const {
+    return Mochila;
 
+}
+
+void inventario::setMochila(const std::vector<Coisas>& m, int espaco, int flechas) {
+    Mochila = m;
+    Espaco = espaco;
+    this->flechas = flechas;
+    // Garantir que a mochila tenha pelo menos Espaco elementos
+    if (static_cast<int>(Mochila.size()) < Espaco) {
+        while (static_cast<int>(Mochila.size()) < Espaco) {
+            Mochila.push_back(NadaItem);
+        }
+    }
+    // Não exceder o limite físico da mochila
+    if (static_cast<int>(Mochila.size()) > espacoMax) {
+        Mochila.resize(espacoMax);
+    }
 }

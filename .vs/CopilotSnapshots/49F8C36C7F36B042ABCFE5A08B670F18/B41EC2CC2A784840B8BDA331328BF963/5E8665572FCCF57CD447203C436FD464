@@ -1,0 +1,31 @@
+﻿#pragma once
+#include "itens.h"
+
+#include <vector>
+#include <string>
+class inventario
+{
+private:
+	int EspacoMax = {4};
+	Coisas Arma;
+	Coisas Armadura;
+	Coisas Acessorio;
+	std::vector < Coisas > Mochila = { Arma , Armadura, Acessorio };
+	int flechas = 10;
+
+
+public:
+	inventario(Coisas Arma, Coisas Armadura, Coisas Acessorio);
+	void encherInv(Coisas item, Coisas item2, Coisas item3);
+	void Usar();
+	void Equipar();
+	Coisas pegarobj(int i);
+    std::vector<Coisas> salvarMochila();
+   	void ChecarMochila();
+    bool temarma();
+    int get_tamanho();
+protected:
+	Itens Adionar_Itens();
+	
+};
+

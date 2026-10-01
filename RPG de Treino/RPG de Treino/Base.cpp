@@ -1,10 +1,6 @@
 #include "Base.h"
 #include <iostream>
 #include "Saves.h"
-Base::Base() : Mochila(NadaItem, NadaItem, NadaItem) {
-    
-}
-
 Base::Base( int HPS, int MPS, int ATKS, int DFS, int INTS, int LUKS, int LV) : HPS(HPS),MPS(MPS),ATKS(ATKS),DFS(DFS),
 INTS(INTS),LUKS(LUKS),LV(LV), XP(0), CurHP(0), CurMP(0), CurATK(0), CurDF(0), MaxXP(10), Nome("erro base foi escolhida"),
 Mochila(NadaItem,NadaItem,NadaItem) {
@@ -13,6 +9,10 @@ Mochila(NadaItem,NadaItem,NadaItem) {
 	CurHP = MaxHP;
 	CurMP = MaxMP;
 }
+Base::Base() : Mochila(NadaItem, NadaItem, NadaItem) {
+    
+}
+
 Base::~Base()
 {
 }
@@ -92,13 +92,12 @@ void Base::setMochila(Coisas item, Coisas item2, Coisas item3)
 
 void Base::salvar() {
 	Saves salvar;
-	salvar.Salvar(Status(), ListadeAtaqueMap, Mochila.salvarMochila());
+	salvar.Salvar(Status(), ListadeAtaqueMap, Mochila);
 }
 void Base::carregar() {
 	Saves carregar;
 	auto status = Status();
-	carregar.carregar(status, ListadeAtaqueMap);
-	// substituir todos os valores da Base pelos valores carregados em 'status'
+	carregar.carregar(status, ListadeAtaqueMap, Mochila);
 	HPS = status.HPS;
 	MPS = status.MPS;
 	ATKS = status.ATK;
@@ -191,3 +190,5 @@ void Base::checarMochila()
 {
 	Mochila.ChecarMochila();
 }
+
+

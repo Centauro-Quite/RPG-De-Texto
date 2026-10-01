@@ -78,9 +78,4 @@
   <ItemGroup>
     <None Include="ClassDiagram.cd" />
   </ItemGroup>
-  <ItemGroup>
-    <Text Include="Saves\Gurreio_save.txt">
-      <Filter>Saves</Filter>
-    </Text>
-  </ItemGroup>
 </Project>

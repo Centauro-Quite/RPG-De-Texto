@@ -1,0 +1,64 @@
+﻿#include "inventario.h"
+#include <iostream>
+
+inventario::inventario(Coisas Arma, Coisas Armadura, Coisas Acessorio) : Arma(Arma), Armadura(Armadura), Acessorio(Acessorio)
+{
+    Mochila.reserve(10);
+    Mochila.push_back(Arma);
+    Mochila.push_back(Armadura);
+    Mochila.push_back(Acessorio);
+    Mochila.push_back(NadaItem);
+    
+}
+
+void inventario::encherInv(Coisas item, Coisas item2, Coisas item3)
+{
+	Mochila[0] = item;
+	Mochila[1] = item2;
+	Mochila[2] = item3;
+}
+
+bool inventario::temarma() {
+    if (Arma.Qualuso == usos::arma) {
+        return true;
+   }
+    return false;
+}
+
+int inventario::get_tamanho() const
+{
+    return EspacoMax;
+}
+
+void inventario::Usar() {
+    ChecarMochila();
+    std::cout << "Gostaria de usar qual poncao?";
+}
+
+Coisas inventario::pegarobj(int i)
+{
+    return Mochila[i];
+}
+
+void inventario::ChecarMochila()
+{
+    std::cout << "___Mochila___\nTamanho da mochila = " << EspacoMax << "\n";
+
+    for (int i = 0; i < EspacoMax; i++){
+        if (Mochila[i].item == NadaItem.item) {
+            std::cout << (i + 1) << ": Vazio\n ";
+        }
+        else {
+            std::cout << (i + 1) << ": " << Mochila[i].Name << " DP: " << Mochila[i].Atk;  
+            if (i < 3) {
+                std::cout << "   >>Equipado<<\n";
+                continue;
+            }
+            std::cout << '\n';
+        }
+    }
+}
+std::vector<Coisas> inventario::salvarMochila() {
+    return {Mochila};
+
+}

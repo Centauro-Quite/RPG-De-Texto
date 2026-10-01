@@ -49,7 +49,7 @@ public:
     StatusPlayer Status()const;
     void trocarnome(std::string x);
     void checarMochila();
-    std::vector <Coisas> salvarMochilaB();
+    
 
     void salvar();
 

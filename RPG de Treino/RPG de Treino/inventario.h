@@ -1,12 +1,14 @@
 #pragma once
 #include "itens.h"
+
 #include <vector>
 #include <string>
 class inventario
 {
 private:
-	int EspacoMax = {4};
-	int quantidade = 0;
+	int Espaco = {4};
+    const int espacoMax = 10;
+
 	Coisas Arma;
 	Coisas Armadura;
 	Coisas Acessorio;
@@ -20,11 +22,15 @@ public:
 	void Usar();
 	void Equipar();
 	Coisas pegarobj(int i);
-    std::vector<Coisas> salvarMochila();
-   	void ChecarMochila();
-    bool temarma();
+	const std::vector<Coisas>& carregarMochila() const;
+		void ChecarMochila();
+	bool temarma();
+	int get_tamanho() const;
+	int get_flechas() const;
+	void setMochila(const std::vector<Coisas>& m, int espaco, int flechas);
 protected:
 	Itens Adionar_Itens();
-	
+
 };
+
 
