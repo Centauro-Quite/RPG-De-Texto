@@ -11,8 +11,10 @@ static bool is_number(const std::string& s)
 
 void Combate::turnoInimigo()
 {
-    
-    turnoJogador();
+    int x = Inimigo.CausarDano();
+    Player.ReceberDano(x);
+    std::cout << "o inimigo causou " << x << "de dano seu ficando:" << Player.GetHP()<< '\n';
+    return turnoJogador();
 }
 
 Combate::Combate(Base& Player, InimigosBase& Inimigo) : Player(Player), Inimigo(Inimigo),statusI(Inimigo.Status()),
@@ -63,7 +65,9 @@ void Combate::turnoJogador() {
             }
         }
         if (input == "sair") {
-            //fugir
+            Aleatorio rado;
+            int x = rado.en(0,1)
+            if(x ==)
             return;
         }
     }

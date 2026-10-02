@@ -78,3 +78,4 @@ StatusInimigos InimigosBase::Status()
 {
 	return StatusInimigos{ this->ATK,this->MaxHP,this->DF,this->LV,this->Nome,this->Descricao };
 }
+
