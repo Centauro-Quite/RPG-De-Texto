@@ -92,9 +92,9 @@ void comecojogo() {
 
 int main()
 {
-    Player = std::make_unique<Gurreiro>(1,1,1,1,1,1,1);
-    Player->carregar();
+    Player = std::make_unique<Gurreiro>(10,10,10,10,10,10,10);
     
+    Player->StatusTela();
     
     testar;
     return 0;

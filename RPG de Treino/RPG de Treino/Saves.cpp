@@ -4,9 +4,10 @@
 #include <string>
 #include <iomanip>
 
+const std::string path = "Saves\\save.txt";
 bool Saves::checarSave(const std::string nome)
 {
-	if (std::filesystem::exists(( nome + "_save.dat"))) {
+	if (std::filesystem::exists(path)) {
 		return true;
 	}
 	else {
@@ -21,7 +22,6 @@ Saves::Saves()
 {
 }
 
-const std::filesystem::path path = "save.txt";
 void Saves::Salvar(const StatusPlayer& basestruct, const std::map<int, Ataques>& listaAtaques, const inventario& mochila)
 {
     std::ofstream Save (path, std::ios::out);
