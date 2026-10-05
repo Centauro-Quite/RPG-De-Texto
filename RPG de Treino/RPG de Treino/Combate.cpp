@@ -13,7 +13,7 @@ void Combate::turnoInimigo()
 {
     int x = Inimigo.CausarDano();
     Player.ReceberDano(x);
-    std::cout << "o inimigo causou " << x << "de dano seu ficando:" << Player.GetHP()<< '\n';
+    std::cout << "o inimigo causou " << x << " de dano seu hp ficando:" << Player.GetHP()<< '\n';
     return turnoJogador();
 }
 
@@ -66,9 +66,14 @@ void Combate::turnoJogador() {
         }
         if (input == "sair") {
             Aleatorio rado;
-            int x = rado.en(0,1)
-            if(x ==)
-            return;
+            int x = rado.Entre(0, 1);
+            if (x == 0) {
+                return turnoInimigo();
+            }
+            else {
+                std::cout << "consegui fugir conseguindo nada";
+                return;
+            }
         }
     }
 }

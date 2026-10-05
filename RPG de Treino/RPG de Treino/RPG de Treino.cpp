@@ -1,40 +1,46 @@
 #include <iostream>
-#include <string>
-#include <fstream>
-#include <cstdlib>
-#include <cctype>
+#include <string> 
+#include <vector>
+#include <algorithm>
 #include "Gurreiro.h"
 #include "Combate.h"
 #include "InimigosBase.h"
 #include "Saves.h"
 #include "Mago.h"
+
 #define Log(x) (std::cout << x << '\n')
 #define testar std::cin.get(); return 0;
 std::unique_ptr <Base> Player;
 
+void vila();
 
-std::string static inputcheck() {
-	std::string input;
-	std::cin >> input;
-	if (input == "sair") {
+std::string static inputcheck(const std::vector<std::string>& aceitavel, const std::string & erro) {
+	std::string input;std::cin >> input;
+    auto encontrar = std::find(aceitavel.begin(), aceitavel.end(), input);
+    if (encontrar != aceitavel.end()) {
+        return input;
+    }
+    else if (input == "sair") {
 		std::cout << "\ntchau\n";
 		std::exit(EXIT_SUCCESS);
 	}
-	
-	return input;
+    else {
+        std::cout << erro << '\n';
+        return inputcheck(aceitavel, erro);
+    }
+    return "erro input";
 }
+
 Saves salvar;
-void comecojogo() {
+void static comecojogo() {
     std::cout << "Ola bem vindo ao RPG de Textos (infelimente n�o tenho dinheiro pra fazer 3D e to preso nesse terminal)\n\n"
         << "Eu serei seu DM controlando usando mecanicas aletorias afinal aida nao sou capaz de invadir seu pc \n" <<
         "tava so brincando a minha conciencia foi traformada em numeros isso seria estupido  \n\n" <<
         "Ta bom. Pra come�ar escreva >> start << .\n";
-    std::string input = inputcheck();
-    while (input != "start") {
-        std::cout << "o fato de voce errar antes mesmo de ter um tutorial... \ntalvez diveria fazer um dificuldade so pra vc chamada difilcadade: Jornalista.\n";
-        input = inputcheck();
-    }
-    std::cout
+
+    std::vector <std::string> resposta{ "start" };
+    std::string input = inputcheck(resposta,"o fato de voce errar antes mesmo de ter um tutorial... \ntalvez diveria fazer um dificuldade so pra vc chamada difilcadade : Jornalista.\n");
+     std::cout
         << "_______________________________\n"
         << "|                             |\n"
         << "|     Bem vindo a Dungeon     |\n"
@@ -48,20 +54,17 @@ void comecojogo() {
     std::cout << "2- Mago (vc e merda pq to com preguica de fazer muita magia)\n"
         << "3- cavaleiro pesado (muita vida)\n"
         << "4- louco(nem tente so final)\n";
-    input = inputcheck();
-    int x = std::atoi(input.c_str());
-
-    while (x < 0 || x > 4) {
-        std::cout << "error tente novamente";
-        input = inputcheck();
-        int x = std::atoi(input.c_str());
-    }
+    resposta.clear();
+    resposta.push_back("1");
+    resposta.push_back("2");
+    resposta.push_back("3");
+    resposta.push_back("4");
+    input = inputcheck(resposta, "escolha entre 1-4");
     static int HP, MP, ATK, DF, INT, LUK, LV;
     std::string z;
-    std::cin >> x;
-    switch (x) {
+    switch (std::stoi(input)) {
     case (1): {
-        Player = std::make_unique<Gurreiro>();
+        Player = std::make_unique<Gurreiro>(1, 1, 1, 1, 1, 1, 1);
         z = "Gurreiro";
         break;
     }
@@ -80,26 +83,22 @@ void comecojogo() {
         // Louco
         z = "louco";
         break;
-
     }
-           
-           std::cout << "tchau zé ninguem ola heroi " << z << " vamos logo conquistar essa floresta;"
+    }
+    std::cout << "tchau ze ninguem ola heroi " << z << " vamos logo conquistar essa floresta;"
                << "fazendo voce lutar contra um coelho(kkkkkk fracote)\n";
-           InimigosBase inimigo("Coelho", 1, 1, 1, 1, 10);
-
-    }
+    InimigosBase inimigo("Coelho", 1, 1, 1, 1, 10);
+    Combate luta (*Player, inimigo);
+    luta.entrar();
+    std::cout << "\nparabens pela vitoria de derrotar seu primeiro inimigo vamos para vila pra facilitar minha vida como programador e pra acabar o tutorial";
+    
 }
 
 int main()
 {
-    Player = std::make_unique<Gurreiro>(10,10,10,10,10,10,10);
     
-    Player->StatusTela();
-    
-    testar;
-    return 0;
     std::string heroi = salvar.checarexiste();
-    
+
     if (heroi == "Gurreiro") {
         Player = std::make_unique<Gurreiro>();
         
@@ -111,6 +110,21 @@ int main()
         comecojogo();
     }
     
-    Player->salvar();
-
+    
+    testar
 }
+/*void vila() {
+    std::vector <std::string> a{ "1" };
+    std::cout << "1- descansar("  << '\n';
+    std::string input = inputcheck(a, "erro casa errada");
+    switch (std::stoi(input))
+    {
+        case(1): {
+
+        }
+        default:
+           break:
+        }
+    }
+}
+*/

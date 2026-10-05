@@ -3,7 +3,7 @@
 
 inventario::inventario(Coisas Arma, Coisas Armadura, Coisas Acessorio) : Arma(Arma), Armadura(Armadura), Acessorio(Acessorio)
 {
-    Mochila.reserve(10);
+    Mochila.reserve(Espaco);
     Mochila.push_back(Arma);
     Mochila.push_back(Armadura);
     Mochila.push_back(Acessorio);

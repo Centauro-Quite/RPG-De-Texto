@@ -16,7 +16,7 @@ Base::Base() : Mochila(NadaItem, NadaItem, NadaItem) {
 Base::~Base()
 {
 }
-void const Base::StatusTela() const {
+void Base::StatusTela() const {
 	std::cout << "Status de " << Nome << ":\n" << "HP:" << CurHP << "/" <<
 		MaxHP << '\n' << "MP:" << CurMP << "/" << MaxMP << '\n' << "Dps:" << CurATK
 		<< '\n' << "XP:" << XP << "/" << MaxXP << '\n'<< "DFatual:" << CurDF 
@@ -77,7 +77,11 @@ int Base::ListaDeAtaques(const bool Combate) {
 }
 
 void Base::ReceberDano(int dano) {
-	CurHP = CurDF - dano;	
+	int danoEfetivo = dano - CurDF;
+	if (danoEfetivo < 0) {
+		danoEfetivo = 0;
+	}
+	CurHP -= danoEfetivo;
 	if (CurHP < 1) {
 		Morte();
 	}

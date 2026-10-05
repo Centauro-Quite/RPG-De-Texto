@@ -37,9 +37,12 @@ private:
 public:
     Base();
     Base(int HPS, int MPS, int ATKS, int DFS, int INTS, int LUKS, int LV);
-    ~Base();
-    void const StatusTela() const;
-	int  GetHP()const;
+	~Base();
+	void StatusTela() const;
+	int  GetHP()const;    
+	// corrigido: 'const' não deve preceder o tipo de retorno void
+	// mantém compatibilidade com a definição em Base.cpp
+
     int GetATK()const;
     int causardano (const int ataque)const;
     int ListaDeAtaques(const bool combate);

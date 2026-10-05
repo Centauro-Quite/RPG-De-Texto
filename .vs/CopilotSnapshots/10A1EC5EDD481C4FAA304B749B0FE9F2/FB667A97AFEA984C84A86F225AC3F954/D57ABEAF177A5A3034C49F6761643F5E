@@ -1,0 +1,61 @@
+﻿#pragma once
+#include <map>
+#include <string>
+#include "inventario.h"
+//HPS,MPS,ATK,DFS,INTS,LUKS,LV,XP,MaxHP,MaxMP,CurMP,CurATK,CurDF,MaxXP;string Nome;
+struct StatusPlayer
+{
+    int HPS, MPS, ATK, DFS, INTS, LUKS, LV,
+        XP, MaxHP, MaxMP, CurMP, CurATK, CurDF, MaxXP, CurHP;
+    std::string Nome;
+};
+struct Ataques
+{
+    std::string Nome = "erro";
+
+    int dano = 0;
+    int mana = 0;
+};
+enum class classes {
+    Gurreiro
+};
+class Base
+{
+protected:
+    void setMochila(Coisas item, Coisas item2, Coisas item3);
+
+    // [ID], Nome,Dano,MP
+    std::map <int, Ataques> ListadeAtaqueMap;
+    
+private:
+    inventario Mochila;
+    int HPS, MPS, ATKS, DFS, INTS, LUKS, LV, XP, MaxHP =10 , MaxMP, CurHP, CurMP, CurATK, CurDF, MaxXP;
+    
+    void Morte();
+    std::string Nome;
+    void atualizarstatus();
+public:
+    Base();
+    Base(int HPS, int MPS, int ATKS, int DFS, int INTS, int LUKS, int LV);
+	~Base();
+	void StatusTela() const;
+	int  GetHP()const;    
+	// corrigido: 'const' não deve preceder o tipo de retorno void
+	// mantém compatibilidade com a definição em Base.cpp
+
+    int GetATK()const;
+    int causardano (const int ataque)const;
+    int ListaDeAtaques(const bool combate);
+    void ReceberDano(int dano);
+    void checarLV(const int xp);
+    void SubirLV();
+    StatusPlayer Status()const;
+    void trocarnome(std::string x);
+    void checarMochila();
+    
+
+    void salvar();
+
+    void carregar();
+   
+};  
