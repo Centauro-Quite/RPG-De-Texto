@@ -11,7 +11,7 @@ enum class Itens
 	Armadura_Inicial,
 	Espada_Inicial,
 	// Itens comums
-	Pocao ,
+	Pocao,
 	Maca,
 	Armadura_La,
 	Espada_Cobre,
@@ -114,7 +114,7 @@ static Coisas Pocao{
 	usos::usavel,
 	0,
 	0,
-	5,
+	20,
 	0,
 };
 

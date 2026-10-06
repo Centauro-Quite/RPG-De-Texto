@@ -22,7 +22,7 @@ enum class classes {
 class Base
 {
 protected:
-    void setMochila(Coisas item, Coisas item2, Coisas item3);
+    void setMochila(Coisas item, Coisas item2, Coisas item3, Coisas item4);
 
     // [ID], Nome,Dano,MP
     std::map <int, Ataques> ListadeAtaqueMap;
@@ -52,10 +52,10 @@ public:
     StatusPlayer Status()const;
     void trocarnome(std::string x);
     void checarMochila();
-    
-
+	void UsarItem();
+	void recuperarMP(int MP);
+    void curar(int cura); 
     void salvar();
-
     void carregar();
-   
+    
 };  

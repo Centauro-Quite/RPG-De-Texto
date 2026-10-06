@@ -22,10 +22,10 @@ statusP(Player.Status()){
 
 }
 void Combate::turnoJogador() {
-    std::cout << "1- Atacar\n" << "2- Usar equipamento\n" << "3- Checar Mochila\n" << "4- Checar Inimigo\n" <<
-        "5- Checar Status\n" << " Enquanto estiver em combate voce nao e capaz de sair do jogo mas se escrever 'sair' fara uma tentativa de fuga\n";
     bool out = true;
     while (out) {
+        std::cout << "1- Atacar\n" << "2- Usar equipamento\n" << "3- Checar Mochila\n" << "4- Checar Inimigo\n" <<
+            "5- Checar Status\n" << " Enquanto estiver em combate voce nao e capaz de sair do jogo mas se escrever 'sair' fara uma tentativa de fuga\n";
         std::string input; std::cin >> input;
         int x;
         if (is_number(input)) {
@@ -36,6 +36,7 @@ void Combate::turnoJogador() {
                     return turnoJogador();
                 }
                 Inimigo.ReceberDano(x);
+                std::cout << "causou " << x << " de dano no inimigo ele ficando com " << Inimigo.GetHP() << '\n';
                 if (Inimigo.GetHP() < 0) {
                     return sair();
                 }
@@ -44,7 +45,8 @@ void Combate::turnoJogador() {
                 break;
             }
             case(2): {
-                //ainda nao ta pronto
+                Player.UsarItem();
+                break;
             }
             case(3): {
                 Player.checarMochila();

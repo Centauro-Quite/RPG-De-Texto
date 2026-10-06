@@ -20,6 +20,7 @@ private:
 	std::string Descricao;
 public:
 	InimigosBase(Areas area);
+    //nome,HP,ATK,DF,LUK,LV
 	InimigosBase(std::string Nome, int HP, int ATK, int DF, int LUK, int LV );
 	~InimigosBase();
 	std::string GetName();

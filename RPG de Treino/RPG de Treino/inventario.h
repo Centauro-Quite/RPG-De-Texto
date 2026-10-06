@@ -8,18 +8,12 @@ class inventario
 private:
 	int Espaco = {4};
     const int espacoMax = 10;
-
-	Coisas Arma;
-	Coisas Armadura;
-	Coisas Acessorio;
-	std::vector < Coisas > Mochila = { Arma , Armadura, Acessorio };
+	std::vector < Coisas > Mochila;
 	int flechas = 10;
-
-
 public:
 	inventario(Coisas Arma, Coisas Armadura, Coisas Acessorio);
-	void encherInv(Coisas item, Coisas item2, Coisas item3);
-	void Usar();
+	void encherInv(Coisas item, Coisas item2, Coisas item3, Coisas item4);
+	int Usar();
 	void Equipar();
 	Coisas pegarobj(int i);
 	const std::vector<Coisas>& carregarMochila() const;

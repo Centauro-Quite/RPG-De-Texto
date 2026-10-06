@@ -1,26 +1,23 @@
 #include "inventario.h"
 #include <iostream>
 
-inventario::inventario(Coisas Arma, Coisas Armadura, Coisas Acessorio) : Arma(Arma), Armadura(Armadura), Acessorio(Acessorio)
+inventario::inventario(Coisas Arma, Coisas Armadura, Coisas Acessorio) : Mochila{Arma, Armadura, Acessorio, NadaItem}
 {
-    Mochila.reserve(Espaco);
-    Mochila.push_back(Arma);
-    Mochila.push_back(Armadura);
-    Mochila.push_back(Acessorio);
-    Mochila.push_back(NadaItem);
+ 
     
 }
 
 
-void inventario::encherInv(Coisas item, Coisas item2, Coisas item3)
+void inventario::encherInv(Coisas item, Coisas item2, Coisas item3, Coisas item4)
 {
 	Mochila[0] = item;
 	Mochila[1] = item2;
 	Mochila[2] = item3;
+    Mochila[3] = item4;
 }
 
 bool inventario::temarma() {
-    if (Arma.Qualuso == usos::arma) {
+    if (Mochila[0].Qualuso == usos::arma) {
         return true;
    }
     return false;
@@ -36,10 +33,17 @@ int inventario::get_flechas() const
     return flechas;
 }
 
-void inventario::Usar() {
+int inventario::Usar() {
     ChecarMochila();
-    std::cout << "Gostaria de usar qual poncao?";
-}
+    std::cout << "Gostaria de usar qual Item?\n";
+    int x; std::cin >> x;
+    if (Mochila[(x-1)].Qualuso == usos::usavel) {
+        int retorno = Mochila[(x - 1)].Curar;
+        Mochila[(x -1)] = NadaItem;
+        return retorno;
+    }    
+}    
+
 
 Coisas inventario::pegarobj(int i)
 {
@@ -63,6 +67,7 @@ void inventario::ChecarMochila()
             std::cout << '\n';
         }
     }
+    return;
 }
 const std::vector<Coisas>& inventario::carregarMochila() const {
     return Mochila;

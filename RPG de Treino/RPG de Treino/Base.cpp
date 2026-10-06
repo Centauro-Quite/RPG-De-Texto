@@ -87,9 +87,10 @@ void Base::ReceberDano(int dano) {
 	}
 }
 
-void Base::setMochila(Coisas item, Coisas item2, Coisas item3)
+
+void Base::setMochila(Coisas item, Coisas item2, Coisas item3, Coisas item4)
 {
-	Mochila.encherInv(item, item2, item3);
+	Mochila.encherInv(item, item2, item3, item4);
 }
 
  
@@ -193,6 +194,28 @@ void Base::trocarnome(std::string x)
 void Base::checarMochila()
 {
 	Mochila.ChecarMochila();
+}
+void Base::UsarItem()
+{
+    curar(Mochila.Usar());
+}
+void Base::recuperarMP(int MP)
+{
+    CurMP += MP;
+    if (CurMP > MaxMP) {
+        CurMP = MaxMP;
+    }
+}
+void Base::curar(int cura)
+{
+    std::cout << "Sua vida esta " << CurHP << '\n';
+    CurHP += cura;
+    if (CurHP > MaxHP) {
+        CurHP = MaxHP;
+    }
+
+    std::cout << "curou para:" << CurHP << '\n';
+    return;
 }
 
 

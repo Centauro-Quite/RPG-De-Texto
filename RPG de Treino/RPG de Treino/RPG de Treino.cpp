@@ -33,10 +33,10 @@ std::string static inputcheck(const std::vector<std::string>& aceitavel, const s
 
 Saves salvar;
 void static comecojogo() {
-    std::cout << "Ola bem vindo ao RPG de Textos (infelimente n�o tenho dinheiro pra fazer 3D e to preso nesse terminal)\n\n"
+    std::cout << "Ola bem vindo ao RPG de Textos (infelimente nao tenho dinheiro pra fazer 3D e to preso nesse terminal)\n\n"
         << "Eu serei seu DM controlando usando mecanicas aletorias afinal aida nao sou capaz de invadir seu pc \n" <<
         "tava so brincando a minha conciencia foi traformada em numeros isso seria estupido  \n\n" <<
-        "Ta bom. Pra come�ar escreva >> start << .\n";
+        "Ta bom. Pra comecar escreva >> start << .\n";
 
     std::vector <std::string> resposta{ "start" };
     std::string input = inputcheck(resposta,"o fato de voce errar antes mesmo de ter um tutorial... \ntalvez diveria fazer um dificuldade so pra vc chamada difilcadade : Jornalista.\n");
@@ -55,9 +55,7 @@ void static comecojogo() {
         << "3- cavaleiro pesado (muita vida)\n"
         << "4- louco(nem tente so final)\n";
     resposta.clear();
-    resposta.push_back("1");
-    resposta.push_back("2");
-    resposta.push_back("3");
+    resposta.push_back("1");resposta.push_back("2");resposta.push_back("3");
     resposta.push_back("4");
     input = inputcheck(resposta, "escolha entre 1-4");
     static int HP, MP, ATK, DF, INT, LUK, LV;
@@ -110,21 +108,30 @@ int main()
         comecojogo();
     }
     
+    vila();
     
     testar
 }
-/*void vila() {
-    std::vector <std::string> a{ "1" };
-    std::cout << "1- descansar("  << '\n';
-    std::string input = inputcheck(a, "erro casa errada");
+void vila() {
+    std::vector <std::string> a{ "1","2"};
+    std::cout << "1- Descansar na pousada (recupera HP e MP)\n" << "2- Ir a caça\n" ;
+    std::string input = inputcheck(a, "entrou em uma casa errada");
     switch (std::stoi(input))
     {
-        case(1): {
-
-        }
-        default:
-           break:
-        }
+    case(1): {
+        Player->curar(999999);
+        Player->recuperarMP(999999);
+        break;
+    }
+    case(2): {
+        a.clear();
+        a.push_back("floresta");a.push_back("dungeon");
+        input = inputcheck(a, "se perdeu tente novamente");
+        break;
+    }
+    default:
+        std::cout << "erro";
+        break;
     }
 }
-*/
+
