@@ -1,6 +1,8 @@
 #include "Base.h"
 #include <iostream>
 #include "Saves.h"
+#include "Input certeza.h"
+
 Base::Base( int HPS, int MPS, int ATKS, int DFS, int INTS, int LUKS, int LV) : HPS(HPS),MPS(MPS),ATKS(ATKS),DFS(DFS),
 INTS(INTS),LUKS(LUKS),LV(LV), XP(0), CurHP(0), CurMP(0), CurATK(0), CurDF(0), MaxXP(10), Nome("erro base foi escolhida"),
 Mochila(NadaItem,NadaItem,NadaItem) {
@@ -123,6 +125,29 @@ void Base::carregar() {
 	// limpar todos os valores dentro de 'status' após copiar para o objeto Base
 	status = StatusPlayer{};
 }
+// desculpa quem tiver vendo esse codigo voce vai me odiar desculpa 
+void Base::gethabilidade()
+{
+    std::cout << "escolhe entre:\n";
+    for (const auto& [id, ataque] : disponivelataque) {
+        std::cout << id << "- " << ataque.Nome << ". DP:" << ataque.dano;
+        if (ataque.mana > 0) {
+            std::cout << " e MP:" << ataque.mana;
+        }
+        std::cout << '\n';
+    }
+    std::cout << "\nEsses sao os ataques pode escolher\n ";
+    ListaDeAtaques(false);
+    std::cout << "esses sao os ataques voce tem, voce pode ter apenas 5\n";
+    std::vector<std::string>vectorr{ "1" };
+    int escolhaataque = std::stoi(inputcheck(vectorr, "nao existe esse ataque"));
+    std::cout << "qual slot gostaria de colocar ataque?\n";
+    vectorr.clear();vectorr.push_back("1");vectorr.push_back("2");vectorr.push_back("3");vectorr.push_back("4");
+    vectorr.push_back("5");
+    int x = std::stoi(inputcheck(vectorr, "esse slot nao existe"));
+    ListadeAtaqueMap[x] = disponivelataque.at(x);
+}
+
 
 
 void Base::Morte() {

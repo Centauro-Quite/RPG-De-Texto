@@ -13,6 +13,6 @@ public:
 	Gurreiro();
     //HP,MP,ATK,DF
 	Gurreiro(int HPS, int MPS, int ATKS, int DFS, int INTS, int LUKS, int LV);
-	
+    
 	
 };

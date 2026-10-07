@@ -136,6 +136,7 @@
   <ItemGroup>
     <ClInclude Include="Aleatorio.h" />
     <ClInclude Include="Base.h" />
+    <ClInclude Include="Input certeza.h" />
     <ClInclude Include="Combate.h" />
     <ClInclude Include="Gurreiro.h" />
     <ClInclude Include="Inimigos.h" />

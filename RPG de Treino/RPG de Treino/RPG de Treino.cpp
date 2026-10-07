@@ -2,34 +2,21 @@
 #include <string> 
 #include <vector>
 #include <algorithm>
+#include <memory>
 #include "Gurreiro.h"
 #include "Combate.h"
 #include "InimigosBase.h"
 #include "Saves.h"
 #include "Mago.h"
+#include "Input certeza.h"
 
 #define Log(x) (std::cout << x << '\n')
 #define testar std::cin.get(); return 0;
 std::unique_ptr <Base> Player;
 
-void vila();
 
-std::string static inputcheck(const std::vector<std::string>& aceitavel, const std::string & erro) {
-	std::string input;std::cin >> input;
-    auto encontrar = std::find(aceitavel.begin(), aceitavel.end(), input);
-    if (encontrar != aceitavel.end()) {
-        return input;
-    }
-    else if (input == "sair") {
-		std::cout << "\ntchau\n";
-		std::exit(EXIT_SUCCESS);
-	}
-    else {
-        std::cout << erro << '\n';
-        return inputcheck(aceitavel, erro);
-    }
-    return "erro input";
-}
+
+void vila();
 
 Saves salvar;
 void static comecojogo() {
@@ -94,7 +81,10 @@ void static comecojogo() {
 
 int main()
 {
-    
+    Player = std::make_unique<Gurreiro>(1,1,1,1,1,1,1);
+    vila();
+    testar
+
     std::string heroi = salvar.checarexiste();
 
     if (heroi == "Gurreiro") {
@@ -112,9 +102,10 @@ int main()
     
     testar
 }
+
 void vila() {
-    std::vector <std::string> a{ "1","2"};
-    std::cout << "1- Descansar na pousada (recupera HP e MP)\n" << "2- Ir a caça\n" ;
+    std::vector <std::string> a{ "1","2","3"};
+    std::cout << "1- Descansar na pousada (recupera HP e MP)\n" << "2- Ir a caça\n" << "3- Mestre das Armas\n" << '\n';
     std::string input = inputcheck(a, "entrou em uma casa errada");
     switch (std::stoi(input))
     {
@@ -125,12 +116,17 @@ void vila() {
     }
     case(2): {
         a.clear();
-        a.push_back("floresta");a.push_back("dungeon");
-        input = inputcheck(a, "se perdeu tente novamente");
+        a.push_back("1");a.push_back("2");a.push_back("3");a.push_back("4");a.push_back("5");
+        input = inputcheck(a, "se perdeu acabou invadino uma casa, tente novamente");
         break;
+    }
+    case(3): {
+        std::cout << "Ola aventuiro de coragem imensuravel de me ve minha pessoa e procurar treinar comigo em desmostraçao de egoismo de sua parte\n";
+        Player->gethabilidade();
     }
     default:
         std::cout << "erro";
+        std::exit(EXIT_FAILURE);
         break;
     }
 }

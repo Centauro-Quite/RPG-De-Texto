@@ -16,9 +16,10 @@ struct Ataques
     int dano = 0;
     int mana = 0;
 };
-enum class classes {
-    Gurreiro
+enum class Classes {
+    Gurreiro, Mago
 };
+
 class Base
 {
 protected:
@@ -26,7 +27,7 @@ protected:
 
     // [ID], Nome,Dano,MP
     std::map <int, Ataques> ListadeAtaqueMap;
-    
+    std::map<int, Ataques> disponivelataque;
 private:
     inventario Mochila;
     int HPS, MPS, ATKS, DFS, INTS, LUKS, LV, XP, MaxHP =10 , MaxMP, CurHP, CurMP, CurATK, CurDF, MaxXP;
@@ -35,14 +36,12 @@ private:
     std::string Nome;
     void atualizarstatus();
 public:
-    Base();
-    Base(int HPS, int MPS, int ATKS, int DFS, int INTS, int LUKS, int LV);
-	~Base();
+	Base();
+	Base(int HPS, int MPS, int ATKS, int DFS, int INTS, int LUKS, int LV);
+	virtual ~Base();
 	void StatusTela() const;
-	int  GetHP()const;    
-	// corrigido: 'const' não deve preceder o tipo de retorno void
-	// mantém compatibilidade com a definição em Base.cpp
-
+	// Destrutor virtual para garantir comportamento polimórfico em dynamic_casts e limpeza correta de recursos em classes derivadas
+	int  GetHP()const;
     int GetATK()const;
     int causardano (const int ataque)const;
     int ListaDeAtaques(const bool combate);
@@ -57,5 +56,5 @@ public:
     void curar(int cura); 
     void salvar();
     void carregar();
-    
+    void gethabilidade();
 };  

@@ -1,0 +1,244 @@
+﻿#include "Base.h"
+#include <iostream>
+#include "Saves.h"
+#include "Input certeza.h"
+
+Base::Base( int HPS, int MPS, int ATKS, int DFS, int INTS, int LUKS, int LV) : HPS(HPS),MPS(MPS),ATKS(ATKS),DFS(DFS),
+INTS(INTS),LUKS(LUKS),LV(LV), XP(0), CurHP(0), CurMP(0), CurATK(0), CurDF(0), MaxXP(10), Nome("erro base foi escolhida"),
+Mochila(NadaItem,NadaItem,NadaItem) {
+	atualizarstatus();
+	ListadeAtaqueMap[1] = Ataques{ "Ataque Basico", 3, 0 };
+	CurHP = MaxHP;
+	CurMP = MaxMP;
+}
+Base::Base() : Mochila(NadaItem, NadaItem, NadaItem) {
+    
+}
+
+Base::~Base()
+{
+}
+void Base::StatusTela() const {
+	std::cout << "Status de " << Nome << ":\n" << "HP:" << CurHP << "/" <<
+		MaxHP << '\n' << "MP:" << CurMP << "/" << MaxMP << '\n' << "Dps:" << CurATK
+		<< '\n' << "XP:" << XP << "/" << MaxXP << '\n'<< "DFatual:" << CurDF 
+		<< "\n\n" ;
+	std::cout << "HP:" << HPS << "  MP:" << MPS << "   DF:" << DFS << "  INT:" <<
+		INTS << "   LUK:" << LUKS << "\n\n";
+}
+
+int Base::GetHP() const
+{
+	return CurHP;
+}
+
+int Base::GetATK () const {
+	return CurATK;
+}
+int Base::causardano (const int ataque) const {
+	return (CurATK + ataque);
+}
+
+int Base::ListaDeAtaques(const bool Combate) {
+	if (Mochila.temarma()) {
+		Coisas arma = Mochila.pegarobj(0);
+		ListadeAtaqueMap[1] = Ataques { arma.Name, arma.Atk, arma.MP };
+	}
+	else {
+		ListadeAtaqueMap[1] = Ataques{ "Ataque Basico", 3, 0 };
+	}
+	if (Combate == true) {
+		std::cout << "escolha um dos golpes:\n";
+		
+	}
+	for (const auto& [id, ataque] : ListadeAtaqueMap) {
+		std::cout << id << ": " << ataque.Nome << ": DPS:" << (ATKS + ataque.dano);
+		if (ataque.mana > 0) {
+			std::cout << "MP: " << ataque.mana;
+		}
+		std::cout << '\n';
+		if (Combate == true) {
+			std::cout << "Se quiser sair digite 0 ou atacar o numero do ataque:\n";
+			int input; std::cin >> input;
+			if (input == 0) {
+				std::cout << "saido da lista de acoes\n";
+				return 0;
+			}
+			else if(input == id){
+				return causardano(ataque.dano);
+			} else{
+				std::cout << "erro escolha errado";
+				return 0;
+			}
+		}
+		else {
+			std::cout << "essas sao opcoes de ataque";
+		}
+	}
+	return 0;
+}
+
+void Base::ReceberDano(int dano) {
+	int danoEfetivo = dano - CurDF;
+	if (danoEfetivo < 0) {
+		danoEfetivo = 0;
+	}
+	CurHP -= danoEfetivo;
+	if (CurHP < 1) {
+		Morte();
+	}
+}
+
+
+void Base::setMochila(Coisas item, Coisas item2, Coisas item3, Coisas item4)
+{
+	Mochila.encherInv(item, item2, item3, item4);
+}
+
+ 
+
+void Base::salvar() {
+	Saves salvar;
+	salvar.Salvar(Status(), ListadeAtaqueMap, Mochila);
+}
+void Base::carregar() {
+	Saves carregar;
+	auto status = Status();
+	carregar.carregar(status, ListadeAtaqueMap, Mochila);
+	HPS = status.HPS;
+	MPS = status.MPS;
+	ATKS = status.ATK;
+	DFS = status.DFS;
+	INTS = status.INTS;
+	LUKS = status.LUKS;
+	LV = status.LV;
+	XP = status.XP;
+	MaxHP = status.MaxHP;
+	MaxMP = status.MaxMP;
+	CurMP = status.CurMP;
+	CurATK = status.CurATK;
+	CurDF = status.CurDF;
+	MaxXP = status.MaxXP;
+	CurHP = status.CurHP;
+	Nome = status.Nome;
+
+	// limpar todos os valores dentro de 'status' após copiar para o objeto Base
+	status = StatusPlayer{};
+}
+
+void Base::gethabilidade(Classes clase)
+{
+    std::cout << "escolhe entre:\n";
+    if (clase == Classes::Gurreiro) {
+        std::cout << "1- espada flamejante. DP: 10 e MP: 5\n";
+        std::cout << "\nEsses sao os ataques pode escolher";
+        ListaDeAtaques(false);
+        std::cout << "esses sao os ataques voce tem, voce pode ter apenas 5\n";
+        std::vector<std::string>vectorr{"1"};
+        int escolhaataque = std::stoi(inputcheck(vectorr, "nao existe esse ataque"));
+        std::cout << "qual slot gostaria de colocar ataque?\n";
+        vectorr.clear();vectorr.push_back("1");vectorr.push_back("2");vectorr.push_back("3");vectorr.push_back("4");
+        vectorr.push_back("5");
+        int x = std::stoi(inputcheck(vectorr, "esse slot nao existe"));
+        const std::map<int, Ataques> dispoataque{ {1, Ataques{"ataque flamejante",5,5}} };
+
+        ListadeAtaqueMap[x];
+
+    }
+}
+
+
+void Base::Morte() {
+	std::cout << "infelimente a historia do seu heroi chega ao fim";
+	//limpar o arquivo de save
+	std::exit(EXIT_SUCCESS);
+	
+}
+
+void Base::checarLV(const int xp) {
+	XP += xp;
+	if (XP >= MaxXP) {
+		XP = 0;
+		MaxXP = LV * 2;
+		SubirLV();
+	}
+}
+void Base::SubirLV() {
+	LV++;
+	std::cout << "subir de Nivel: " << (LV - 1) << " -> " << " para Nivel: " << LV << " Parabens vc subiu de nivel\n";
+	StatusTela();
+	std::cout << "Por causa voce upou um nivel cosegiu dois pontos pra gastar no seus status escolha entre eles:\n";
+	std::map<std::string, int*> atributos = {
+	{ "hp",  &HPS },
+	{ "mp",  &MPS },
+	{ "atk", &ATKS },
+	{ "df",  &DFS },
+	{ "int", &INTS },
+	{ "luk", &LUKS }
+	};
+
+	std::cout << "Escolha um status: hp, mp, atk, df, int ou luk\n";
+	int o = 0;
+	while (o < 2) {
+		std::string escolha;
+		std::cin >> escolha;
+
+		auto atributo = atributos.find(escolha);
+
+		if (atributo == atributos.end()) {
+			std::cout << "Esse status nao existe.\n";
+			continue;
+		}
+
+		++(*atributo->second);
+		atualizarstatus();
+		o++;
+		std::cout << "ponto colocado em " << (atributo->first) << '\n';
+	}
+}
+void Base::atualizarstatus() {
+	MaxHP = 5 * HPS;
+	MaxMP = 5 * MPS;
+	CurATK = 5 * ATKS;
+	CurDF = 5 * DFS;
+
+}
+
+StatusPlayer Base::Status() const
+{
+	return StatusPlayer{ HPS,MPS,ATKS,DFS,INTS,LUKS,LV,XP,MaxHP,MaxMP,CurMP,CurATK,CurDF,MaxXP,CurHP,Nome};
+}
+
+void Base::trocarnome(std::string x)
+{
+	Nome = x;
+}
+
+void Base::checarMochila()
+{
+	Mochila.ChecarMochila();
+}
+void Base::UsarItem()
+{
+    curar(Mochila.Usar());
+}
+void Base::recuperarMP(int MP)
+{
+    CurMP += MP;
+    if (CurMP > MaxMP) {
+        CurMP = MaxMP;
+    }
+}
+void Base::curar(int cura)
+{
+    std::cout << "Sua vida esta " << CurHP << '\n';
+    CurHP += cura;
+    if (CurHP > MaxHP) {
+        CurHP = MaxHP;
+    }
+
+    std::cout << "curou para:" << CurHP << '\n';
+    return;
+}
+
+
