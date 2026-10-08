@@ -1,30 +1,42 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\frlr1\\OneDrive\\Documents\\GitHub\\RPG-De-Texto\\RPG de Treino\\",
+  "WorkspaceRootPath": "C:\\Users\\User\\Documents\\GitHub\\RPG-De-Texto\\RPG de Treino\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{680E8C4E-48DA-46F5-AC56-A6BF3EE556DD}|RPG de Treino\\RPG de Treino.vcxproj|C:\\Users\\frlr1\\OneDrive\\Documents\\GitHub\\RPG-De-Texto\\RPG de Treino\\RPG de Treino\\RPG de Treino.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{680E8C4E-48DA-46F5-AC56-A6BF3EE556DD}|RPG de Treino\\RPG de Treino.vcxproj|C:\\Users\\User\\Documents\\GitHub\\RPG-De-Texto\\RPG de Treino\\RPG de Treino\\RPG de Treino.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{680E8C4E-48DA-46F5-AC56-A6BF3EE556DD}|RPG de Treino\\RPG de Treino.vcxproj|solutionrelative:RPG de Treino\\RPG de Treino.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{680E8C4E-48DA-46F5-AC56-A6BF3EE556DD}|RPG de Treino\\RPG de Treino.vcxproj|C:\\Users\\frlr1\\OneDrive\\Documents\\GitHub\\RPG-De-Texto\\RPG de Treino\\RPG de Treino\\Gurreiro.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{680E8C4E-48DA-46F5-AC56-A6BF3EE556DD}|RPG de Treino\\RPG de Treino.vcxproj|solutionrelative:RPG de Treino\\Gurreiro.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{680E8C4E-48DA-46F5-AC56-A6BF3EE556DD}|RPG de Treino\\RPG de Treino.vcxproj|C:\\Users\\User\\Documents\\GitHub\\RPG-De-Texto\\RPG de Treino\\RPG de Treino\\Inimigos.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{680E8C4E-48DA-46F5-AC56-A6BF3EE556DD}|RPG de Treino\\RPG de Treino.vcxproj|solutionrelative:RPG de Treino\\Inimigos.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{680E8C4E-48DA-46F5-AC56-A6BF3EE556DD}|RPG de Treino\\RPG de Treino.vcxproj|C:\\Users\\frlr1\\OneDrive\\Documents\\GitHub\\RPG-De-Texto\\RPG de Treino\\RPG de Treino\\inventario.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{680E8C4E-48DA-46F5-AC56-A6BF3EE556DD}|RPG de Treino\\RPG de Treino.vcxproj|solutionrelative:RPG de Treino\\inventario.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{680E8C4E-48DA-46F5-AC56-A6BF3EE556DD}|RPG de Treino\\RPG de Treino.vcxproj|C:\\Users\\User\\Documents\\GitHub\\RPG-De-Texto\\RPG de Treino\\RPG de Treino\\InimigosBase.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{680E8C4E-48DA-46F5-AC56-A6BF3EE556DD}|RPG de Treino\\RPG de Treino.vcxproj|solutionrelative:RPG de Treino\\InimigosBase.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{680E8C4E-48DA-46F5-AC56-A6BF3EE556DD}|RPG de Treino\\RPG de Treino.vcxproj|C:\\Users\\frlr1\\OneDrive\\Documents\\GitHub\\RPG-De-Texto\\RPG de Treino\\RPG de Treino\\Combate.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{680E8C4E-48DA-46F5-AC56-A6BF3EE556DD}|RPG de Treino\\RPG de Treino.vcxproj|C:\\Users\\User\\Documents\\GitHub\\RPG-De-Texto\\RPG de Treino\\RPG de Treino\\Combate.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{680E8C4E-48DA-46F5-AC56-A6BF3EE556DD}|RPG de Treino\\RPG de Treino.vcxproj|solutionrelative:RPG de Treino\\Combate.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{680E8C4E-48DA-46F5-AC56-A6BF3EE556DD}|RPG de Treino\\RPG de Treino.vcxproj|C:\\Users\\frlr1\\OneDrive\\Documents\\GitHub\\RPG-De-Texto\\RPG de Treino\\RPG de Treino\\Base.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{680E8C4E-48DA-46F5-AC56-A6BF3EE556DD}|RPG de Treino\\RPG de Treino.vcxproj|solutionrelative:RPG de Treino\\Base.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{680E8C4E-48DA-46F5-AC56-A6BF3EE556DD}|RPG de Treino\\RPG de Treino.vcxproj|C:\\Users\\User\\Documents\\GitHub\\RPG-De-Texto\\RPG de Treino\\RPG de Treino\\inventario.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{680E8C4E-48DA-46F5-AC56-A6BF3EE556DD}|RPG de Treino\\RPG de Treino.vcxproj|solutionrelative:RPG de Treino\\inventario.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{680E8C4E-48DA-46F5-AC56-A6BF3EE556DD}|RPG de Treino\\RPG de Treino.vcxproj|C:\\Users\\frlr1\\OneDrive\\Documents\\GitHub\\RPG-De-Texto\\RPG de Treino\\RPG de Treino\\Gurreiro.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{680E8C4E-48DA-46F5-AC56-A6BF3EE556DD}|RPG de Treino\\RPG de Treino.vcxproj|C:\\Users\\User\\Documents\\GitHub\\RPG-De-Texto\\RPG de Treino\\RPG de Treino\\Gurreiro.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{680E8C4E-48DA-46F5-AC56-A6BF3EE556DD}|RPG de Treino\\RPG de Treino.vcxproj|solutionrelative:RPG de Treino\\Gurreiro.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{680E8C4E-48DA-46F5-AC56-A6BF3EE556DD}|RPG de Treino\\RPG de Treino.vcxproj|C:\\Users\\User\\Documents\\GitHub\\RPG-De-Texto\\RPG de Treino\\RPG de Treino\\Base.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{680E8C4E-48DA-46F5-AC56-A6BF3EE556DD}|RPG de Treino\\RPG de Treino.vcxproj|solutionrelative:RPG de Treino\\Base.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{680E8C4E-48DA-46F5-AC56-A6BF3EE556DD}|RPG de Treino\\RPG de Treino.vcxproj|C:\\Users\\User\\Documents\\GitHub\\RPG-De-Texto\\RPG de Treino\\RPG de Treino\\Gurreiro.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{680E8C4E-48DA-46F5-AC56-A6BF3EE556DD}|RPG de Treino\\RPG de Treino.vcxproj|solutionrelative:RPG de Treino\\Gurreiro.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{680E8C4E-48DA-46F5-AC56-A6BF3EE556DD}|RPG de Treino\\RPG de Treino.vcxproj|C:\\Users\\User\\Documents\\GitHub\\RPG-De-Texto\\RPG de Treino\\RPG de Treino\\Base.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{680E8C4E-48DA-46F5-AC56-A6BF3EE556DD}|RPG de Treino\\RPG de Treino.vcxproj|solutionrelative:RPG de Treino\\Base.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,11 +62,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "RPG de Treino.cpp",
-              "DocumentMoniker": "C:\\Users\\frlr1\\OneDrive\\Documents\\GitHub\\RPG-De-Texto\\RPG de Treino\\RPG de Treino\\RPG de Treino.cpp",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\GitHub\\RPG-De-Texto\\RPG de Treino\\RPG de Treino\\RPG de Treino.cpp",
               "RelativeDocumentMoniker": "RPG de Treino\\RPG de Treino.cpp",
-              "ToolTip": "C:\\Users\\frlr1\\OneDrive\\Documents\\GitHub\\RPG-De-Texto\\RPG de Treino\\RPG de Treino\\RPG de Treino.cpp",
+              "ToolTip": "C:\\Users\\User\\Documents\\GitHub\\RPG-De-Texto\\RPG de Treino\\RPG de Treino\\RPG de Treino.cpp",
               "RelativeToolTip": "RPG de Treino\\RPG de Treino.cpp",
-              "ViewState": "AgIAABEAAAAAAAAAAAAAAFQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAHUAAAAAAAAAAAAAAH4AAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-09-29T19:42:45.774Z",
               "IsPinned": true,
@@ -62,37 +74,63 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "InimigosBase.cpp",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\GitHub\\RPG-De-Texto\\RPG de Treino\\RPG de Treino\\InimigosBase.cpp",
+              "RelativeDocumentMoniker": "RPG de Treino\\InimigosBase.cpp",
+              "ToolTip": "C:\\Users\\User\\Documents\\GitHub\\RPG-De-Texto\\RPG de Treino\\RPG de Treino\\InimigosBase.cpp",
+              "RelativeToolTip": "RPG de Treino\\InimigosBase.cpp",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAAAAoAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-10-08T18:28:18.842Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 3,
               "Title": "Combate.cpp",
-              "DocumentMoniker": "C:\\Users\\frlr1\\OneDrive\\Documents\\GitHub\\RPG-De-Texto\\RPG de Treino\\RPG de Treino\\Combate.cpp",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\GitHub\\RPG-De-Texto\\RPG de Treino\\RPG de Treino\\Combate.cpp",
               "RelativeDocumentMoniker": "RPG de Treino\\Combate.cpp",
-              "ToolTip": "C:\\Users\\frlr1\\OneDrive\\Documents\\GitHub\\RPG-De-Texto\\RPG de Treino\\RPG de Treino\\Combate.cpp",
+              "ToolTip": "C:\\Users\\User\\Documents\\GitHub\\RPG-De-Texto\\RPG de Treino\\RPG de Treino\\Combate.cpp",
               "RelativeToolTip": "RPG de Treino\\Combate.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-10-06T19:21:43.931Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
+              "Title": "Base.cpp",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\GitHub\\RPG-De-Texto\\RPG de Treino\\RPG de Treino\\Base.cpp",
+              "RelativeDocumentMoniker": "RPG de Treino\\Base.cpp",
+              "ToolTip": "C:\\Users\\User\\Documents\\GitHub\\RPG-De-Texto\\RPG de Treino\\RPG de Treino\\Base.cpp",
+              "RelativeToolTip": "RPG de Treino\\Base.cpp",
+              "ViewState": "AgIAAHQAAAAAAAAAAAAUwIEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-10-08T18:08:13.499Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "Gurreiro.cpp",
-              "DocumentMoniker": "C:\\Users\\frlr1\\OneDrive\\Documents\\GitHub\\RPG-De-Texto\\RPG de Treino\\RPG de Treino\\Gurreiro.cpp",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\GitHub\\RPG-De-Texto\\RPG de Treino\\RPG de Treino\\Gurreiro.cpp",
               "RelativeDocumentMoniker": "RPG de Treino\\Gurreiro.cpp",
-              "ToolTip": "C:\\Users\\frlr1\\OneDrive\\Documents\\GitHub\\RPG-De-Texto\\RPG de Treino\\RPG de Treino\\Gurreiro.cpp",
+              "ToolTip": "C:\\Users\\User\\Documents\\GitHub\\RPG-De-Texto\\RPG de Treino\\RPG de Treino\\Gurreiro.cpp",
               "RelativeToolTip": "RPG de Treino\\Gurreiro.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-10-06T18:30:33.177Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "inventario.cpp",
-              "DocumentMoniker": "C:\\Users\\frlr1\\OneDrive\\Documents\\GitHub\\RPG-De-Texto\\RPG de Treino\\RPG de Treino\\inventario.cpp",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\GitHub\\RPG-De-Texto\\RPG de Treino\\RPG de Treino\\inventario.cpp",
               "RelativeDocumentMoniker": "RPG de Treino\\inventario.cpp",
-              "ToolTip": "C:\\Users\\frlr1\\OneDrive\\Documents\\GitHub\\RPG-De-Texto\\RPG de Treino\\RPG de Treino\\inventario.cpp",
+              "ToolTip": "C:\\Users\\User\\Documents\\GitHub\\RPG-De-Texto\\RPG de Treino\\RPG de Treino\\inventario.cpp",
               "RelativeToolTip": "RPG de Treino\\inventario.cpp",
               "ViewState": "AgIAAAIAAAAAAAAAAADwvxwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
@@ -103,17 +141,17 @@
         },
         {
           "DockedWidth": 191,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "Base.h",
-              "DocumentMoniker": "C:\\Users\\frlr1\\OneDrive\\Documents\\GitHub\\RPG-De-Texto\\RPG de Treino\\RPG de Treino\\Base.h",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\GitHub\\RPG-De-Texto\\RPG de Treino\\RPG de Treino\\Base.h",
               "RelativeDocumentMoniker": "RPG de Treino\\Base.h",
-              "ToolTip": "C:\\Users\\frlr1\\OneDrive\\Documents\\GitHub\\RPG-De-Texto\\RPG de Treino\\RPG de Treino\\Base.h",
+              "ToolTip": "C:\\Users\\User\\Documents\\GitHub\\RPG-De-Texto\\RPG de Treino\\RPG de Treino\\Base.h",
               "RelativeToolTip": "RPG de Treino\\Base.h",
-              "ViewState": "AgIAABQAAAAAAAAAAAAAAB0AAAALAAAAAAAAAA==",
+              "ViewState": "AgIAABQAAAAAAAAAAAAAAB4AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2026-10-05T21:05:10.87Z",
               "IsPinned": true,
@@ -121,11 +159,24 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
+              "Title": "Inimigos.h",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\GitHub\\RPG-De-Texto\\RPG de Treino\\RPG de Treino\\Inimigos.h",
+              "RelativeDocumentMoniker": "RPG de Treino\\Inimigos.h",
+              "ToolTip": "C:\\Users\\User\\Documents\\GitHub\\RPG-De-Texto\\RPG de Treino\\RPG de Treino\\Inimigos.h",
+              "RelativeToolTip": "RPG de Treino\\Inimigos.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-10-08T18:13:50.056Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "Gurreiro.h",
-              "DocumentMoniker": "C:\\Users\\frlr1\\OneDrive\\Documents\\GitHub\\RPG-De-Texto\\RPG de Treino\\RPG de Treino\\Gurreiro.h",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\GitHub\\RPG-De-Texto\\RPG de Treino\\RPG de Treino\\Gurreiro.h",
               "RelativeDocumentMoniker": "RPG de Treino\\Gurreiro.h",
-              "ToolTip": "C:\\Users\\frlr1\\OneDrive\\Documents\\GitHub\\RPG-De-Texto\\RPG de Treino\\RPG de Treino\\Gurreiro.h",
+              "ToolTip": "C:\\Users\\User\\Documents\\GitHub\\RPG-De-Texto\\RPG de Treino\\RPG de Treino\\Gurreiro.h",
               "RelativeToolTip": "RPG de Treino\\Gurreiro.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",

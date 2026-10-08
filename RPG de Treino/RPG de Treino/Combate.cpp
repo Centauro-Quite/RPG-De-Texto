@@ -3,6 +3,10 @@
 #include <algorithm>
 #include <iostream>
 
+Combate::Combate(Base& Player, InimigosBase& Inimigo) : Player(Player), Inimigo(Inimigo),statusI(Inimigo.Status()),
+statusP(Player.Status()){
+
+}
 static bool is_number(const std::string& s)
 {
     return !s.empty() && std::find_if(s.begin(),
@@ -17,10 +21,6 @@ void Combate::turnoInimigo()
     return turnoJogador();
 }
 
-Combate::Combate(Base& Player, InimigosBase& Inimigo) : Player(Player), Inimigo(Inimigo),statusI(Inimigo.Status()),
-statusP(Player.Status()){
-
-}
 void Combate::turnoJogador() {
     bool out = true;
     while (out) {

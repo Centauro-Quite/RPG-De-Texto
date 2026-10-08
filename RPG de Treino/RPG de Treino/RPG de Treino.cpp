@@ -13,7 +13,7 @@
 #define Log(x) (std::cout << x << '\n')
 #define testar std::cin.get(); return 0;
 std::unique_ptr <Base> Player;
-
+void caca(Areas local);
 
 
 void vila();
@@ -102,32 +102,67 @@ int main()
     
     testar
 }
-
-void vila() {
-    std::vector <std::string> a{ "1","2","3"};
-    std::cout << "1- Descansar na pousada (recupera HP e MP)\n" << "2- Ir a caça\n" << "3- Mestre das Armas\n" << '\n';
-    std::string input = inputcheck(a, "entrou em uma casa errada");
-    switch (std::stoi(input))
-    {
-    case(1): {
-        Player->curar(999999);
-        Player->recuperarMP(999999);
-        break;
-    }
-    case(2): {
-        a.clear();
-        a.push_back("1");a.push_back("2");a.push_back("3");a.push_back("4");a.push_back("5");
-        input = inputcheck(a, "se perdeu acabou invadino uma casa, tente novamente");
-        break;
-    }
-    case(3): {
-        std::cout << "Ola aventuiro de coragem imensuravel de me ve minha pessoa e procurar treinar comigo em desmostraçao de egoismo de sua parte\n";
-        Player->gethabilidade();
-    }
+Areas inttoenum(int area) {
+    switch (area) {
+    case(1): { return Areas::floresta;}
+    case(2): { return Areas::cemiterio;}
+    
     default:
-        std::cout << "erro";
-        std::exit(EXIT_FAILURE);
         break;
     }
 }
 
+void vila() {
+    while (true) {
+    std::vector <std::string> a{ "1","2","3" };
+    std::cout << "1- Descansar na pousada (recupera HP e MP)\n" << "2- Ir a caça\n" << "3- Mestre das Armas\n" << '\n';
+    std::string input = inputcheck(a, "entrou em uma casa errada");
+        switch (std::stoi(input))
+        {
+        case(1): {
+            Player->curar(999999);
+            Player->recuperarMP(999999);
+            break;
+        }
+        case(2): {
+            a.clear();
+            a.push_back("1");a.push_back("2");a.push_back("3");a.push_back("4");a.push_back("5");
+            std::cout << "1-ir a floresta\n2- ir cemiterio\n" << "3- ir ao fundo da vila\n"
+                << "4- Guerra\n";
+            input = inputcheck(a, "se perdeu acabou invadino uma casa, tente novamente");
+            Areas i = inttoenum(std::stoi(input));
+            caca(i);
+            break;
+        }
+        case(3): {
+            std::cout << "Ola aventuiro de coragem imensuravel de me ve minha pessoa e procurar treinar comigo em desmostraçao de egoismo de sua parte\n";
+            Player->gethabilidade();
+            break;
+        }
+        default:
+            std::cout << "erro";
+            std::exit(EXIT_FAILURE);
+            break;
+        }
+    }
+}
+void caca(Areas local)
+{
+    std::cout << "Dm:Combate sempre a frente cuidado heroi\n";
+    while (true) {
+        std::cout << "1- ir a procura de inimigos\n" << "2- descansar um pouco(tem chance de ser atacado\n"
+           << "3- sair\n";
+        InimigosBase inimigo(local);
+        std::vector<std::string> a = { "1", "2", "3" };
+        switch (std::stoi(inputcheck(a, "se perdeu"))) {
+        case(1): {
+            InimigosBase inimigo(local);
+            Combate(*Player, inimigo).entrar();
+        }
+        case(2): {
+            std::cout << "nao ta pronto";
+        }
+        case(3): { std::cout << "saindo";return; }
+        }
+    }
+}
